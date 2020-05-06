@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modes>
+
+  <mode name="zab-twol" install="yes">
+    <pipeline>
+      <program name="hfst-strings2fst -S"/>
+      <program name="hfst-compose-intersect">
+        <file name=".deps/zab.twol.hfst"/>
+      </program>
+      <program name="hfst-fst2strings"/>
+    </pipeline>
+  </mode>
+
+  <mode name="zab-morph" install="yes">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="zab.automorf.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="zab-lexc" install="yes">
+    <pipeline>
+      <program name="hfst-lookup">
+        <file name=".deps/zab.LR.lexc.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="zab-gener" install="yes">
+    <pipeline>
+      <program name="lt-proc -g">
+        <file name="zab.autogen.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="zab-tagger" install="yes">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="zab.automorf.bin"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="zab.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="zab-disam" install="yes">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="zab.automorf.bin"/>
+      </program>
+      <program name="cg-conv -a"/>
+      <program name="vislcg3 --trace --grammar">
+        <file name="zab.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+</modes>
+
