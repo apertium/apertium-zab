@@ -49,16 +49,23 @@ c:q <=> _ %>:* %{u%}:u ;
 
 "KKC → KC in combined form"
 KV:0 <=> :KV _ :Vow :ʼ :Cons* %>: ;   ! FIXME: doesn't seem to work??
+     where KV in KV ;
+
+!@ r >:0 s è è:0 i ʼ d y >:0 {u}:0 i h
 
 "BB → PB in combined form"
 h:0 <=> :Vow _ :Vow :h :Cons* %>: ;
 
+!@ r >:0 s u b i h:0 a h z > {u}:0 i h
+
 ! FIXME: w>bahnny>{u}ëng:wbàaʼnyëng
 
-"di → dy before vowels"
+"diʼ → dy before vowels: {I}"
 %{I%}:y <=> _ (ʼ:) %>:* :0* :Vow ;
 
 ! FIXME: does ʼ delete?
+"diʼ → dy before vowels: ʼ"
+ʼ:0 <=> %{I%}:y _ ;
 
 
 ! Resources:
