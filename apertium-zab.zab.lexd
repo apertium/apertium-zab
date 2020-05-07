@@ -21,24 +21,31 @@ PATTERNS
 
 # new orthography analysis
 N-Stems(1) n-tag:
+N-Stems(1): :N-Stems(2) n-tag:    # ! Dir/LR
 
 ## old orthography analysis
 #N-Stems(2) n-tag:
 
 NP-Stems(1) np-tag: NP-Stems(3):
-NP-Stems(2) np-tag: NP-Stems(3):
+NP-Stems(1): :NP-Stems(2) np-tag: NP-Stems(3):   # ! Dir/LR
 
 Prep-Stems(1) pr-tag:
+Prep-Stems(1): :Prep-Stems(2) pr-tag:  # ! Dir/LR
 
 Det-Stems(1) det-tag: Det-Stems(3):
+Det-Stems(1): :Det-Stems(2) det-tag: Det-Stems(3):   # ! Dir/LR
 
 Postdet-Stems(1) postdet-tag: Postdet-Stems(3):
+Postdet-Stems(1): :Postdet-Stems(2) postdet-tag: Postdet-Stems(3):  # ! Dir/LR
 
 Adv-Stems(1) adv-tag:
+Adv-Stems(1): :Adv-Stems(2) adv-tag:  # ! Dir/LR
 
 Ij-Stems(1) ij-tag:
+Ij-Stems(1): :Ij-Stems(2) ij-tag:    # ! Dir/LR
 
 Mod-Stems(1) mod-tag:
+Mod-Stems(1): :Mod-Stems(2) mod-tag:  # ! Dir/LR
 
 
 LEXICON Tense
