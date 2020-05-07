@@ -48,7 +48,7 @@ Cx:Cy <=> c a %>:* _ ;
 c:q <=> _ %>:* %{u%}:u ;
 
 "KKC → KC in combined form"
-KV:0 <=> :KV _ :Vow :ʼ :Cons* %>: ;
+KV:0 <=> :KV _ :Vow :ʼ :Cons* %>: ;   ! FIXME: doesn't seem to work??
 
 "BB → PB in combined form"
 h:0 <=> :Vow _ :Vow :h :Cons* %>: ;
