@@ -13,8 +13,8 @@ PATTERNS
 # :Tense :Caus V-Stems-TV(1) v-tag: V-Stems-TV(3): Caus: Tense:
 :Tense V-Stems-TV(1) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
 #:Tense V-Stems-TV(2) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
-:Tense V-Stems-IV(1) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
-#:Tense V-Stems-IV(2) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
+:Tense V-Stems-IV(1) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-IV(3): V-Extender: Tense: V-Neg: V-Subj:
+#:Tense V-Stems-IV(2) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-IV(3): V-Extender: Tense: V-Neg: V-Subj:
 
 # new orthography analysis
 N-Stems(1) n-tag:
