@@ -11,10 +11,13 @@
 PATTERNS
 
 # :Tense :Caus V-Stems-TV(1) v-tag: V-Stems-TV(3): Caus: Tense:
-:Tense V-Stems-TV(1) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
-#:Tense V-Stems-TV(2) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
-:Tense V-Stems-IV(1) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-IV(3): V-Extender: Tense: V-Neg: V-Subj:
-#:Tense V-Stems-IV(2) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-IV(3): V-Extender: Tense: V-Neg: V-Subj:
+:Tense V-Stems-TV(1) :V-Extender(1) :V-Neg(1) :V-Subj(1) v-tag: V-Stems-TV(3): V-Extender(1): Tense: V-Neg(1): V-Subj(1):
+
+:Tense V-Stems-IV(1) :V-Extender(1) :V-Neg(1) :V-Subj(1) v-tag: V-Stems-IV(3): V-Extender(1): Tense: V-Neg(1): V-Subj(1):
+
+:Tense V-Stems-TV(1): :V-Stems-TV(2) :V-Extender(2) :V-Neg(2) :V-Subj(2) v-tag: V-Stems-TV(3): V-Extender(2): Tense: V-Neg(2): V-Subj(2):  # ! Dir/LR
+
+:Tense V-Stems-IV(1): :V-Stems-IV(2) :V-Extender(2) :V-Neg(2) :V-Subj(2) v-tag: V-Stems-IV(3): V-Extender(2): Tense: V-Neg(2): V-Subj(2):  # ! Dir/LR
 
 # new orthography analysis
 N-Stems(1) n-tag:
@@ -44,28 +47,28 @@ LEXICON Tense
 <perf>:{B}>     # perfective   {B} → m / _ n ; w / _ b
 <prog>:ca>      # progressive
 
-LEXICON V-Subj           # FIXME
+LEXICON V-Subj(2)           # FIXME
 
-<p1><sg>:>a              #   <p1><sg>:>aʼ
-<p1><pl>:>{u}ën          #   <p1><pl>:>{u}ëhnn
-<p2><infm><sg>:>u        #   <p2><infm><sg>:>ùuʼ
-<p2><frm><sg>:>yu        #   <p2><frm><sg>:>yuuʼ
-<p2><frm><sg>:>yëbu      #   <p2><frm><sg>:>yëbuuʼ   ! Dir/LR
-<p2><frm><pl>:>yuad      #   <p2><frm><sg>:>yùad     ! Dir/LR
-<p2><frm><pl>:>yëbuad    #   <p2><frm><sg>:>yëbùad   ! Dir/LR
-<p3><prox><sg>:>{u}ëng   #   <p3><prox><sg>:>{u}ëng
-<p3><dist><sg>:>{u}i     #   <p3><dist><sg>:>{u}ih
-<p3><resp><sg>:>{u}ëb    #   <p3><resp><sg>:>{u}ëhb
-:                        #   :
+<p1><sg>:>a                 <p1><sg>:>aʼ
+<p1><pl>:>{u}ën             <p1><pl>:>{u}ëhnn
+<p2><infm><sg>:>u           <p2><infm><sg>:>ùuʼ
+<p2><frm><sg>:>yu           <p2><frm><sg>:>yuuʼ
+<p2><frm><sg>:>yëbu         <p2><frm><sg>:>yëbuuʼ   # ! Dir/LR
+<p2><frm><pl>:>yuad         <p2><frm><sg>:>yùad     # ! Dir/LR
+<p2><frm><pl>:>yëbuad       <p2><frm><sg>:>yëbùad   # ! Dir/LR
+<p3><prox><sg>:>{u}ëng      <p3><prox><sg>:>{u}ëng
+<p3><dist><sg>:>{u}i        <p3><dist><sg>:>{u}ih
+<p3><resp><sg>:>{u}ëb       <p3><resp><sg>:>{u}ëhb
+:                           :
 
-LEXICON V-Neg            # FIXME        
+LEXICON V-Neg(2)            # FIXME        
 
-<neg>:>d{I}              #   <neg>:>d{I}ʼ
-:                        #   :
+<neg>:>d{I}                 <neg>:>d{I}ʼ
+:                           :
 
-LEXICON V-Extender       # FIXME
-<pol>:>la                #   <pol>:>làaʼ
-:                        #   :
+LEXICON V-Extender(2)       # FIXME
+<pol>:>la                   <pol>:>làaʼ
+:                           :
 
 #LEXICON Caus
 #
