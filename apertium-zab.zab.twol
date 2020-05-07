@@ -1,15 +1,31 @@
 Alphabet
- A B C D E Ë F G H I J K L M N O P q R S T U V W X Y Z
+ A B C D E Ë F G H I J K L M N O P Q R S T U V W X Y Z
  a b c d e ë f g h i j k l m n o p q r s t u v w x y z
+ À È Ê Ì Ò Ù
+ à è ê ì ò ù ꞉ ʼ
  %{B%}:b %{B%}:m %{B%}:w
+ %{I%}:i %{I%}:y
  %{l%}:0 %{l%}:l
  %{n%}:0 %{n%}:n
+ %{u%}:0 %{u%}:u
  %>:0  ;
 
 Sets
 
 Nasal = N M 
         n m ;
+
+quVowels = I E Ë
+           i e ë ;
+
+KV = À È Ê Ì Ò Ù
+     à è ê ì ò ù ;
+
+Vow = A E Ë I O U
+     a e ë i o u ;
+
+Cons = B C D F G H J K L M N P Q R S T V W X Y Z 
+       b c d f g h j k l m n p q r s t v w x y z ꞉ ;
 
 Rules 
 
@@ -24,6 +40,26 @@ Cx:Cy <=> c a %>:* _ ;
       where Cx in ( %{l%} %{n%} )
             Cy in (   l     n   )
       matched ;
+
+"c{u} as qu if before i/e/ë: {u}:u"
+%{u%}:u <=> c: %>:* _ :quVowels ;
+
+"c{u} as qu if before i/e/ë: c:q"
+c:q <=> _ %>:* %{u%}:u ;
+
+"KKC → KC in combined form"
+KV:0 <=> :KV _ :Vow :ʼ :Cons* %>: ;
+
+"BB → PB in combined form"
+h:0 <=> :Vow _ :Vow :h :Cons* %>: ;
+
+! FIXME: w>bahnny>{u}ëng:wbàaʼnyëng
+
+"di → dy before vowels"
+%{I%}:y <=> _ (ʼ:) %>:* :0* :Vow ;
+
+! FIXME: does ʼ delete?
+
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol

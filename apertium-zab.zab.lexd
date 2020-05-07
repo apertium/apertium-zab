@@ -11,8 +11,10 @@
 PATTERNS
 
 # :Tense :Caus V-Stems-TV(1) v-tag: V-Stems-TV(3): Caus: Tense:
-:Tense V-Stems-TV(1) v-tag: V-Stems-TV(3): Tense:
-:Tense V-Stems-IV(1) v-tag: V-Stems-TV(3): Tense:
+:Tense V-Stems-TV(1) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
+#:Tense V-Stems-TV(2) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
+:Tense V-Stems-IV(1) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
+#:Tense V-Stems-IV(2) :V-Extender :V-Neg :V-Subj v-tag: V-Stems-TV(3): V-Extender: Tense: V-Neg: V-Subj:
 
 # new orthography analysis
 N-Stems(1) n-tag:
@@ -27,6 +29,8 @@ Prep-Stems(1) pr-tag:
 
 Det-Stems(1) det-tag: Det-Stems(3):
 
+Postdet-Stems(1) postdet-tag: Postdet-Stems(3):
+
 Adv-Stems(1) adv-tag:
 
 
@@ -35,6 +39,29 @@ LEXICON Tense
 <hab>:r>        # habitual
 <perf>:{B}>     # perfective   {B} → m / _ n ; w / _ b
 <prog>:ca>      # progressive
+
+LEXICON V-Subj           # FIXME
+
+<p1><sg>:>a              #   <p1><sg>:>aʼ
+<p1><pl>:>{u}ën          #   <p1><pl>:>{u}ëhnn
+<p2><infm><sg>:>u        #   <p2><infm><sg>:>ùuʼ
+<p2><frm><sg>:>yu        #   <p2><frm><sg>:>yuuʼ
+<p2><frm><sg>:>yëbu      #   <p2><frm><sg>:>yëbuuʼ   ! Dir/LR
+<p2><frm><pl>:>yuad      #   <p2><frm><sg>:>yùad     ! Dir/LR
+<p2><frm><pl>:>yëbuad    #   <p2><frm><sg>:>yëbùad   ! Dir/LR
+<p3><prox><sg>:>{u}ëng   #   <p3><prox><sg>:>{u}ëng
+<p3><dist><sg>:>{u}i     #   <p3><dist><sg>:>{u}ih
+<p3><resp><sg>:>{u}ëb    #   <p3><resp><sg>:>{u}ëhb
+:                        #   :
+
+LEXICON V-Neg            # FIXME        
+
+<neg>:>d{I}              #   <neg>:>d{I}ʼ
+:                        #   :
+
+LEXICON V-Extender       # FIXME
+<pol>:>la                #   <pol>:>làaʼ
+:                        #   :
 
 #LEXICON Caus
 #
@@ -62,6 +89,9 @@ LEXICON det-tag
 
 <det>
 
+LEXICON postdet-tag
+
+<postdet>
 LEXICON adv-tag
 
 <adv>
@@ -175,14 +205,18 @@ zhyet            zhyeʼet              # "cat"
 
 LEXICON NP-Stems(3)
 
-Bed       Beed           <ant><m>    # Pedro
-Gyeily    Gyeʼeihlly     <ant><m>    # Miguel
-Len       Leen           <ant><f>    # Elena
-Jwany     Jwaany         <ant><m>    # Juan
-Petr      Peʼtr          <ant><f>    # Petra
-Mazh      Maʼazh         <ant><m>    # Tomás/Thomas
-Rony      Roʼony         <ant><m>    # Jeronimo
-Glory     Gloory         <ant><f>    # Gloria
+Bac       Baʼahc         <top>       # "Tlacolula (de Matamoros)"
+Bed       Beed           <ant><m>    # "Pedro"
+Glory     Gloory         <ant><f>    # "Gloria"
+Gyeily    Gyeʼeihlly     <ant><m>    # "Miguel"
+Jwany     Jwaany         <ant><m>    # "Juan"
+Len       Leen           <ant><f>    # "Elena"
+Mazh      Maʼazh         <ant><m>    # "Tomás/Thomas"
+Petr      Peʼtr          <ant><f>    # "Petra"
+Rony      Roʼony         <ant><m>    # "Jeronimo"
+San\ Luc  Sann\ Luʼuc    <top>       # "San Lucas Quiaviní"
+Xandan    Xanndaan       <top>       # "Santa Ana del Valle"
+Xgyia     X꞉gyìiʼah      <top>       # "Teotitlán del Valle"
 
 
 LEXICON Prep-Stems(2)
@@ -195,24 +229,39 @@ zalo      zalloh      # "about" (?)
 
 LEXICON Prn-Stems(3)
 
-tu        tu        <itg>   # "who"
-xi        xi        <itg>   # "what"
-lai       laʼàiʼ    <pers><p3><dist>  # "he/she/it (distal)"
-laëng     laʼa-ëng  <pers><p3><prox>  # "he/she/it (proximal)"
+tu           tu               <itg>   # "who"
+xi           xi               <itg>   # "what"
+lai          laʼàiʼ           <pers><p3><dist><sg>  # "he/she/it (distal)"
+laëng        laʼa-ëng         <pers><p3><prox><sg>  # "he/she/it (proximal)"
+laëb         làaʼ-ëhb         <pers><p3><resp><sg>  # "he/she/it (respectful)"
+liu          _FIXME           <pers><p2><infm><sg>  # "you (sg, informal)"
+yu           yuʼuuʼ           <pers><p2><frm><sg>   # "you (sg, formal)"
+yu:yëbu      yuʼuuʼ:yəbuʼuuʼ  <pers><p2><frm><sg>   # "you (sg, formal)" ! Dir/LR
+yuad         yùad             <pers><p2><frm><pl>   # "you (pl, formal)"
+yuad:yëbuad  yuad:yëbùad      <pers><p2><frm><pl>   # "you (pl, formal)" ! Dir/LR
+danoën:danoën dannooh-ëhnn:dannooh-ëhnn  <pers><p1><pl> # "we"
+danoën:danuën dannooh-ëhnn:dannuuh-ëhnn  <pers><p1><pl> # "we"  ! Dir/LR
 
 LEXICON Det-Stems(3)
 
 cha       chah     <cls>   # "one, a/an (with breadstuffs)"
+ra        ra       <qnt>   # (pl)
 rata      raʼtaʼ   <qnt>   # "every"
+teiby     teiby    <idf>   # "a/an"
+
+LEXICON Postdet-Stems(3)
+
 re        rèe      <dem>   # "that"
 re        rèeʼ     <dem>   # "this"
-teiby     teiby    <idf>   # "a/an"
 
 LEXICON Adv-Stems(2)
 
-na        nah         # "now"
-nai       nàiʼ        # "yesterday"
-uas       uʼas        # "really"
+a                a                   # "already" (completion of verb)
+na               nah                 # "now"
+nai              nàiʼ                # "yesterday"
+queity:queity    queʼity:queiʼty     # "not"
+queity:quëity    queʼity:quëiʼty     # "not"   ! Dir/LR
+uas              uʼas                # "really"
 
 
 LEXICON Itg-Stems(2)
