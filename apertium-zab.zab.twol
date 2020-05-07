@@ -1,17 +1,29 @@
 Alphabet
- A B Ç D E Ä F G H I J Ž K L M N Ň O Ö P R S Ş T U Ü W Y Ý Z
- a b ç d e ä f g h i j ž k l m n ň o ö p r s ş t u ü w y ý z
- %{A%}:a %>:0  ;
+ A B C D E Ë F G H I J K L M N O P q R S T U V W X Y Z
+ a b c d e ë f g h i j k l m n o p q r s t u v w x y z
+ %{B%}:b %{B%}:m %{B%}:w
+ %{l%}:0 %{l%}:l
+ %{n%}:0 %{n%}:n
+ %>:0  ;
 
 Sets
 
-Vowel = A E Ä I O Ö U Ü Y Ý 
-        a e ä i o ö u ü y ý ;
+Nasal = N M 
+        n m ;
 
 Rules 
 
-"Remove suffix vowel with vowel-ending stem"
-i:0 <=> Vow %{VSUF%}:0 _ [ m | n ] ;
+"{B} as m before n"
+%{B%}:m <=> _ %>:* :n ;
+
+"{b} as w before b"
+%{B%}:w <=> _ %>:* :b ;
+
+"disappearing consonants only surface in progressive"
+Cx:Cy <=> c a %>:* _ ;
+      where Cx in ( %{l%} %{n%} )
+            Cy in (   l     n   )
+      matched ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol

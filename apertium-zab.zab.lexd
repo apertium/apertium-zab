@@ -10,20 +10,190 @@
 
 PATTERNS
 
-:Tense V-Stems(1) v-tag V-Stems(2) Tense:
+# :Tense :Caus V-Stems-TV(1) v-tag: V-Stems-TV(3): Caus: Tense:
+:Tense V-Stems-TV(1) v-tag: V-Stems-TV(3): Tense:
+:Tense V-Stems-IV(1) v-tag: V-Stems-TV(3): Tense:
+
+# new orthography analysis
+N-Stems(1) n-tag:
+
+## old orthography analysis
+#N-Stems(2) n-tag:
+
+NP-Stems(1) np-tag: NP-Stems(3):
+NP-Stems(2) np-tag: NP-Stems(3):
+
+Prep-Stems(1) pr-tag:
+
+Det-Stems(1) det-tag: Det-Stems(3):
+
+Adv-Stems(1) adv-tag:
 
 
 LEXICON Tense
 
-<hab>:r        # habitual
+<hab>:r>        # habitual
+<perf>:{B}>     # perfective   {B} → m / _ n ; w / _ b
+<prog>:ca>      # progressive
+
+#LEXICON Caus
+#
+#<caus>:su
+#:
 
 
 LEXICON v-tag
 
-<v>:
+<v>
+
+LEXICON n-tag
+
+<n>
+
+LEXICON pr-tag
+
+<pr>
+
+LEXICON np-tag
+
+<np>
+
+LEXICON det-tag
+
+<det>
+
+LEXICON adv-tag
+
+<adv>
 
 
-LEXICON V-Stems(2)
+LEXICON V-Stems-IV(3)
 
-cwany:cwany   <tv>:    # "wake up"
-gyan:gyan     <tv>:    # "feed"
+bix       biʼihx      <iv>    # "ring (of a bell)"
+cyetlaz   cyeʼtlààaʼz <iv>    # "be/get happy"
+dieby     dììeʼby     <iv>    # "boil"
+duax      duʼahx      <iv>    # "bark"
+nyity     nyiʼihty    <iv>    # "get lost, be missing"
+tyis      tyiʼihs     <iv>    # "jump"
+zhuny     zh꞉ùuʼnny   <iv>    # "run; elope"
+zhyeil    zhyeʼilly   <iv>    # "open"
+
+
+LEXICON V-Stems-TV(3)
+
+beb             bèeʼb               <tv>    # "ride (an animal)"
+cwany           cwàaʼnny            <tv>    # "wake up"
+deidy:{l}deidy  dèèiʼdy:{l}dèèiʼdy  <dtv>   # "give"    # {l}:l in <prog>
+deidy:{n}deidy  dèèiʼdy:{n}dèèiʼdy  <dtv>   # "give"    # {n}:n in <prog>
+guad            gùad                <tv>    # "sting"
+gyan            gyaàaʼn             <dtv>   # "feed"
+nab             nààaʼb              <tv>    # "ask/send for"
+nalaz           nnahlààaʼz          <tv>    # "remember, miss (a person), think about"
+naz             nnàaʼaz             <tv>    # "grab"
+nudizh          nuhdìiʼzh           <tv>    # "ask of"
+nyity           nyiʼihty            <tv>    # "lose, miss (a thing)"
+san             sàaʼan              <tv>    # "leave behind"
+seidy           sèèiʼdy             <dtv>   # "teach"
+seidy           sèèiʼdy             <tv>    # "learn"
+sudieby         sudììeʼby           <tv>    # "boil"
+taz             tàaʼaz              <tv>    # "hit"
+xyeily          xyeʼilly            <tv>    # "open"
+yulaz           yuʼlààaʼz           <tv>    # "like"  # FIXME: not used with <perf>
+
+
+LEXICON N-Stems(2)
+
+banua            bannùùaʼ             # "scorpion"
+bdua             bdùùaʼ               # "banana"
+becw             bèeʼcw               # "dog"
+beld:bel         behlld:behll         # "fish"               
+beld:beld        behlld:behlld        # "fish"         !  Dir/LR
+bolz             boʼoollz             # "bag"
+buny             bùunny               # "person, man"
+bxady            bx꞉àady              # "chapulin"
+cabai            cabaʼi               # "horse"
+campan           campaʼnn             # "bell"
+doctor           doʼctoor             # "doctor"
+fot              foʼt                 # "photograph"
+guan             gùuʼann              # "bull"
+guet             gueht                # "tortilla"
+guet\ xtily      gueht\ xtiilly       # "bread"
+gyag             gyahg                # "stick, tree, wood, firewood"
+lapy             laʼpy                # "pencil"
+lecsyony         lecsyoony            # "lesson"
+liebr            liʼebr               # "book"
+mansan           mannsaan             # "apple"
+manyser          maʼanyseer           # "bee"
+mes              meʼs                 # "teacher"
+mna              mnààaʼ               # "woman"
+mniny            mnìiʼiny             # "child, kid, boy"
+muly             mùuully              # "money"
+nyis             nyiʼihs              # "water"
+plum             pluʼmm               # "pen"
+pwert            pweeʼrt              # "door"
+sede             sedee                # "CD"
+tarea            tareea               # "exercise, homework"
+unida            unidaa               # "unit"
+wi               wii                  # "guava"
+zhi              zh꞉ih                # "day"
+zhomrel          zh꞉ommreel           # "hat"
+zhyet            zhyeʼet              # "cat"
+Dizhtily         Dìiʼzhtiilly         # "Spanish language"
+Dizhsa           Dìiʼzhsah            # "Zapotec language"
+Ingles           Ingleʼs              # "English language"
+
+
+
+
+LEXICON NP-Stems(3)
+
+Bed       Beed           <ant><m>    # Pedro
+Gyeily    Gyeʼeihlly     <ant><m>    # Miguel
+Len       Leen           <ant><f>    # Elena
+Jwany     Jwaany         <ant><m>    # Juan
+Petr      Peʼtr          <ant><f>    # Petra
+Mazh      Maʼazh         <ant><m>    # Tomás/Thomas
+Rony      Roʼony         <ant><m>    # Jeronimo
+Glory     Gloory         <ant><f>    # Gloria
+
+
+LEXICON Prep-Stems(2)
+
+cuan      cuahnn      # "and, with"
+quën      quëhnn      # "and, with"
+xte       x꞉tèeʼ      # "of"
+xten      x꞉tèeʼn     # "of"    # Dir/LR    # FIXME
+zalo      zalloh      # "about" (?)
+
+LEXICON Prn-Stems(3)
+
+tu        tu        <itg>   # "who"
+xi        xi        <itg>   # "what"
+lai       laʼàiʼ    <pers><p3><dist>  # "he/she/it (distal)"
+laëng     laʼa-ëng  <pers><p3><prox>  # "he/she/it (proximal)"
+
+LEXICON Det-Stems(3)
+
+cha       chah     <cls>   # "one, a/an (with breadstuffs)"
+rata      raʼtaʼ   <qnt>   # "every"
+re        rèe      <dem>   # "that"
+re        rèeʼ     <dem>   # "this"
+teiby     teiby    <idf>   # "a/an"
+
+LEXICON Adv-Stems(2)
+
+na        nah         # "now"
+nai       nàiʼ        # "yesterday"
+uas       uʼas        # "really"
+
+
+LEXICON Itg-Stems(2)
+
+a                àaaʼ                # "yes"
+queity:queity    queʼity:queiʼty     # "no"
+queity:quëity    queʼity:quëiʼty     # "no"   ! Dir/LR
+
+
+LEXICON Mod-Stems(2)    # modal particles
+
+e         èee        # yes/no question marker
