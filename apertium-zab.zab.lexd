@@ -33,6 +33,10 @@ Postdet-Stems(1) postdet-tag: Postdet-Stems(3):
 
 Adv-Stems(1) adv-tag:
 
+Ij-Stems(1) ij-tag:
+
+Mod-Stems(1) mod-tag:
+
 
 LEXICON Tense
 
@@ -92,9 +96,18 @@ LEXICON det-tag
 LEXICON postdet-tag
 
 <postdet>
+
 LEXICON adv-tag
 
 <adv>
+
+LEXICON ij-tag
+
+<ij>
+
+LEXICON mod-tag
+
+<mod>
 
 
 LEXICON V-Stems-IV(3)
@@ -264,7 +277,7 @@ queity:quëity    queʼity:quëiʼty     # "not"   ! Dir/LR
 uas              uʼas                # "really"
 
 
-LEXICON Itg-Stems(2)
+LEXICON Ij-Stems(2)
 
 a                àaaʼ                # "yes"
 queity:queity    queʼity:queiʼty     # "no"
