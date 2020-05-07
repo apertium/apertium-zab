@@ -69,12 +69,17 @@ LEXICON adv-tag
 
 LEXICON V-Stems-IV(3)
 
+ban       bàaʼan      <iv>    # "follow a medical diet"
 bix       biʼihx      <iv>    # "ring (of a bell)"
 cyetlaz   cyeʼtlààaʼz <iv>    # "be/get happy"
 dieby     dììeʼby     <iv>    # "boil"
 duax      duʼahx      <iv>    # "bark"
 nyity     nyiʼihty    <iv>    # "get lost, be missing"
+tyepy     tyèeʼpy     <iv>    # "whistle"
 tyis      tyiʼihs     <iv>    # "jump"
+yac       yaʼahc      <iv>    # "heal, get better/well"
+zhiby     zhihby      <iv>    # "get scared"
+zhiez     rzhìez      <iv>    # "laugh, smile"
 zhuny     zh꞉ùuʼnny   <iv>    # "run; elope"
 zhyeil    zhyeʼilly   <iv>    # "open"
 
@@ -82,39 +87,61 @@ zhyeil    zhyeʼilly   <iv>    # "open"
 LEXICON V-Stems-TV(3)
 
 beb             bèeʼb               <tv>    # "ride (an animal)"
+chiby           chìiby              <tv>    # "scare"
+cuzh            cuhzh               <tv>    # "play (a wind instrument)"
 cwany           cwàaʼnny            <tv>    # "wake up"
+cwez            cwèez               <tv>    # "turn off"
+cwual           cwùaʼll             <tv>    # "turn on"
 deidy:{l}deidy  dèèiʼdy:{l}dèèiʼdy  <dtv>   # "give"    # {l}:l in <prog>
 deidy:{n}deidy  dèèiʼdy:{n}dèèiʼdy  <dtv>   # "give"    # {n}:n in <prog>
 guad            gùad                <tv>    # "sting"
+guch            guhch               <tv>    # "bathe"
+gwezac          gwèeʼzaʼc           <tv>    # "speak (a language) well"
 gyan            gyaàaʼn             <dtv>   # "feed"
 nab             nààaʼb              <tv>    # "ask/send for"
 nalaz           nnahlààaʼz          <tv>    # "remember, miss (a person), think about"
 naz             nnàaʼaz             <tv>    # "grab"
+ni              nììiʼ               <tv>    # "say"
 nudizh          nuhdìiʼzh           <tv>    # "ask of"
 nyity           nyiʼihty            <tv>    # "lose, miss (a thing)"
 san             sàaʼan              <tv>    # "leave behind"
 seidy           sèèiʼdy             <dtv>   # "teach"
 seidy           sèèiʼdy             <tv>    # "learn"
+subiaz          subihahz            <tv>    # "dry"
 sudieby         sudììeʼby           <tv>    # "boil"
 taz             tàaʼaz              <tv>    # "hit"
 xyeily          xyeʼilly            <tv>    # "open"
 yulaz           yuʼlààaʼz           <tv>    # "like"  # FIXME: not used with <perf>
 
 
+
 LEXICON N-Stems(2)
 
+Dizhsa           Dìiʼzhsah            # "Zapotec language"
+Dizhtily         Dìiʼzhtiilly         # "Spanish language"
+Ingles           Ingleʼs              # "English language"
+Lia              Lia                  # person word for females
+bag              baag                 # "cow"
 banua            bannùùaʼ             # "scorpion"
+bar              baar                 # "stick, pole"
+bdo              bdòoʼ                # "baby"
 bdua             bdùùaʼ               # "banana"
 becw             bèeʼcw               # "dog"
 beld:bel         behlld:behll         # "fish"               
 beld:beld        behlld:behlld        # "fish"         !  Dir/LR
 bolz             boʼoollz             # "bag"
+budy             buʼuhuhdy            # "chicken"
+budy\ gwuar      buʼuhdy\ gwuʼuar     # "turkey"
+budy\ ngual      buʼuhdy\ nguʼahll    # "male turkey"
 buny             bùunny               # "person, man"
 bxady            bx꞉àady              # "chapulin"
 cabai            cabaʼi               # "horse"
 campan           campaʼnn             # "bell"
+chirmia          chirmia              # "traditional flute"
+clarinet         clarineʼt            # "clarinet"
 doctor           doʼctoor             # "doctor"
 fot              foʼt                 # "photograph"
+grabador         grabadoor            # "tape recorder"
 guan             gùuʼann              # "bull"
 guet             gueht                # "tortilla"
 guet\ xtily      gueht\ xtiilly       # "bread"
@@ -131,17 +158,18 @@ muly             mùuully              # "money"
 nyis             nyiʼihs              # "water"
 plum             pluʼmm               # "pen"
 pwert            pweeʼrt              # "door"
+rrady            rraady               # "radio"
 sede             sedee                # "CD"
 tarea            tareea               # "exercise, homework"
+telebisyony      telebisyoony         # "television"
 unida            unidaa               # "unit"
+wbwan            wbwààaʼn             # "theif"
 wi               wii                  # "guava"
 zhi              zh꞉ih                # "day"
+zhieb            zhiʼeb               # "goat"
+zhily            zhiʼìilly            # "sheep"
 zhomrel          zh꞉ommreel           # "hat"
 zhyet            zhyeʼet              # "cat"
-Dizhtily         Dìiʼzhtiilly         # "Spanish language"
-Dizhsa           Dìiʼzhsah            # "Zapotec language"
-Ingles           Ingleʼs              # "English language"
-
 
 
 
@@ -196,4 +224,4 @@ queity:quëity    queʼity:quëiʼty     # "no"   ! Dir/LR
 
 LEXICON Mod-Stems(2)    # modal particles
 
-e         èee        # yes/no question marker
+e         èee           # yes/no question marker
