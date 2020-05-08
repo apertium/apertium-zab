@@ -21,7 +21,14 @@ PATTERNS
 
 # new orthography analysis
 N-Stems(1) n-tag:
-N-Stems(1): :N-Stems(2) n-tag:    # ! Dir/LR
+N-Stems(1): :N-Stems(2) n-tag:    # Dir/LR
+
+:N-Poss(1) N-Stems(1) n-tag: N-Poss(3): V-Subj(1)
+:N-Poss(2) N-Stems(1): :N-Stems(2) n-tag: N-Poss(3): V-Subj(1)  # Dir/LR
+
+N-Stems-Possessed(1) n-tag: V-Subj(1)
+N-Stems-Possessed(1): :N-Stems-Possessed(2) n-tag: :V-Subj(2)   # Dir/LR
+
 
 ## old orthography analysis
 #N-Stems(2) n-tag:
@@ -41,6 +48,9 @@ Postdet-Stems(1): :Postdet-Stems(2) postdet-tag: Postdet-Stems(3):  # ! Dir/LR
 Adv-Stems(1) adv-tag:
 Adv-Stems(1): :Adv-Stems(2) adv-tag:  # ! Dir/LR
 
+Adj-Stems(1) adj-tag:
+Adj-Stems(1): :Adj-Stems(2) adj-tag:  # ! Dir/LR
+
 Ij-Stems(1) ij-tag:
 Ij-Stems(1): :Ij-Stems(2) ij-tag:    # ! Dir/LR
 
@@ -51,21 +61,42 @@ Mod-Stems(1): :Mod-Stems(2) mod-tag:  # ! Dir/LR
 LEXICON Tense
 
 <hab>:r>        # habitual
-<perf>:{B}>     # perfective   {B} → m / _ n ; w / _ b
+<perf>:{B}>     # perfective
 <prog>:ca>      # progressive
+
+LEXICON N-Poss(3)
+
+# FIXME: deal with irregulars, e.g. xyecw/x꞉yèeʼcw for becw
+x     x꞉     <px>    # for adding pronominal possession to Ns FIXME: CHECK(2)
+
+
 
 LEXICON V-Subj(2)           # FIXME
 
 <p1><sg>:>a                 <p1><sg>:>aʼ
 <p1><pl>:>{u}ën             <p1><pl>:>{u}ëhnn
+
 <p2><infm><sg>:>u           <p2><infm><sg>:>ùuʼ
 <p2><frm><sg>:>yu           <p2><frm><sg>:>yuuʼ
 <p2><frm><sg>:>yëbu         <p2><frm><sg>:>yëbuuʼ   # ! Dir/LR
-<p2><frm><pl>:>yuad         <p2><frm><sg>:>yùad     # ! Dir/LR
+<p2><infm><pl>:>ad          <p2><infm><pl>:>ad      # FIXME: CHECK(2)
+<p2><frm><pl>:>yuad         <p2><frm><sg>:>yùad
 <p2><frm><pl>:>yëbuad       <p2><frm><sg>:>yëbùad   # ! Dir/LR
+
 <p3><prox><sg>:>{u}ëng      <p3><prox><sg>:>{u}ëng
 <p3><dist><sg>:>{u}i        <p3><dist><sg>:>{u}ih
-<p3><resp><sg>:>{u}ëb       <p3><resp><sg>:>{u}ëhb
+<p3><resp><sg>:>{u}ëb       <p3><resp><sg>:>{u}ëhb  # FIXME: CHECK(2)
+<p3><anml><sg>:>{u}ëm       <p3><anml><sg>:>{u}ëhm  # FIXME: CHECK(2)
+<p3><fam><sg>:>azh          <p3><fam><sg>:>azh      # FIXME: CHECK(2)
+<p3><rev><sg>:>iny          <p3><rev><sg>:>iny      # FIXME: CHECK(2), (1): iny/ni
+
+<p3><prox><pl>:>rëng        <p3><prox><pl>:>rëng    # FIXME: CHECK(2)
+<p3><dist><pl>:>ri          <p3><dist><pl>:>rih     # FIXME: CHECK(2)
+<p3><resp><pl>:>rëb         <p3><resp><pl>:>rëhb    # FIXME: CHECK(2)
+<p3><anml><pl>:>rëm         <p3><anml><pl>:>rëhm    # FIXME: CHECK(2)
+<p3><fam><pl>:>razh         <p3><fam><pl>:>razh     # FIXME: CHECK(2)
+<p3><rev><pl>:>riny         <p3><rev><pl>:>riny     # FIXME: CHECK(2)
+
 :                           :
 
 LEXICON V-Neg(2)            # FIXME        
@@ -110,6 +141,10 @@ LEXICON postdet-tag
 LEXICON adv-tag
 
 <adv>
+
+LEXICON adj-tag
+
+<adj>
 
 LEXICON ij-tag
 
@@ -167,6 +202,10 @@ xyeily          xyeʼilly            <tv>    # "open"
 yulaz           yuʼlààaʼz           <tv>    # "like"  # FIXME: not used with <perf>
 
 
+LEXICON N-Stems-Possessed(2)
+
+bzyan            bzyaàaʼn             # "brother (of opposite sex); sister (of opposite sex)"
+
 
 LEXICON N-Stems(2)
 
@@ -174,14 +213,19 @@ Dizhsa           Dìiʼzhsah            # "Zapotec language"
 Dizhtily         Dìiʼzhtiilly         # "Spanish language"
 Ingles           Ingleʼs              # "English language"
 Lia              Lia                  # person word for females
+Tiu              Tiʼu                 # person word for males (Señor, Don)
+amiegw           amieʼgw              # "friend"
+apartamen        apartameʼenn         # "apartment"
 bag              baag                 # "cow"
 banua            bannùùaʼ             # "scorpion"
 bar              baar                 # "stick, pole"
+basquetbol       basqueʼtboʼll        # "basketball"
 bdo              bdòoʼ                # "baby"
 bdua             bdùùaʼ               # "banana"
 becw             bèeʼcw               # "dog"
 beld:bel         behlld:behll         # "fish"               
 beld:beld        behlld:behlld        # "fish"         !  Dir/LR
+blal             blàaal               # "blal (precolumbian earthenware figure)"
 bolz             boʼoollz             # "bag"
 budy             buʼuhuhdy            # "chicken"
 budy\ gwuar      buʼuhdy\ gwuʼuar     # "turkey"
@@ -192,6 +236,8 @@ cabai            cabaʼi               # "horse"
 campan           campaʼnn             # "bell"
 chirmia          chirmia              # "traditional flute"
 clarinet         clarineʼt            # "clarinet"
+cos              coʼs                 # "thing"
+cwen             cweʼenn              # "story"
 doctor           doʼctoor             # "doctor"
 fot              foʼt                 # "photograph"
 grabador         grabadoor            # "tape recorder"
@@ -215,6 +261,7 @@ rrady            rraady               # "radio"
 sede             sedee                # "CD"
 tarea            tareea               # "exercise, homework"
 telebisyony      telebisyoony         # "television"
+tiu              tiʼu                 # "uncle"
 unida            unidaa               # "unit"
 wbwan            wbwààaʼn             # "theif"
 wi               wii                  # "guava"
@@ -257,7 +304,8 @@ xi           xi               <itg>   # "what"
 lai          laʼàiʼ           <pers><p3><dist><sg>  # "he/she/it (distal)"
 laëng        laʼa-ëng         <pers><p3><prox><sg>  # "he/she/it (proximal)"
 laëb         làaʼ-ëhb         <pers><p3><resp><sg>  # "he/she/it (respectful)"
-liu          _FIXME           <pers><p2><infm><sg>  # "you (sg, informal)"
+liu          lìuʼ             <pers><p2><infm><sg>  # "you (sg, informal)"
+laad         làaʼ-ahd         <pers><p2><infm><pl>  # "you (pl, informal)"
 yu           yuʼuuʼ           <pers><p2><frm><sg>   # "you (sg, formal)"
 yu:yëbu      yuʼuuʼ:yəbuʼuuʼ  <pers><p2><frm><sg>   # "you (sg, formal)" ! Dir/LR
 yuad         yùad             <pers><p2><frm><pl>   # "you (pl, formal)"
@@ -276,6 +324,10 @@ LEXICON Postdet-Stems(3)
 
 re        rèe      <dem>   # "that"
 re        rèeʼ     <dem>   # "this"
+
+LEXICON Adj-Stems(2)
+
+cweby            cweby               # "new"
 
 LEXICON Adv-Stems(2)
 
