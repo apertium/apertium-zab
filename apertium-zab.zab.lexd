@@ -57,6 +57,8 @@ Ij-Stems(1): :Ij-Stems(2) ij-tag:    # ! Dir/LR
 Mod-Stems(1) mod-tag:
 Mod-Stems(1): :Mod-Stems(2) mod-tag:  # ! Dir/LR
 
+Punctuation
+
 
 LEXICON Tense
 
@@ -349,3 +351,32 @@ queity:quëity    queʼity:quëiʼty     # "no"   ! Dir/LR
 LEXICON Mod-Stems(2)    # modal particles
 
 e         èee           # yes/no question marker
+
+
+
+LEXICON Punctuation
+
+.<sent>:.
+..<sent>:..
+...<sent>:...
+;<sent>:;
+\:<sent>:\:
+!<sent>:!
+-<guio>:-
+—<guio>:—
+,<cm>:,
+?<sent>:?
+'<apos>:'
+"<sent>:"
+«<lquot>:«
+»<rquot>:»
+”<rquot>:”
+“<lquot>:“
+(<lpar>:(
+]<rpar>:]
+[<lpar>:[
+)<rpar>:)
+\\<sent>:\\
+/<sent>:/
+
+
