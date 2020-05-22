@@ -115,6 +115,31 @@ LEXICON Prn-Bound(2)           # FIXME
 
 :                           :
 
+LEXICON Pronouns(3)        # Free pronouns
+
+tu           tu               <itg>   # "who"
+xi           xi               <itg>   # "what"
+
+danoën:danoën dannooh-ëhnn:dannooh-ëhnn  <pers><p1><pl> # "we"
+danoën:danuën dannooh-ëhnn:dannuuh-ëhnn  <pers><p1><pl> # "we"  ! Dir/LR
+
+liu          lìuʼ             <pers><p2><infm><sg>  # "you (sg, informal)"
+laad         làaʼ-ahd         <pers><p2><infm><pl>  # "you (pl, informal)"
+yu           yuʼuuʼ           <pers><p2><frm><sg>   # "you (sg, formal)"
+yu:yëbu      yuʼuuʼ:yəbuʼuuʼ  <pers><p2><frm><sg>   # "you (sg, formal)" ! Dir/LR
+yuad         yùad             <pers><p2><frm><pl>   # "you (pl, formal)"
+yuad:yëbuad  yuad:yëbùad      <pers><p2><frm><pl>   # "you (pl, formal)" ! Dir/LR
+
+lai          laʼàiʼ           <pers><p3><dist><sg>  # "he/she/it (distal)"
+laëng        laʼa-ëng         <pers><p3><prox><sg>  # "he/she/it (proximal)"
+laëb         làaʼ-ëhb         <pers><p3><resp><sg>  # "he/she/it (respectful)"
+
+lari         làaʼri           <pers><p3><dist><pl>  # "they/them (distal)"
+larëng       làaʼrëng         <pers><p3><prox><pl>  # "they/them (proximal)"
+larëb        làaʼrëhb         <pers><p3><resp><pl>  # "they/them (respectful)"
+
+
+
 LEXICON V-Neg(2)            # FIXME        
 
 <neg>:>d{I}                 <neg>:>d{I}ʼ
@@ -327,25 +352,6 @@ quën      quëhnn      # "and, with"
 xte       x꞉tèeʼ      # "of"
 xten      x꞉tèeʼn     # "of"    # Dir/LR    # FIXME
 zalo      zalloh      # "about" (?)
-
-LEXICON Pronouns(3)        # Free pronouns
-
-tu           tu               <itg>   # "who"
-xi           xi               <itg>   # "what"
-lari         làaʼri           <pers><p3><dist><pl>  # "they/them (distal)"
-larëng       làaʼrëng         <pers><p3><prox><pl>  # "they/them (proximal)"
-larëb        làaʼrëhb         <pers><p3><resp><pl>  # "they/them (respectful)"
-lai          laʼàiʼ           <pers><p3><dist><sg>  # "he/she/it (distal)"
-laëng        laʼa-ëng         <pers><p3><prox><sg>  # "he/she/it (proximal)"
-laëb         làaʼ-ëhb         <pers><p3><resp><sg>  # "he/she/it (respectful)"
-liu          lìuʼ             <pers><p2><infm><sg>  # "you (sg, informal)"
-laad         làaʼ-ahd         <pers><p2><infm><pl>  # "you (pl, informal)"
-yu           yuʼuuʼ           <pers><p2><frm><sg>   # "you (sg, formal)"
-yu:yëbu      yuʼuuʼ:yəbuʼuuʼ  <pers><p2><frm><sg>   # "you (sg, formal)" ! Dir/LR
-yuad         yùad             <pers><p2><frm><pl>   # "you (pl, formal)"
-yuad:yëbuad  yuad:yëbùad      <pers><p2><frm><pl>   # "you (pl, formal)" ! Dir/LR
-danoën:danoën dannooh-ëhnn:dannooh-ëhnn  <pers><p1><pl> # "we"
-danoën:danuën dannooh-ëhnn:dannuuh-ëhnn  <pers><p1><pl> # "we"  ! Dir/LR
 
 LEXICON Det-Stems(3)
 
