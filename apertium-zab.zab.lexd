@@ -29,6 +29,9 @@ Postdet-Stems(1): :Postdet-Stems(2) postdet-tag: Postdet-Stems(3):  # ! Dir/LR
 Adv-Stems(1) adv-tag:
 Adv-Stems(1): :Adv-Stems(2) adv-tag:  # ! Dir/LR
 
+Adv-Stems-Itg(1) adv-itg-tag:
+Adv-Stems-Itg(1): :Adv-Stems-Itg(2) adv-itg-tag:  # ! Dir/LR
+
 Adj-Stems(1) adj-tag:
 Adj-Stems(1): :Adj-Stems(2) adj-tag:  # ! Dir/LR
 
@@ -187,6 +190,10 @@ LEXICON adv-tag
 
 <adv>
 
+LEXICON adv-itg-tag
+
+<adv><itg>
+
 LEXICON adj-tag
 
 <adj>
@@ -209,7 +216,9 @@ dieby        dììeʼby           <iv>    # "boil"
 duax         duʼahx            <iv>    # "bark"
 dub:{l}dub   dùuʼb:{l}dùuʼb    <iv>    # "sweep"
 dub:{n}dub   dùuʼb:{n}dùuʼb    <iv>    # "sweep"     ! Dir/LR
+gats         gàaʼts            <iv>    # "get buried"
 nyity        nyiʼihty          <iv>    # "get lost, be missing"
+saguel       saguehll          <iv>    # "be so good as to"
 tyepy        tyèeʼpy           <iv>    # "whistle"
 tyis         tyiʼihs           <iv>    # "jump"
 yac          yaʼahc            <iv>    # "heal, get better/well"
@@ -221,38 +230,42 @@ zhyeil       zhyeʼilly         <iv>    # "open"
 
 LEXICON V-Stems-TV(3)
 
-beb             bèeʼb               <tv>    # "ride (an animal)"
-chiby           chìiby              <tv>    # "scare"
-culozac         culohzaʼc           <tv>    # "take good care of"
-cuzh            cuhzh               <tv>    # "play (a wind instrument)"
-cwany           cwàaʼnny            <tv>    # "wake up"
-cwez            cwèez               <tv>    # "turn off"
-cwual           cwùaʼll             <tv>    # "turn on"
-deidy:{l}deidy  dèèiʼdy:{l}dèèiʼdy  <dtv>   # "give"    # {l}:l in <prog>
-deidy:{n}deidy  dèèiʼdy:{n}dèèiʼdy  <dtv>   # "give"    # {n}:n in <prog>  ! Dir/LR
-deidy           dèèiˈdy             <tv>    # "cross"  # FIXME: irreg irrealis
-dily            dìiʼlly             <tv>    # "fight with, scold"  # FIXME: irreg irrealis
-guad            gùad                <tv>    # "sting"
-guch            guhch               <tv>    # "bathe"
-gwezac          gwèeʼzaʼc           <tv>    # "speak (a language) well"
-gyan            gyaàaʼn             <dtv>   # "feed"
-nab             nààaʼb              <tv>    # "ask/send for"
-nalaz           nnahlààaʼz          <tv>    # "remember, miss (a person), think about"
-naz             nnàaʼaz             <tv>    # "grab"
-ni              nììiʼ               <tv>    # "say"
-nudizh          nuhdìiʼzh           <tv>    # "ask of"
-nyity           nyiʼihty            <tv>    # "lose, miss (a thing)"
-san             sàaʼan              <tv>    # "leave behind"
-seidy           sèèiʼdy             <dtv>   # "teach"
-seidy           sèèiʼdy             <tv>    # "learn"
-subiaz          subihahz            <tv>    # "dry"
-sudieby         sudììeʼby           <tv>    # "boil"
-taz             tàaʼaz              <tv>    # "hit"
-teidy           tèèiʼdy             <tv>    # "take/bring across"
-xyeily          xyeʼilly            <tv>    # "open"
-yulaz           yuʼlààaʼz           <tv>    # "like"  # FIXME: not used with <perf>
-zhyag           zhyàag              <tv>    # "meet"
-zilaz           zilààaʼz            <tv>    # "used to think that"
+beb               bèeʼb                    <tv>    # "ride (an animal)"
+chiby             chìiby                   <tv>    # "scare"
+culozac           culohzaʼc                <tv>    # "take good care of"
+cuzh              cuhzh                    <tv>    # "play (a wind instrument)"
+cwany             cwàaʼnny                 <tv>    # "wake up"
+cwez              cwèez                    <tv>    # "turn off"
+cwual             cwùaʼll                  <tv>    # "turn on"
+deidy:{l}deidy    dèèiʼdy:{l}dèèiʼdy       <dtv>   # "give"    # {l}:l in <prog>
+deidy:{n}deidy    dèèiʼdy:{n}dèèiʼdy       <dtv>   # "give"    # {n}:n in <prog>  ! Dir/LR
+deidy             dèèiˈdy                  <tv>    # "cross"  # FIXME: irreg irrealis
+dily              dìiʼlly                  <tv>    # "fight with, scold"  # FIXME: irreg irrealis
+dinal             dinàall                  <tv>    # "chase"
+guad              gùad                     <tv>    # "sting"
+guch              guhch                    <tv>    # "bathe"
+gwezac            gwèeʼzaʼc                <tv>    # "speak (a language) well"
+gyan              gyaàaʼn                  <dtv>   # "feed"
+nab               nààaʼb                   <tv>    # "ask/send for"
+nalaz             nnahlààaʼz               <tv>    # "remember, miss (a person), think about"
+naz               nnàaʼaz                  <tv>    # "grab"
+ni                nììiʼ                    <tv>    # "say"
+nudizh            nuhdìiʼzh                <tv>    # "ask of"
+nyity             nyiʼihty                 <tv>    # "lose, miss (a thing)"
+reizh             rèeiʼizh                 <tv>    # "measure"
+san               sàaʼan                   <tv>    # "leave behind"
+seidy             sèèiʼdy                  <dtv>   # "teach"
+seidy             sèèiʼdy                  <tv>    # "learn"
+studian           studiʼaann               <tv>    # "student"
+studian:estudian  studiʼaann:estudiʼaann   <tv>    # "student"
+subiaz            subihahz                 <tv>    # "dry"
+sudieby           sudììeʼby                <tv>    # "boil"
+taz               tàaʼaz                   <tv>    # "hit"
+teidy             tèèiʼdy                  <tv>    # "take/bring across"
+xyeily            xyeʼilly                 <tv>    # "open"
+yulaz             yuʼlààaʼz                <tv>    # "like"  # FIXME: not used with <perf>
+zhyag             zhyàag                   <tv>    # "meet"
+zilaz             zilààaʼz                 <tv>    # "used to think that"
 
 
 LEXICON N-Stems-Possessed(2)
@@ -269,6 +282,7 @@ Lia              Lia                  # person word for females
 Tiu              Tiʼu                 # person word for males (Señor, Don)
 amiegw           amieʼgw              # "friend"
 apartamen        apartameʼenn         # "apartment"
+autobuas         autobuaʼs            # "bus"
 bag              baag                 # "cow"
 banua            bannùùaʼ             # "scorpion"
 bar              baar                 # "stick, pole"
@@ -278,6 +292,8 @@ bdua             bdùùaʼ               # "banana"
 becw             bèeʼcw               # "dog"
 beld:bel         behlld:behll         # "fish"               
 beld:beld        behlld:behlld        # "fish"         !  Dir/LR
+beld:bel         bèèeʼlld:bèèeʼll     # "snake"
+beld:beld        bèèeʼlld:bèèeʼlld    # "snake"        !  Dir/LR
 blal             blàaal               # "blal (precolumbian earthenware figure)"
 bolz             boʼoollz             # "bag"
 budy             buʼuhuhdy            # "chicken"
@@ -287,9 +303,14 @@ buny             bùunny               # "person, man"
 bxady            bx꞉àady              # "chapulin"
 cabai            cabaʼi               # "horse"
 campan           campaʼnn             # "bell"
+camyuny          cammyunny            # "bus; truck; car; van"
+carr             caʼrr                # "car; bus; truck"
 chirmia          chirmia              # "traditional flute"
 clarinet         clarineʼt            # "clarinet"
+coch             coʼch                # "car"
 cos              coʼs                 # "thing"
+coyot            coyoʼt               # "‘coyote’ - cross-border escort"
+cub              cuʼuhb               # "tejate, masa"
 cwen             cweʼenn              # "story"
 doctor           doʼctoor             # "doctor"
 fot              foʼt                 # "photograph"
@@ -301,6 +322,7 @@ gyag             gyahg                # "stick, tree, wood, firewood"
 lapy             laʼpy                # "pencil"
 lecsyony         lecsyoony            # "lesson"
 liebr            liʼebr               # "book"
+liny             liʼnny               # "border (between two countries)"
 mansan           mannsaan             # "apple"
 manyser          maʼanyseer           # "bee"
 mes              meʼs                 # "teacher"
@@ -309,7 +331,9 @@ mniny            mnìiʼiny             # "child, kid, boy"
 muly             mùuully              # "money"
 nyis             nyiʼihs              # "water"
 plum             pluʼmm               # "pen"
+polisia          polisiia             # "policeman; police"
 pwert            pweeʼrt              # "door"
+pyep             pyeʼp                # "pipe; tanker truck"
 rmudy            rmuudy               # "medicine"
 rrady            rraady               # "radio"
 rregal           rregaʼll             # "gift"
@@ -337,9 +361,11 @@ Gyeily    Gyeʼeihlly     <ant><m>    # "Miguel"
 Jwany     Jwaany         <ant><m>    # "Juan"
 Len       Leen           <ant><f>    # "Elena"
 Mazh      Maʼazh         <ant><m>    # "Tomás/Thomas"
+Nach      Naʼch          <ant><m>    # "Ignacio, Nacho, Ignatius"
 Petr      Peʼtr          <ant><f>    # "Petra"
 Rony      Roʼony         <ant><m>    # "Jeronimo"
 San\ Luc  Sann\ Luʼuc    <top>       # "San Lucas Quiaviní"
+Tyen      Tyeʼnn         <ant><f>    # "Cristina, Christina"
 Xandan    Xanndaan       <top>       # "Santa Ana del Valle"
 Xgyia     X꞉gyìiʼah      <top>       # "Teotitlán del Valle"
 
@@ -378,6 +404,11 @@ queity:quëity    queʼity:quëiʼty     # "not"   ! Dir/LR
 uas              uʼas                # "really"
 zhi:zhi          zhii:zhii           # "tomorrow"
 zhi:yzhi         zhii:yzhii          # "tomorrow"  ! Dir/LR
+
+LEXICON Adv-Stems-Itg(2)
+
+guc:guc          guʼc:guʼc           # "when"
+guc:uc           guʼc:uʼc            # "when"      ! Dir/LR
 
 
 LEXICON Ij-Stems(2)
