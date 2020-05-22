@@ -10,28 +10,9 @@
 
 PATTERNS
 
-# :Tense :Caus V-Stems-TV(1) v-tag: V-Stems-TV(3): Caus: Tense:
-:Tense V-Stems-TV(1) :V-Extender(1) :V-Neg(1) :V-Subj(1) v-tag: V-Stems-TV(3): V-Extender(1): Tense: V-Neg(1): V-Subj(1):
-
-:Tense V-Stems-IV(1) :V-Extender(1) :V-Neg(1) :V-Subj(1) v-tag: V-Stems-IV(3): V-Extender(1): Tense: V-Neg(1): V-Subj(1):
-
-:Tense V-Stems-TV(1): :V-Stems-TV(2) :V-Extender(2) :V-Neg(2) :V-Subj(2) v-tag: V-Stems-TV(3): V-Extender(2): Tense: V-Neg(2): V-Subj(2):  # ! Dir/LR
-
-:Tense V-Stems-IV(1): :V-Stems-IV(2) :V-Extender(2) :V-Neg(2) :V-Subj(2) v-tag: V-Stems-IV(3): V-Extender(2): Tense: V-Neg(2): V-Subj(2):  # ! Dir/LR
-
-# new orthography analysis
-N-Stems(1) n-tag:
-N-Stems(1): :N-Stems(2) n-tag:    # Dir/LR
-
-:N-Poss(1) N-Stems(1) n-tag: N-Poss(3): V-Subj(1)
-:N-Poss(2) N-Stems(1): :N-Stems(2) n-tag: N-Poss(3): V-Subj(1)  # Dir/LR
-
-N-Stems-Possessed(1) n-tag: V-Subj(1)
-N-Stems-Possessed(1): :N-Stems-Possessed(2) n-tag: :V-Subj(2)   # Dir/LR
-
-
-## old orthography analysis
-#N-Stems(2) n-tag:
+Nouns
+Verbs
+Punctuation
 
 NP-Stems(1) np-tag: NP-Stems(3):
 NP-Stems(1): :NP-Stems(2) np-tag: NP-Stems(3):   # ! Dir/LR
@@ -52,12 +33,44 @@ Adj-Stems(1) adj-tag:
 Adj-Stems(1): :Adj-Stems(2) adj-tag:  # ! Dir/LR
 
 Ij-Stems(1) ij-tag:
-Ij-Stems(1): :Ij-Stems(2) ij-tag:    # ! Dir/LR
+Ij-Stems(1): :Ij-Stems(2) ij-tag:     # ! Dir/LR
 
 Mod-Stems(1) mod-tag:
 Mod-Stems(1): :Mod-Stems(2) mod-tag:  # ! Dir/LR
 
-Punctuation
+Pronouns(1) prn-tag: Pronouns(3):
+Pronouns(1): :Pronouns(2) prn-tag: Pronouns(3): # ! Dir/LR
+
+
+
+
+PATTERN Verbs
+
+:Tense V-Stems-TV(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) v-tag: V-Stems-TV(3): V-Extender(1): Tense: V-Neg(1): Prn-Bound(1):
+
+:Tense V-Stems-IV(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) v-tag: V-Stems-IV(3): V-Extender(1): Tense: V-Neg(1): Prn-Bound(1):
+
+:Tense V-Stems-TV(1): :V-Stems-TV(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) v-tag: V-Stems-TV(3): V-Extender(2): Tense: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
+
+:Tense V-Stems-IV(1): :V-Stems-IV(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) v-tag: V-Stems-IV(3): V-Extender(2): Tense: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
+
+
+PATTERN Nouns
+
+# new orthography analysis
+N-Stems(1) n-tag:
+N-Stems(1): :N-Stems(2) n-tag:    # Dir/LR
+
+:N-Poss(1) N-Stems(1) n-tag: N-Poss(3): Prn-Bound(1)
+:N-Poss(2) N-Stems(1): :N-Stems(2) n-tag: N-Poss(3): Prn-Bound(1)  # Dir/LR
+
+N-Stems-Possessed(1) n-tag: Prn-Bound(1)
+N-Stems-Possessed(1): :N-Stems-Possessed(2) n-tag: Prn-Bound(2)    # Dir/LR
+
+
+## old orthography analysis
+#N-Stems(2) n-tag:
+
 
 
 LEXICON Tense
@@ -73,7 +86,7 @@ x     x꞉     <px>    # for adding pronominal possession to Ns FIXME: CHECK(2)
 
 
 
-LEXICON V-Subj(2)           # FIXME
+LEXICON Prn-Bound(2)           # FIXME
 
 <p1><sg>:>a                 <p1><sg>:>aʼ
 <p1><pl>:>{u}ën             <p1><pl>:>{u}ëhnn
@@ -87,10 +100,10 @@ LEXICON V-Subj(2)           # FIXME
 
 <p3><prox><sg>:>{u}ëng      <p3><prox><sg>:>{u}ëng
 <p3><dist><sg>:>{u}i        <p3><dist><sg>:>{u}ih
-<p3><resp><sg>:>{u}ëb       <p3><resp><sg>:>{u}ëhb  # FIXME: CHECK(2)
-<p3><anml><sg>:>{u}ëm       <p3><anml><sg>:>{u}ëhm  # FIXME: CHECK(2)
-<p3><fam><sg>:>azh          <p3><fam><sg>:>azh      # FIXME: CHECK(2)
-<p3><rev><sg>:>iny          <p3><rev><sg>:>iny      # FIXME: CHECK(2), (1): iny/ni
+<p3><resp><sg>:>{u}ëb       <p3><resp><sg>:>{u}ëhb   # FIXME: CHECK(2)
+<p3><anml><sg>:>{u}ëm       <p3><anml><sg>:>{u}ëhm   # FIXME: CHECK(2)
+<p3><fam><sg>:>azh          <p3><fam><sg>:>azh       # FIXME: CHECK(2)
+<p3><rev><sg>:>{u}iny          <p3><rev><sg>:>{u}iny # FIXME: CHECK(2), (1): iny/ni
 
 <p3><prox><pl>:>rëng        <p3><prox><pl>:>rëng    # FIXME: CHECK(2)
 <p3><dist><pl>:>ri          <p3><dist><pl>:>rih     # FIXME: CHECK(2)
@@ -119,6 +132,11 @@ LEXICON V-Extender(2)       # FIXME
 LEXICON v-tag
 
 <v>
+
+LEXICON prn-tag
+
+<prn>
+
 
 LEXICON n-tag
 
@@ -159,19 +177,21 @@ LEXICON mod-tag
 
 LEXICON V-Stems-IV(3)
 
-ban       bàaʼan      <iv>    # "follow a medical diet"
-bix       biʼihx      <iv>    # "ring (of a bell)"
-cyetlaz   cyeʼtlààaʼz <iv>    # "be/get happy"
-dieby     dììeʼby     <iv>    # "boil"
-duax      duʼahx      <iv>    # "bark"
-nyity     nyiʼihty    <iv>    # "get lost, be missing"
-tyepy     tyèeʼpy     <iv>    # "whistle"
-tyis      tyiʼihs     <iv>    # "jump"
-yac       yaʼahc      <iv>    # "heal, get better/well"
-zhiby     zhihby      <iv>    # "get scared"
-zhiez     rzhìez      <iv>    # "laugh, smile"
-zhuny     zh꞉ùuʼnny   <iv>    # "run; elope"
-zhyeil    zhyeʼilly   <iv>    # "open"
+ban          bàaʼan            <iv>    # "follow a medical diet"
+bix          biʼihx            <iv>    # "ring (of a bell)"
+cyetlaz      cyeʼtlààaʼz       <iv>    # "be/get happy"
+dieby        dììeʼby           <iv>    # "boil"
+duax         duʼahx            <iv>    # "bark"
+dub:{l}dub   dùuʼb:{l}dùuʼb    <iv>    # "sweep"
+dub:{n}dub   dùuʼb:{n}dùuʼb    <iv>    # "sweep"     ! Dir/LR
+nyity        nyiʼihty          <iv>    # "get lost, be missing"
+tyepy        tyèeʼpy           <iv>    # "whistle"
+tyis         tyiʼihs           <iv>    # "jump"
+yac          yaʼahc            <iv>    # "heal, get better/well"
+zhiby        zhihby            <iv>    # "get scared"
+zhiez        rzhìez            <iv>    # "laugh, smile"
+zhuny        zh꞉ùuʼnny         <iv>    # "run; elope"
+zhyeil       zhyeʼilly         <iv>    # "open"
 
 
 LEXICON V-Stems-TV(3)
@@ -183,7 +203,7 @@ cwany           cwàaʼnny            <tv>    # "wake up"
 cwez            cwèez               <tv>    # "turn off"
 cwual           cwùaʼll             <tv>    # "turn on"
 deidy:{l}deidy  dèèiʼdy:{l}dèèiʼdy  <dtv>   # "give"    # {l}:l in <prog>
-deidy:{n}deidy  dèèiʼdy:{n}dèèiʼdy  <dtv>   # "give"    # {n}:n in <prog>
+deidy:{n}deidy  dèèiʼdy:{n}dèèiʼdy  <dtv>   # "give"    # {n}:n in <prog>  ! Dir/LR
 guad            gùad                <tv>    # "sting"
 guch            guhch               <tv>    # "bathe"
 gwezac          gwèeʼzaʼc           <tv>    # "speak (a language) well"
@@ -200,8 +220,11 @@ seidy           sèèiʼdy             <tv>    # "learn"
 subiaz          subihahz            <tv>    # "dry"
 sudieby         sudììeʼby           <tv>    # "boil"
 taz             tàaʼaz              <tv>    # "hit"
+teidy           tèèiʼdy             <tv>    # "take/bring across"
 xyeily          xyeʼilly            <tv>    # "open"
 yulaz           yuʼlààaʼz           <tv>    # "like"  # FIXME: not used with <perf>
+zhyag           zhyàag              <tv>    # "meet"
+zilaz           zilààaʼz            <tv>    # "used to think that"
 
 
 LEXICON N-Stems-Possessed(2)
@@ -259,7 +282,9 @@ muly             mùuully              # "money"
 nyis             nyiʼihs              # "water"
 plum             pluʼmm               # "pen"
 pwert            pweeʼrt              # "door"
+rmudy            rmuudy               # "medicine"
 rrady            rraady               # "radio"
+rregal           rregaʼll             # "gift"
 sede             sedee                # "CD"
 tarea            tareea               # "exercise, homework"
 telebisyony      telebisyoony         # "television"
@@ -299,10 +324,13 @@ xte       x꞉tèeʼ      # "of"
 xten      x꞉tèeʼn     # "of"    # Dir/LR    # FIXME
 zalo      zalloh      # "about" (?)
 
-LEXICON Prn-Stems(3)
+LEXICON Pronouns(3)        # Free pronouns
 
 tu           tu               <itg>   # "who"
 xi           xi               <itg>   # "what"
+lari         làaʼri           <pers><p3><dist><pl>  # "they/them (distal)"
+larëng       làaʼrëng         <pers><p3><prox><pl>  # "they/them (proximal)"
+larëb        làaʼrëhb         <pers><p3><resp><pl>  # "they/them (respectful)"
 lai          laʼàiʼ           <pers><p3><dist><sg>  # "he/she/it (distal)"
 laëng        laʼa-ëng         <pers><p3><prox><sg>  # "he/she/it (proximal)"
 laëb         làaʼ-ëhb         <pers><p3><resp><sg>  # "he/she/it (respectful)"
