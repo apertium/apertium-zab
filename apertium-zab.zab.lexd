@@ -78,6 +78,7 @@ LEXICON Tense
 <hab>:r>        # habitual
 <perf>:{B}>     # perfective
 <prog>:ca>      # progressive
+<irre>:{Y}>     # irrealis
 
 LEXICON N-Poss(3)
 
@@ -198,12 +199,15 @@ LEXICON V-Stems-TV(3)
 
 beb             bèeʼb               <tv>    # "ride (an animal)"
 chiby           chìiby              <tv>    # "scare"
+culozac         culohzaʼc           <tv>    # "take good care of"
 cuzh            cuhzh               <tv>    # "play (a wind instrument)"
 cwany           cwàaʼnny            <tv>    # "wake up"
 cwez            cwèez               <tv>    # "turn off"
 cwual           cwùaʼll             <tv>    # "turn on"
 deidy:{l}deidy  dèèiʼdy:{l}dèèiʼdy  <dtv>   # "give"    # {l}:l in <prog>
 deidy:{n}deidy  dèèiʼdy:{n}dèèiʼdy  <dtv>   # "give"    # {n}:n in <prog>  ! Dir/LR
+deidy           dèèiˈdy             <tv>    # "cross"  # FIXME: irreg irrealis
+dily            dìiʼlly             <tv>    # "fight with, scold"  # FIXME: irreg irrealis
 guad            gùad                <tv>    # "sting"
 guch            guhch               <tv>    # "bathe"
 gwezac          gwèeʼzaʼc           <tv>    # "speak (a language) well"
@@ -367,6 +371,8 @@ nai              nàiʼ                # "yesterday"
 queity:queity    queʼity:queiʼty     # "not"
 queity:quëity    queʼity:quëiʼty     # "not"   ! Dir/LR
 uas              uʼas                # "really"
+zhi:zhi          zhii:zhii           # "tomorrow"
+zhi:yzhi         zhii:yzhii          # "tomorrow"  ! Dir/LR
 
 
 LEXICON Ij-Stems(2)

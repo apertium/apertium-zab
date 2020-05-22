@@ -8,6 +8,7 @@ Alphabet
  %{l%}:0 %{l%}:l
  %{n%}:0 %{n%}:n
  %{u%}:0 %{u%}:u
+ %{Y%}:y %{Y%}:g
  %>:0  ;
 
 Sets
@@ -32,8 +33,11 @@ Rules
 "{B} as m before n"
 %{B%}:m <=> _ %>:* :n ;
 
-"{b} as w before b"
+"{B} as w before b"
 %{B%}:w <=> _ %>:* :b ;
+
+"{Y} as g before y"
+%{Y%}:g <=> _ %>:* :y ;
 
 "disappearing consonants only surface in progressive"
 Cx:Cy <=> c a %>:* _ ;
