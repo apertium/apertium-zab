@@ -104,7 +104,7 @@ LEXICON Prn-Bound(2)           # FIXME
 <p3><resp><sg>:>{u}ëb       <p3><resp><sg>:>{u}ëhb   # FIXME: CHECK(2)
 <p3><anml><sg>:>{u}ëm       <p3><anml><sg>:>{u}ëhm   # FIXME: CHECK(2)
 <p3><fam><sg>:>azh          <p3><fam><sg>:>azh       # FIXME: CHECK(2)
-<p3><rev><sg>:>{u}iny          <p3><rev><sg>:>{u}iny # FIXME: CHECK(2), (1): iny/ni
+<p3><rev><sg>:>{u}iny       <p3><rev><sg>:>{u}iny    # FIXME: CHECK(2), (1): iny/ni
 
 <p3><prox><pl>:>rëng        <p3><prox><pl>:>rëng    # FIXME: CHECK(2)
 <p3><dist><pl>:>ri          <p3><dist><pl>:>rih     # FIXME: CHECK(2)
@@ -137,7 +137,6 @@ laëb         làaʼ-ëhb         <pers><p3><resp><sg>  # "he/she/it (respectful
 lari         làaʼri           <pers><p3><dist><pl>  # "they/them (distal)"
 larëng       làaʼrëng         <pers><p3><prox><pl>  # "they/them (proximal)"
 larëb        làaʼrëhb         <pers><p3><resp><pl>  # "they/them (respectful)"
-
 
 
 LEXICON V-Neg(2)            # FIXME        
