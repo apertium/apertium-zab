@@ -44,7 +44,8 @@ Mod-Stems(1): :Mod-Stems(2) mod-tag:  # ! Dir/LR
 Pronouns(1) prn-tag: Pronouns(3):
 Pronouns(1): :Pronouns(2) prn-tag: Pronouns(3): # ! Dir/LR
 
-
+Number-Stems(1) num-tag:
+Number-Stems(1): :Number-Stems(2) num-tag: # ! Dir/LR
 
 
 PATTERN Verbs
@@ -206,6 +207,10 @@ LEXICON mod-tag
 
 <mod>
 
+LEXICON num-tag
+
+<num>
+
 
 LEXICON V-Stems-IV(3)
 
@@ -230,7 +235,7 @@ zhyeil       zhyeʼilly         <iv>    # "open"
 
 LEXICON V-Stems-TV(3)
 
-beb               bèeʼb                    <tv>    # "ride (an animal)"
+beb               bèeʼb                    <tv>    # "ride (an animal)"  # FIXME: irreg irrealis
 chiby             chìiby                   <tv>    # "scare"
 culozac           culohzaʼc                <tv>    # "take good care of"
 cuzh              cuhzh                    <tv>    # "play (a wind instrument)"
@@ -409,6 +414,31 @@ LEXICON Adv-Stems-Itg(2)
 
 guc:guc          guʼc:guʼc           # "when"
 guc:uc           guʼc:uʼc            # "when"      ! Dir/LR
+
+
+LEXICON Number-Stems(2)
+
+teiby            teʼihby             # "one"
+tyop             tyoʼp               # "two"
+chon             chòonn              # "there"
+tap              tahp                # "four"
+gai              gàiʼ                # "five"
+xop              x꞉òp                # "six"
+gaz              gàaz                # "seven"
+xon              x꞉òon               # "eight"
+ga               gààaʼ               # "nine"
+tsë              tsêëʼ               # "ten"
+tsëbteby         tsëbteeby           # "eleven"
+tsëbtyop         tsëbtyoʼp           # "twelve"
+tseiny           tsèeʼiny            # "thirteen"
+tsëda            tsëdah              # "fourteen"
+tseiny           tsèèiʼny            # "fifteen"
+tseinyabteby     tsèiʼnyahbteeby     # "sixteen"
+tseinyabtyop     tsèiʼnyahbtyoʼp     # "seventeen"
+tseinyabchon     tsèiʼnyahbchòonn    # "eighteen"
+tseinyabtap      tsèiʼnyahbtaʼp      # "nineteen"
+galy:galy        gàally:gàally       # "twenty"
+galy:galyd       gàally:gàallyd      # "twenty"     ! Dir/LR
 
 
 LEXICON Ij-Stems(2)
