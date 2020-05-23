@@ -47,10 +47,10 @@ TARGETS_COMMON =			\
 	hfst-compose-intersect -1 .deps/$(LANG1).LR.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
 
 $(LANG1).autogen.hfst: .deps/$(LANG1).RL.hfst
-	hfst-fst2fst -O $< -o $@
+	hfst-minimise $< | hfst-fst2fst -O -o $@
 
 $(LANG1).automorf.hfst: .deps/$(LANG1).LR.hfst
-	hfst-invert $< | hfst-fst2fst -O -o $@
+	hfst-invert $< | hfst-minimise | hfst-fst2fst -O -o $@
 
 $(LANG1).autogen.att.gz: $(LANG1).autogen.hfst
 	hfst-fst2txt $< | gzip -9 -c -n > $@
@@ -60,6 +60,7 @@ $(LANG1).automorf.att.gz: $(LANG1).automorf.hfst
 
 $(LANG1).autogen.bin: $(LANG1).autogen.att.gz .deps/.d
 	zcat < $< > .deps/$(LANG1).autogen.att
+	./atthack.sh
 	lt-comp lr .deps/$(LANG1).autogen.att $@
 
 $(LANG1).automorf.bin: $(LANG1).automorf.att.gz .deps/.d
