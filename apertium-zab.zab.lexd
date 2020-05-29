@@ -42,7 +42,7 @@ Mod-Stems(1) mod-tag:
 Mod-Stems(1): :Mod-Stems(2) mod-tag:  # ! Dir/LR
 
 Pronouns(1) prn-tag: Pronouns(3):
-Pronouns(1): :Pronouns(2) prn-tag: Pronouns(3): # ! Dir/LR
+Pronouns(1):Pronouns(2) prn-tag: Pronouns(3): # ! Dir/LR
 
 Number-Stems(1) num-tag:
 Number-Stems(1): :Number-Stems(2) num-tag: # ! Dir/LR
@@ -222,6 +222,7 @@ duax         duʼahx            <iv>    # "bark"
 dub:{l}dub   dùuʼb:{l}dùuʼb    <iv>    # "sweep"
 dub:{n}dub   dùuʼb:{n}dùuʼb    <iv>    # "sweep"     ! Dir/LR
 gats         gàaʼts            <iv>    # "get buried"
+guixicy:{G}{u}ixicy  guixiʼihcy:{G}{u}ixiʼihcy  <iv>   # "nod off (to sleep)"
 nyity        nyiʼihty          <iv>    # "get lost, be missing"
 saguel       saguehll          <iv>    # "be so good as to"
 tyepy        tyèeʼpy           <iv>    # "whistle"
@@ -244,11 +245,21 @@ cwez              cwèez                    <tv>    # "turn off"
 cwual             cwùaʼll                  <tv>    # "turn on"
 deidy:{l}deidy    dèèiʼdy:{l}dèèiʼdy       <dtv>   # "give"    # {l}:l in <prog>
 deidy:{n}deidy    dèèiʼdy:{n}dèèiʼdy       <dtv>   # "give"    # {n}:n in <prog>  ! Dir/LR
-deidy             dèèiˈdy                  <tv>    # "cross"  # FIXME: irreg irrealis
+deidy:{D}eidy     dèèiʼdy:(D)èèiʼdy        <tv>    # "cross"  # FIXME: irreg irrealis
 dily              dìiʼlly                  <tv>    # "fight with, scold"  # FIXME: irreg irrealis
 dinal             dinàall                  <tv>    # "chase"
+gap:{G}ap         gàaʼp:{G}àaʼp            <tv>    # "slap"
 guad              gùad                     <tv>    # "sting"
+gub:{G}ub         gùùuʼb:{G}ùùuʼb          <tv>    # "suck; smoke; use a lot (of fuel)"
 guch              guhch                    <tv>    # "bathe"
+guez:{G}{u}ez     guèeʼez:{G}{u}èeʼez      <tv>    # "hug; carry (in arms)"
+guiby:{G}{u}iby   guìiʼby:{G}{u}ìiʼby      <tv>    # "wash"
+guieb:{G}{u}ieb   guìeb:{G}{u}ìeb          <tv>    # "sew"
+guily:{G}{u}ily   guìiʼlly:{G}{u}ìiʼilly   <tv>    # "look for"  ! Dir/LR
+guily:{G}{u}ily   guìiʼlly:{G}{u}ìiʼlly    <tv>    # "look for"
+guiny:{G}{u}iny   guìiʼiny:{G}{u}ìiʼiny    <tv>    # "borrow; ask for hand (of girl) in marriage (in betrothal negotiation)"
+guix:{G}{u}ix     guìiʼx:{G}{u}ìiʼx        <tv>    # "lay down, put down (long object)"
+guizh:{G}{u}izh   guiʼihzh:{G}{u}iʼihzh    <dtv>   # "pay"
 gwezac            gwèeʼzaʼc                <tv>    # "speak (a language) well"
 gyan              gyaàaʼn                  <dtv>   # "feed"
 nab               nààaʼb                   <tv>    # "ask/send for"
@@ -414,13 +425,16 @@ LEXICON Adv-Stems-Itg(2)
 
 guc:guc          guʼc:guʼc           # "when"
 guc:uc           guʼc:uʼc            # "when"      ! Dir/LR
+xa               x꞉a                 # "how"
+xa\ mod          x꞉a\ moʼod          # "how"
+xi\ ni           xi\ niʼih           # "why"
 
 
 LEXICON Number-Stems(2)
 
 teiby            teʼihby             # "one"
 tyop             tyoʼp               # "two"
-chon             chòonn              # "there"
+chon             chòonn              # "three"
 tap              tahp                # "four"
 gai              gàiʼ                # "five"
 xop              x꞉òp                # "six"

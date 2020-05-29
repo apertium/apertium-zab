@@ -1,0 +1,34 @@
+Config:
+  hfst:
+    App: hfst-lookup
+    Gen: ../zab.autogen.hfst
+    Morph: ../zab.automorf.hfst
+
+
+Tests:
+  "habitual":
+    cwez<v><tv><hab> : rcwez
+    dub<v><iv><hab> : rdub
+
+  "regular perfective":
+    dub<v><iv><perf> : bdub
+    nalaz<v><tv><perf> : mnalaz
+
+  "irregular perfective":
+    guily<v><tv><perf> : bdily
+    gub<v><tv><perf> : bdub
+
+  "regular irrealis":
+    deidy<v><dtv><irre> : ydeidy
+
+  "irregular irrealis":
+    deidy<v><tv><irre> : teidy
+    guily<v><tv><irre> : quily
+    gub<v><tv><irre> : cub
+
+  "regular progressive":
+    dinal<v><tv><prog> : cadinal
+
+  "irregular progressive":
+    dub<v><iv><prog> : candub
+    dub<v><iv><prog> : caldub
