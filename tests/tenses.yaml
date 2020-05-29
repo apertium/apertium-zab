@@ -9,11 +9,13 @@ Tests:
   "habitual":
     cwez<v><tv><hab> : rcwez
     dub<v><iv><hab> : rdub
+    zhuny<v><iv><hab> : rzhuny
 
   "regular perfective":
     dub<v><iv><perf> : bdub
     nalaz<v><tv><perf> : mnalaz
     bix<v><iv><perf> : wbix
+    zhuny<v><iv><perf> : bzhuny
 
   "irregular perfective":
     guily<v><tv><perf> : bdily
@@ -21,6 +23,7 @@ Tests:
 
   "regular irrealis":
     deidy<v><dtv><irre> : ydeidy
+    zhuny<v><iv><irre> : yzhuny
 
   "irregular irrealis":
     deidy<v><tv><irre> : teidy
@@ -30,6 +33,7 @@ Tests:
 
   "regular progressive":
     dinal<v><tv><prog> : cadinal
+    zhuny<v><iv><prog> : cazhuny
 
   "irregular progressive":
     dub<v><iv><prog> : candub

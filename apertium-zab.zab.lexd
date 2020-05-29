@@ -231,6 +231,7 @@ yac          yaʼahc            <iv>    # "heal, get better/well"
 zhiby        zhihby            <iv>    # "get scared"
 zhiez        rzhìez            <iv>    # "laugh, smile"
 zhuny        zh꞉ùuʼnny         <iv>    # "run; elope"
+zhuny:zhyuny zh꞉ùuʼnny:zhy꞉ùuʼnny  <iv>    # "run; elope"   # ! Dir/LR
 zhyeil       zhyeʼilly         <iv>    # "open"
 
 
@@ -246,7 +247,7 @@ cwual             cwùaʼll                  <tv>    # "turn on"
 deidy:{l}deidy    dèèiʼdy:{l}dèèiʼdy       <dtv>   # "give"    # {l}:l in <prog>
 deidy:{n}deidy    dèèiʼdy:{n}dèèiʼdy       <dtv>   # "give"    # {n}:n in <prog>  ! Dir/LR
 deidy:{D}eidy     dèèiʼdy:(D)èèiʼdy        <tv>    # "cross"  # FIXME: irreg irrealis
-dily              dìiʼlly                  <tv>    # "fight with, scold"  # FIXME: irreg irrealis
+dily:{D}ily       dìiʼlly:{D}ìiʼlly                  <tv>    # "fight with, scold"  # FIXME: irreg irrealis
 dinal             dinàall                  <tv>    # "chase"
 gap:{G}ap         gàaʼp:{G}àaʼp            <tv>    # "slap"
 guad              gùad                     <tv>    # "sting"
@@ -458,6 +459,8 @@ galy:galyd       gàally:gàallyd      # "twenty"     ! Dir/LR
 LEXICON Ij-Stems(2)
 
 a                àaaʼ                # "yes"
+as               aʼs                 # "hi, hey"
+as\ nia          aʼs\ nniìaʼ         # "hey there"
 queity:queity    queʼity:queiʼty     # "no"
 queity:quëity    queʼity:quëiʼty     # "no"   ! Dir/LR
 
