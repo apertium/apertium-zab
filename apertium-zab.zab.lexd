@@ -137,10 +137,12 @@ yuad:yëbuad  yuad:yëbùad      <pers><p2><frm><pl>   # "you (pl, formal)" ! Di
 lai          laʼàiʼ           <pers><p3><dist><sg>  # "he/she/it (distal)"
 laëng        laʼa-ëng         <pers><p3><prox><sg>  # "he/she/it (proximal)"
 laëb         làaʼ-ëhb         <pers><p3><resp><sg>  # "he/she/it (respectful)"
+laëm         làaʼ-ëhmm        <pers><p3><anml><sg>  # "he/she/it (animal)"
 
 lari         làaʼri           <pers><p3><dist><pl>  # "they/them (distal)"
 larëng       làaʼrëng         <pers><p3><prox><pl>  # "they/them (proximal)"
 larëb        làaʼrëhb         <pers><p3><resp><pl>  # "they/them (respectful)"
+larëm        làaʼrëhmm        <pers><p3><anml><sg>  # "they/them (animal)"
 
 
 LEXICON V-Neg(2)            # FIXME        
@@ -367,6 +369,20 @@ zhily            zhiʼìilly            # "sheep"
 zhomrel          zh꞉ommreel           # "hat"
 zhyet            zhyeʼet              # "cat"
 
+bca              bcaʼah               # "crow"
+bistied          bistiied             # "dress"
+bzeiny           bzèiny               # "deer"
+bzeiny:bzëiny    bzèiny:bzêiny        # "deer"  ! Dir/LR
+cotony           cotoony              # "shirt/blouse"
+dolr             doʼlr                # "dollar"
+fald             faʼalld              # "skirt"
+gal\ rguily\ dizh  gahll\ rguìiʼlly\ dìiʼzh  # "word search"
+gasolyen         gasolyeʼnn           # "gas, gasoline"
+guez             guehehz              # "cigarette"
+many             maʼany               # "animal"
+myes             myeʼes               # "mass (at a church)"
+pes              peʼs                 # "peso"
+rresieb          rresiieb             # "bill (for service); receipt"
 
 
 LEXICON NP-Stems(3)
@@ -424,6 +440,9 @@ zhi:yzhi         zhii:yzhii          # "tomorrow"  ! Dir/LR
 
 LEXICON Adv-Stems-Itg(2)
 
+bal              bàall               # "how many"
+bal:bald         bàall:bàalld        # "how many"  ! Dir/LR
+blac             blaʼac              # "how much (money)"
 guc:guc          guʼc:guʼc           # "when"
 guc:uc           guʼc:uʼc            # "when"      ! Dir/LR
 xa               x꞉a                 # "how"
@@ -468,6 +487,7 @@ queity:quëity    queʼity:quëiʼty     # "no"   ! Dir/LR
 LEXICON Mod-Stems(2)    # modal particles
 
 e         èee           # yes/no question marker
+na        nah           # optionally used at end of wh questions
 
 
 
