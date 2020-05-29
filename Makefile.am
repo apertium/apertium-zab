@@ -60,7 +60,6 @@ $(LANG1).automorf.att.gz: $(LANG1).automorf.hfst
 
 $(LANG1).autogen.bin: $(LANG1).autogen.att.gz .deps/.d
 	zcat < $< > .deps/$(LANG1).autogen.att
-	./atthack.sh
 	lt-comp lr .deps/$(LANG1).autogen.att $@
 
 $(LANG1).automorf.bin: $(LANG1).automorf.att.gz .deps/.d
