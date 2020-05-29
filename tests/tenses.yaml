@@ -13,6 +13,7 @@ Tests:
   "regular perfective":
     dub<v><iv><perf> : bdub
     nalaz<v><tv><perf> : mnalaz
+    bix<v><iv><perf> : wbix
 
   "irregular perfective":
     guily<v><tv><perf> : bdily
@@ -25,6 +26,7 @@ Tests:
     deidy<v><tv><irre> : teidy
     guily<v><tv><irre> : quily
     gub<v><tv><irre> : cub
+    dily<v><tv><irre> : tily
 
   "regular progressive":
     dinal<v><tv><prog> : cadinal
