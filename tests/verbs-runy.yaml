@@ -1,0 +1,33 @@
+Config:
+  hfst:
+    App: hfst-lookup
+    Gen: ../zab.autogen.hfst
+    Morph: ../zab.automorf.hfst
+
+
+Tests:
+  "habitual":
+    uny<v><tv><hab> : runy
+    uny<v><tv><hab> : ruhny
+    uny<v><tv><hab>+ën<prn><pers><p1><pl> : rienyën
+    uny<v><tv><hab>+ën<prn><pers><p1><pl> : rieʼnyëhnn
+
+  "perfective":
+    uny<v><tv><perf> : beiny
+    uny<v><tv><perf> : bèèiʼny
+    uny<v><tv><perf>+ën<prn><pers><p1><pl> : bienyën
+    uny<v><tv><perf>+ën<prn><pers><p1><pl> : bieʼnyëhnn
+
+  "irrealis":
+    uny<v><tv><irre> : guny
+    uny<v><tv><irre> : guuny
+    uny<v><tv><irre>+ën<prn><pers><p1><pl> : gyienyën
+    uny<v><tv><irre>+ën<prn><pers><p1><pl> : gyieʼnyëhnn
+
+  "progressive":
+    uny<v><tv><prog> : cayuny
+    uny<v><tv><prog> : cayuhny
+    uny<v><tv><prog>+ën<prn><pers><p1><pl> : cayienyën
+    uny<v><tv><prog>+ën<prn><pers><p1><pl> : cayieʼnyëhnn
+
+
