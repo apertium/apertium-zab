@@ -14,67 +14,64 @@ Nouns
 Verbs
 Punctuation
 
-NP-Stems(1) np-tag: NP-Stems(3):
-NP-Stems(1): :NP-Stems(2) np-tag: NP-Stems(3):   # ! Dir/LR
+NP-Stems(1) [<np>:] NP-Stems(3):
+NP-Stems(1):NP-Stems(2) [<np>:] NP-Stems(3):     # ! Dir/LR
 
-Prep-Stems(1) pr-tag:
-Prep-Stems(1): :Prep-Stems(2) pr-tag:  # ! Dir/LR
+Prep-Stems(1) [<pr>:]
+Prep-Stems(1):Prep-Stems(2) [<pr>:]              # ! Dir/LR
 
-Det-Stems(1) det-tag: Det-Stems(3):
-Det-Stems(1): :Det-Stems(2) det-tag: Det-Stems(3):   # ! Dir/LR
+Det-Stems(1) [<det>:] Det-Stems(3):
+Det-Stems(1):Det-Stems(2) [<det>:] Det-Stems(3): # ! Dir/LR
 
-Postdet-Stems(1) postdet-tag: Postdet-Stems(3):
-Postdet-Stems(1): :Postdet-Stems(2) postdet-tag: Postdet-Stems(3):  # ! Dir/LR
+Postdet-Stems(1) [<postdet>:] Postdet-Stems(3):
+Postdet-Stems(1):Postdet-Stems(2) [<postdet>:] Postdet-Stems(3):  # ! Dir/LR
 
-Adv-Stems(1) adv-tag:
-Adv-Stems(1): :Adv-Stems(2) adv-tag:  # ! Dir/LR
+Adv-Stems(1) [<adv>:]
+Adv-Stems(1):Adv-Stems(2) [<adv>:]               # ! Dir/LR
 
-Adv-Stems-Itg(1) adv-itg-tag:
-Adv-Stems-Itg(1): :Adv-Stems-Itg(2) adv-itg-tag:  # ! Dir/LR
+Adv-Stems-Itg(1) [<adv><itg>:]
+Adv-Stems-Itg(1):Adv-Stems-Itg(2) [<adv><itg>:]  # ! Dir/LR
 
-Adj-Stems(1) adj-tag:
-Adj-Stems(1): :Adj-Stems(2) adj-tag:  # ! Dir/LR
+Adj-Stems(1) [<adj>:]
+Adj-Stems(1):Adj-Stems(2) [<adj>:]               # ! Dir/LR
 
-Ij-Stems(1) ij-tag:
-Ij-Stems(1): :Ij-Stems(2) ij-tag:     # ! Dir/LR
+Ij-Stems(1) [<ij>:]
+Ij-Stems(1):Ij-Stems(2) [<ij>:]                  # ! Dir/LR
 
-Mod-Stems(1) mod-tag:
-Mod-Stems(1): :Mod-Stems(2) mod-tag:  # ! Dir/LR
+Mod-Stems(1) [<mod>:]
+Mod-Stems(1):Mod-Stems(2) [<mod>:]               # ! Dir/LR
 
-Pronouns(1) prn-tag: Pronouns(3):
-Pronouns(1):Pronouns(2) prn-tag: Pronouns(3): # ! Dir/LR
+Pronouns(1) [<prn>:] Pronouns(3):
+Pronouns(1):Pronouns(2) [<prn>:] Pronouns(3):    # ! Dir/LR
 
-Number-Stems(1) num-tag:
-Number-Stems(1): :Number-Stems(2) num-tag: # ! Dir/LR
+Number-Stems(1) [<num>:]
+Number-Stems(1):Number-Stems(2) [<num>:]         # ! Dir/LR
 
 
 PATTERN Verbs
 
-:Tense V-Stems-TV(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) v-tag: V-Stems-TV(3): V-Extender(1): Tense: V-Neg(1): Prn-Bound(1):
+:Tense V-Stems-TV(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) [<v>:] V-Stems-TV(3): V-Extender(1): Tense: V-Neg(1): Prn-Bound(1):
 
-:Tense V-Stems-IV(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) v-tag: V-Stems-IV(3): V-Extender(1): Tense: V-Neg(1): Prn-Bound(1):
+:Tense V-Stems-IV(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) [<v>:] V-Stems-IV(3): V-Extender(1): Tense: V-Neg(1): Prn-Bound(1):
 
-:Tense V-Stems-TV(1): :V-Stems-TV(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) v-tag: V-Stems-TV(3): V-Extender(2): Tense: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
+:Tense V-Stems-TV(1):V-Stems-TV(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems-TV(3): V-Extender(2): Tense: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
 
-:Tense V-Stems-IV(1): :V-Stems-IV(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) v-tag: V-Stems-IV(3): V-Extender(2): Tense: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
+:Tense V-Stems-IV(1):V-Stems-IV(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems-IV(3): V-Extender(2): Tense: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
 
 
 PATTERN Nouns
 
-# new orthography analysis
+# Bare nouns
 N-Stems(1) [<n>:]
-N-Stems(1): :N-Stems(2) [<n>:]    # Dir/LR
+N-Stems(1):N-Stems(2) [<n>:]    # Dir/LR
 
-:N-Poss(1) N-Stems(1) n-tag: N-Poss(3): Prn-Bound(1)
-:N-Poss(2) N-Stems(1): :N-Stems(2) n-tag: N-Poss(3): Prn-Bound(1)  # Dir/LR
+# Possessed nouns
+:N-Poss(1) N-Stems(1) [<n>:] N-Poss(3): Prn-Bound(1)
+:N-Poss(2) N-Stems(1):N-Stems(2) [<n>:] N-Poss(3): Prn-Bound(1)  # Dir/LR
 
-N-Stems-Possessed(1) n-tag: Prn-Bound(1)
-N-Stems-Possessed(1): :N-Stems-Possessed(2) n-tag: Prn-Bound(2)    # Dir/LR
-
-
-## old orthography analysis
-#N-Stems(2) n-tag:
-
+# Inherently possessed nouns
+N-Stems-Possessed(1) [<n>:] Prn-Bound(1)
+N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(2)    # Dir/LR
 
 
 LEXICON Tense
@@ -157,60 +154,6 @@ LEXICON V-Extender(2)       # FIXME
 #
 #<caus>:su
 #:
-
-
-LEXICON v-tag
-
-<v>
-
-LEXICON prn-tag
-
-<prn>
-
-
-LEXICON n-tag
-
-<n>
-
-LEXICON pr-tag
-
-<pr>
-
-LEXICON np-tag
-
-<np>
-
-LEXICON det-tag
-
-<det>
-
-LEXICON postdet-tag
-
-<postdet>
-
-LEXICON adv-tag
-
-<adv>
-
-LEXICON adv-itg-tag
-
-<adv><itg>
-
-LEXICON adj-tag
-
-<adj>
-
-LEXICON ij-tag
-
-<ij>
-
-LEXICON mod-tag
-
-<mod>
-
-LEXICON num-tag
-
-<num>
 
 
 LEXICON V-Stems-IV(3)
