@@ -62,8 +62,8 @@ PATTERN Verbs
 PATTERN Nouns
 
 # new orthography analysis
-N-Stems(1) n-tag:
-N-Stems(1): :N-Stems(2) n-tag:    # Dir/LR
+N-Stems(1) [<n>:]
+N-Stems(1): :N-Stems(2) [<n>:]    # Dir/LR
 
 :N-Poss(1) N-Stems(1) n-tag: N-Poss(3): Prn-Bound(1)
 :N-Poss(2) N-Stems(1): :N-Stems(2) n-tag: N-Poss(3): Prn-Bound(1)  # Dir/LR
@@ -90,32 +90,31 @@ LEXICON N-Poss(3)
 x     x꞉     <px>    # for adding pronominal possession to Ns FIXME: CHECK(2)
 
 
-
 LEXICON Prn-Bound(2)           # FIXME
 
-<p1><sg>:>a                 <p1><sg>:>aʼ
-<p1><pl>:>{u}ën             <p1><pl>:>{u}ëhnn
++a<prn><pers><p1><sg>:>a                 +aʼ<prn><pers><p1><sg>:>aʼ
++ën<prn><pers><p1><pl>:>{u}ën            +ëhnn<prn><pers><p1><pl>:>{u}ëhnn
 
-<p2><infm><sg>:>u           <p2><infm><sg>:>ùuʼ
-<p2><frm><sg>:>yu           <p2><frm><sg>:>yuuʼ
-<p2><frm><sg>:>yëbu         <p2><frm><sg>:>yëbuuʼ   # ! Dir/LR
-<p2><infm><pl>:>ad          <p2><infm><pl>:>ad      # FIXME: CHECK(2)
-<p2><frm><pl>:>yuad         <p2><frm><sg>:>yùad
-<p2><frm><pl>:>yëbuad       <p2><frm><sg>:>yëbùad   # ! Dir/LR
++u<prn><pers><p2><infm><sg>:>u           +ùuʼ<prn><pers><p2><infm><sg>:>ùuʼ
++yu<prn><pers><p2><frm><sg>:>yu          +yuuʼ<prn><pers><p2><frm><sg>:>yuuʼ
++yëbu<prn><pers><p2><frm><sg>:>yëbu      +yëbuuʼ<prn><pers><p2><frm><sg>:>yëbuuʼ   # ! Dir/LR
++ad<prn><pers><p2><infm><pl>:>ad         +ad<prn><pers><p2><infm><pl>:>ad      # FIXME: CHECK(2)
++yuad<prn><pers><p2><frm><pl>:>yuad      +yùad<prn><pers><p2><frm><sg>:>yùad
++yëbuad<prn><pers><p2><frm><pl>:>yëbuad  +yëbùad<prn><pers><p2><frm><sg>:>yëbùad   # ! Dir/LR
 
-<p3><prox><sg>:>{u}ëng      <p3><prox><sg>:>{u}ëng
-<p3><dist><sg>:>{u}i        <p3><dist><sg>:>{u}ih
-<p3><resp><sg>:>{u}ëb       <p3><resp><sg>:>{u}ëhb   # FIXME: CHECK(2)
-<p3><anml><sg>:>{u}ëm       <p3><anml><sg>:>{u}ëhm   # FIXME: CHECK(2)
-<p3><fam><sg>:>azh          <p3><fam><sg>:>azh       # FIXME: CHECK(2)
-<p3><rev><sg>:>{u}iny       <p3><rev><sg>:>{u}iny    # FIXME: CHECK(2), (1): iny/ni
++ëng<prn><pers><p3><prox><sg>:>{u}ëng    +ëng<prn><pers><p3><prox><sg>:>{u}ëng
++i<prn><pers><p3><dist><sg>:>{u}i        +ih<prn><pers><p3><dist><sg>:>{u}ih
++ëb<prn><pers><p3><resp><sg>:>{u}ëb      +ëhb<prn><pers><p3><resp><sg>:>{u}ëhb   # FIXME: CHECK(2)
++ëm<prn><pers><p3><anml><sg>:>{u}ëm      +ëhm<prn><pers><p3><anml><sg>:>{u}ëhm   # FIXME: CHECK(2)
++azh<prn><pers><p3><fam><sg>:>azh        +azh<prn><pers><p3><fam><sg>:>azh       # FIXME: CHECK(2)
++iny<prn><pers><p3><rev><sg>:>{u}iny     +iny<prn><pers><p3><rev><sg>:>{u}iny    # FIXME: CHECK(2), (1): iny/ni
 
-<p3><prox><pl>:>rëng        <p3><prox><pl>:>rëng    # FIXME: CHECK(2)
-<p3><dist><pl>:>ri          <p3><dist><pl>:>rih     # FIXME: CHECK(2)
-<p3><resp><pl>:>rëb         <p3><resp><pl>:>rëhb    # FIXME: CHECK(2)
-<p3><anml><pl>:>rëm         <p3><anml><pl>:>rëhm    # FIXME: CHECK(2)
-<p3><fam><pl>:>razh         <p3><fam><pl>:>razh     # FIXME: CHECK(2)
-<p3><rev><pl>:>riny         <p3><rev><pl>:>riny     # FIXME: CHECK(2)
++rëng<prn><pers><p3><prox><pl>:>rëng     +rëng<prn><pers><p3><prox><pl>:>rëng    # FIXME: CHECK(2)
++ri<prn><pers><p3><dist><pl>:>ri         +rih<prn><pers><p3><dist><pl>:>rih     # FIXME: CHECK(2)
++rëb<prn><pers><p3><resp><pl>:>rëb       +rëhb<prn><pers><p3><resp><pl>:>rëhb    # FIXME: CHECK(2)
++rëm<prn><pers><p3><anml><pl>:>rëm       +rëhm<prn><pers><p3><anml><pl>:>rëhm    # FIXME: CHECK(2)
++razh<prn><pers><p3><fam><pl>:>razh      +razh<prn><pers><p3><fam><pl>:>razh     # FIXME: CHECK(2)
++riny<prn><pers><p3><rev><pl>:>riny      +riny<prn><pers><p3><rev><pl>:>riny     # FIXME: CHECK(2)
 
 :                           :
 
@@ -510,8 +509,8 @@ LEXICON Punctuation
 ”<rquot>:”
 “<lquot>:“
 (<lpar>:(
-]<rpar>:]
-[<lpar>:[
+\]<rpar>:\]
+\[<lpar>:\[
 )<rpar>:)
 \\<sent>:\\
 /<sent>:/
