@@ -90,8 +90,13 @@ h:0 <=> :Vow _ :Vow :h :Cons* %>: ;
 "{Y} deletes before {G} and {D}"
 %{Y%}:0 <=> _ %>: [ %{G%}: | %{D%}: ] ;
 
-"{y} is 0 after r (hab) and b (perf)"
+"{y} is 0 after r (hab) and {B} (perf)"
 %{y%}:0 <=> [ :r | %{B%}: ] %>:* _ ;
+
+"{gy} is 0 after r (hab) and {Y} (irre) "
+%{gy%}:0 <=> [ :r | %{Y%}: ] %>:* _ ;
+
+
 
 !"{G} is g unless after {Y} or {B}"
 !{G}:g <=> _ ;
