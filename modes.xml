@@ -29,6 +29,9 @@
 
   <mode name="zab-gener" install="yes">
     <pipeline>
+      <program name="lsx-proc">
+        <file name="zab.revautoseq.bin"/>
+      </program>
       <program name="lt-proc -g">
         <file name="zab.autogen.bin"/>
       </program>
@@ -42,6 +45,20 @@
       </program>
       <program name="cg-proc -w">
         <file name="zab.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="zab-pretransfer" install="yes">
+    <pipeline>
+      <program name="lt-proc -w">
+        <file name="zab.automorf.bin"/>
+      </program>
+      <program name="cg-proc -w -1 -n">
+        <file name="zab.rlx.bin"/>
+      </program>
+      <program name="lsx-proc">
+        <file name="zab.autoseq.bin"/>
       </program>
     </pipeline>
   </mode>

@@ -7,16 +7,18 @@ VERSION=0.1.0
 LANG1=zab
 BASENAME=apertium-$(LANG1)
 
-TARGETS_COMMON =			\
+TARGETS_COMMON =					\
 	$(LANG1).automorf.hfst		\
 	$(LANG1).automorf.bin		\
 	$(LANG1).automorf.att.gz	\
 	$(LANG1).autogen.hfst		\
-	$(LANG1).autogen.bin		\
+	$(LANG1).autogen.bin			\
 	$(LANG1).autogen.att.gz		\
 	$(LANG1).autopgen.bin		\
-	$(LANG1).prob                   \
-	$(LANG1).rlx.bin
+	$(LANG1).prob					\
+	$(LANG1).rlx.bin				\
+	$(LANG1).autoseq.bin			\
+	$(LANG1).revautoseq.bin
 
 # This include defines goals for install-modes, .deps/.d, autobil.prefixes and .mode files:
 @ap_include@
@@ -89,6 +91,16 @@ debug: .deps/$(LANG1).LR-debug.hfst .deps/$(LANG1).lexc.hfst
 
 $(LANG1).rlx.bin: $(BASENAME).$(LANG1).rlx $(CGCOMP)
 	$(CGCOMP) $< $@
+
+###############################################################################
+## Multi-word expressions
+###############################################################################
+
+$(LANG1).autoseq.bin: $(BASENAME).$(LANG1).lsx
+	lsx-comp lr $< $@
+
+$(LANG1).revautoseq.bin: $(BASENAME).$(LANG1).lsx
+	lsx-comp rl $< $@
 
 ###############################################################################
 ## Spell checker
