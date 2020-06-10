@@ -10,6 +10,8 @@ Alphabet
  %{u%}:0 %{u%}:u
  %{Y%}:y %{Y%}:g
  %{G%}:g %{G%}:c %{G%}:q %{G%}:d
+ %{gy%}:0 %{gy%}:y
+ %{y%}:0 %{y%}:y
  %>:0  ;
 
 Sets
@@ -37,8 +39,8 @@ Rules
 "{B} as w before b"
 %{B%}:w <=> _ %>:* :b ;
 
-"{Y} as g before y"
-%{Y%}:g <=> _ %>:* :y ;
+"{Y} as g before y and {gy}"
+%{Y%}:g <=> _ %>:* [ :y | %{gy%}: | %{y%}: ] ;
 
 "disappearing consonants only surface in progressive"
 Cx:Cy <=> c a %>:* _ ;
@@ -87,6 +89,9 @@ h:0 <=> :Vow _ :Vow :h :Cons* %>: ;
 
 "{Y} deletes before {G} and {D}"
 %{Y%}:0 <=> _ %>: [ %{G%}: | %{D%}: ] ;
+
+"{y} is 0 after r (hab) and b (perf)"
+%{y%}:0 <=> [ :r | %{B%}: ] %>:* _ ;
 
 !"{G} is g unless after {Y} or {B}"
 !{G}:g <=> _ ;

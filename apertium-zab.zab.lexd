@@ -47,16 +47,21 @@ Pronouns(1):Pronouns(2) [<prn>:] Pronouns(3):    # ! Dir/LR
 Number-Stems(1) [<num>:]
 Number-Stems(1):Number-Stems(2) [<num>:]         # ! Dir/LR
 
+# For light verb constructions, with runy
+
+Aux(1) [<aux>:]
+Aux(1):Aux(2) [<aux>:]                           # ! Dir/LR
+
+
 
 PATTERN Verbs
 
-:Tense V-Stems-TV(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) [<v>:] V-Stems-TV(3): V-Extender(1): Tense: V-Neg(1): Prn-Bound(1):
+:Aspect V-Stems(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) [<v>:] V-Stems(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1):
 
-:Tense V-Stems-IV(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) [<v>:] V-Stems-IV(3): V-Extender(1): Tense: V-Neg(1): Prn-Bound(1):
+:Aspect V-Stems(1):V-Stems(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems(3): V-Extender(2): Aspect: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
 
-:Tense V-Stems-TV(1):V-Stems-TV(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems-TV(3): V-Extender(2): Tense: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
-
-:Tense V-Stems-IV(1):V-Stems-IV(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems-IV(3): V-Extender(2): Tense: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
+:Aspect V-Stems-Irreg(1)[p1pl] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[p1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[p1pl]:
+:Aspect V-Stems-Irreg(1)[-p1pl] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-p1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-p1pl]:
 
 
 PATTERN Nouns
@@ -74,7 +79,7 @@ N-Stems-Possessed(1) [<n>:] Prn-Bound(1)
 N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(2)    # Dir/LR
 
 
-LEXICON Tense
+LEXICON Aspect
 
 <hab>:r>        # habitual
 <perf>:{B}>     # perfective
@@ -90,7 +95,7 @@ x     x꞉     <px>    # for adding pronominal possession to Ns FIXME: CHECK(2)
 LEXICON Prn-Bound(2)           # FIXME
 
 +a<prn><pers><p1><sg>:>a                 +aʼ<prn><pers><p1><sg>:>aʼ
-+ën<prn><pers><p1><pl>:>{u}ën            +ëhnn<prn><pers><p1><pl>:>{u}ëhnn
++ën<prn><pers><p1><pl>[p1pl]:>{u}ën[p1pl]      +ëhnn<prn><pers><p1><pl>[p1pl]:>{u}ëhnn[p1pl]
 
 +u<prn><pers><p2><infm><sg>:>u           +ùuʼ<prn><pers><p2><infm><sg>:>ùuʼ
 +yu<prn><pers><p2><frm><sg>:>yu          +yuuʼ<prn><pers><p2><frm><sg>:>yuuʼ
@@ -156,44 +161,66 @@ LEXICON V-Extender(2)       # FIXME
 #:
 
 
-LEXICON V-Stems-IV(3)
+LEXICON Aux(2)
 
-ban          bàaʼan            <iv>    # "follow a medical diet"
-bix          biʼihx            <iv>    # "ring (of a bell)"
-cyetlaz      cyeʼtlààaʼz       <iv>    # "be/get happy"
-dieby        dììeʼby           <iv>    # "boil"
-duax         duʼahx            <iv>    # "bark"
-dub:{l}dub   dùuʼb:{l}dùuʼb    <iv>    # "sweep"
-dub:{n}dub   dùuʼb:{n}dùuʼb    <iv>    # "sweep"     ! Dir/LR
-gats         gàaʼts            <iv>    # "get buried"
-guixicy:{G}{u}ixicy  guixiʼihcy:{G}{u}ixiʼihcy  <iv>   # "nod off (to sleep)"
-nyity        nyiʼihty          <iv>    # "get lost, be missing"
-saguel       saguehll          <iv>    # "be so good as to"
-tyepy        tyèeʼpy           <iv>    # "whistle"
-tyis         tyiʼihs           <iv>    # "jump"
-yac          yaʼahc            <iv>    # "heal, get better/well"
-zhiby        zhihby            <iv>    # "get scared"
-zhiez        rzhìez            <iv>    # "laugh, smile"
-zhuny        zh꞉ùuʼnny         <iv>    # "run; elope"
-zhuny:zhyuny zh꞉ùuʼnny:zhy꞉ùuʼnny  <iv>    # "run; elope"   # ! Dir/LR
-zhyeil       zhyeʼilly         <iv>    # "open"
+alabar         alabaar          # "praise"
+arreglad       arreglaad        # "arrange for"
+bda            bdaa             # "cat a shadow, give shade"
+bgw            bgwah            # "tie a knot"
+bisy           biʼsy            # "let (someone) know"
+cas            caʼs             # "pay attention to"
+castiu         castiʼu          # "punish"
+col            coʼoll           # "stand in line"
+company        compaʼanny       # "accompany"
+comprender     comprendeer      # "understand"
+contest        connteʼst        # "answer"
+dany           daany            # "make (someone) sick; damage"
+defender       defendeer        # "defend"
+fald           faʼlld           # "do something wrong somewhere; miss / be absent from somewhere"
+gan            gaan             # "earn, win"
+gaxt           gaʼaxt           # "spend money"
+guan           guuhahnn         # "make charitable donation"
+mandad         mandaad          # "run an errand; give someone an errand"
+nadar          nadaar           # "swim"
+protestar      protestaar       # "protest"
+sospechar      sohspechaar      # "suspect"
+tomar\ fot     tomaar\ foʼt     # "take a picture (of)"
+uas            uaʼs             # "use"
+xgab:xgab      x꞉gaʼab:x꞉gaʼab  # "think"
+xgab:xjab      x꞉gaʼab:x꞉jaʼab  # "think"    ! Dir/LR
+xten           x꞉tèeʼn          # "work as"
+zeiny          zèèiʼny          # "work"
 
 
-LEXICON V-Stems-TV(3)
+LEXICON V-Stems-Irreg(3)
 
+uny:{gy}uny       uhny:{gy}uny             <tv>    # "do"
+uny[p1pl]:{y}ieny[p1pl]    uhny[p1pl]:{y}ieʼny[p1pl]         <tv>    # "do"
+
+
+LEXICON V-Stems(3)
+
+ban               bàaʼan                   <iv>    # "follow a medical diet"
 beb               bèeʼb                    <tv>    # "ride (an animal)"  # FIXME: irreg irrealis
+bix               biʼihx                   <iv>    # "ring (of a bell)"
 chiby             chìiby                   <tv>    # "scare"
 culozac           culohzaʼc                <tv>    # "take good care of"
 cuzh              cuhzh                    <tv>    # "play (a wind instrument)"
 cwany             cwàaʼnny                 <tv>    # "wake up"
 cwez              cwèez                    <tv>    # "turn off"
 cwual             cwùaʼll                  <tv>    # "turn on"
+cyetlaz           cyeʼtlààaʼz              <iv>    # "be/get happy"
+deidy:{D}eidy     dèèiʼdy:(D)èèiʼdy        <tv>    # "cross"  # FIXME: irreg irrealis
 deidy:{l}deidy    dèèiʼdy:{l}dèèiʼdy       <dtv>   # "give"    # {l}:l in <prog>
 deidy:{n}deidy    dèèiʼdy:{n}dèèiʼdy       <dtv>   # "give"    # {n}:n in <prog>  ! Dir/LR
-deidy:{D}eidy     dèèiʼdy:(D)èèiʼdy        <tv>    # "cross"  # FIXME: irreg irrealis
-dily:{D}ily       dìiʼlly:{D}ìiʼlly                  <tv>    # "fight with, scold"  # FIXME: irreg irrealis
+dieby             dììeʼby                  <iv>    # "boil"
+dily:{D}ily       dìiʼlly:{D}ìiʼlly        <tv>    # "fight with, scold"  # FIXME: irreg irrealis
 dinal             dinàall                  <tv>    # "chase"
+duax              duʼahx                   <iv>    # "bark"
+dub:{l}dub        dùuʼb:{l}dùuʼb           <iv>    # "sweep"
+dub:{n}dub        dùuʼb:{n}dùuʼb           <iv>    # "sweep"     ! Dir/LR
 gap:{G}ap         gàaʼp:{G}àaʼp            <tv>    # "slap"
+gats              gàaʼts                   <iv>    # "get buried"
 guad              gùad                     <tv>    # "sting"
 gub:{G}ub         gùùuʼb:{G}ùùuʼb          <tv>    # "suck; smoke; use a lot (of fuel)"
 guch              guhch                    <tv>    # "bathe"
@@ -204,6 +231,7 @@ guily:{G}{u}ily   guìiʼlly:{G}{u}ìiʼilly   <tv>    # "look for"  ! Dir/LR
 guily:{G}{u}ily   guìiʼlly:{G}{u}ìiʼlly    <tv>    # "look for"
 guiny:{G}{u}iny   guìiʼiny:{G}{u}ìiʼiny    <tv>    # "borrow; ask for hand (of girl) in marriage (in betrothal negotiation)"
 guix:{G}{u}ix     guìiʼx:{G}{u}ìiʼx        <tv>    # "lay down, put down (long object)"
+guixicy:{G}{u}ixicy  guixiʼihcy:{G}{u}ixiʼihcy  <iv>   # "nod off (to sleep)"
 guizh:{G}{u}izh   guiʼihzh:{G}{u}iʼihzh    <dtv>   # "pay"
 gwezac            gwèeʼzaʼc                <tv>    # "speak (a language) well"
 gyan              gyaàaʼn                  <dtv>   # "feed"
@@ -212,8 +240,10 @@ nalaz             nnahlààaʼz               <tv>    # "remember, miss (a perso
 naz               nnàaʼaz                  <tv>    # "grab"
 ni                nììiʼ                    <tv>    # "say"
 nudizh            nuhdìiʼzh                <tv>    # "ask of"
+nyity             nyiʼihty                 <iv>    # "get lost, be missing"
 nyity             nyiʼihty                 <tv>    # "lose, miss (a thing)"
 reizh             rèeiʼizh                 <tv>    # "measure"
+saguel            saguehll                 <iv>    # "be so good as to"
 san               sàaʼan                   <tv>    # "leave behind"
 seidy             sèèiʼdy                  <dtv>   # "teach"
 seidy             sèèiʼdy                  <tv>    # "learn"
@@ -223,9 +253,17 @@ subiaz            subihahz                 <tv>    # "dry"
 sudieby           sudììeʼby                <tv>    # "boil"
 taz               tàaʼaz                   <tv>    # "hit"
 teidy             tèèiʼdy                  <tv>    # "take/bring across"
+tyepy             tyèeʼpy                  <iv>    # "whistle"
+tyis              tyiʼihs                  <iv>    # "jump"
 xyeily            xyeʼilly                 <tv>    # "open"
+yac               yaʼahc                   <iv>    # "heal, get better/well"
 yulaz             yuʼlààaʼz                <tv>    # "like"  # FIXME: not used with <perf>
+zhiby             zhihby                   <iv>    # "get scared"
+zhiez             rzhìez                   <iv>    # "laugh, smile"
+zhuny             zh꞉ùuʼnny                <iv>    # "run; elope"
+zhuny:zhyuny      zh꞉ùuʼnny:zhy꞉ùuʼnny     <iv>    # "run; elope"   # ! Dir/LR
 zhyag             zhyàag                   <tv>    # "meet"
+zhyeil            zhyeʼilly                <iv>    # "open"
 zilaz             zilààaʼz                 <tv>    # "used to think that"
 
 
