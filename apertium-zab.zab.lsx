@@ -31,7 +31,7 @@
 		<pardef n="prn">
 			<e><i><w/><s n="prn"/><t/><j/></i></e>
 		</pardef>
-		<pardef n="SN">
+		<pardef n="SN"><!-- FIXME -->
 			<e><par n="n"/></e>
 			<e><par n="prn"/></e>
 			<e><par n="adj"/><par n="n"/></e>
@@ -60,6 +60,49 @@
 				<r></r>
 			</p>
 		</e>
+
+		<e lm="runy bgwa" c="tie (a knot)">
+			<p>
+				<l>uny<s n="v"/><s n="tv"/></l>
+				<r>uny<b/>bgwa<s n="v"/><s n="tv"/></r>
+			</p>
+			<i><t/></i>
+			<par n="w_edge"/>
+			<par n="SN"/>
+			<p>
+				<l>bgwa<s n="aux"/><j/></l>
+				<r></r>
+			</p>
+		</e>
+
+		<e lm="runy comprender" c="understand">
+			<p>
+				<l>uny<s n="v"/><s n="tv"/></l>
+				<r>uny<b/>comprender<s n="v"/><s n="tv"/></r>
+			</p>
+			<i><t/></i>
+			<par n="w_edge"/>
+			<par n="SN"/>
+			<p>
+				<l>comprender<s n="aux"/><j/></l>
+				<r></r>
+			</p>
+		</e>
+
+		<e lm="runy contest" c="answer">
+			<p>
+				<l>uny<s n="v"/><s n="tv"/></l>
+				<r>uny<b/>contest<s n="v"/><s n="tv"/></r>
+			</p>
+			<i><t/></i>
+			<par n="w_edge"/>
+			<par n="SN"/>
+			<p>
+				<l>contest<s n="aux"/><j/></l>
+				<r></r>
+			</p>
+		</e>
+
 	</section>
 </dictionary>
 
