@@ -10,6 +10,7 @@ Tests:
     uny<v><tv><hab> : runy
     # uny<v><tv><hab> : ruhny
     uny<v><tv><hab>+a<prn><pers><p1><sg> : runya
+    #uny<v><tv><hab>+a<prn><pers><p1><sg> : ruʼunyaʼ
     uny<v><tv><hab>+ën<prn><pers><p1><pl> : rienyën
     # uny<v><tv><hab>+ën<prn><pers><p1><pl> : rieʼnyëhnn
 
@@ -24,6 +25,7 @@ Tests:
     uny<v><tv><irre> : guny
     # uny<v><tv><irre> : guuny
     uny<v><tv><irre>+a<prn><pers><p1><sg> : gunya
+    #uny<v><tv><irre>+a<prn><pers><p1><sg> : guʼunyaʼ
     uny<v><tv><irre>+ën<prn><pers><p1><pl> : gyienyën
     # uny<v><tv><irre>+ën<prn><pers><p1><pl> : gyieʼnyëhnn
 
@@ -31,6 +33,7 @@ Tests:
     uny<v><tv><prog> : cayuny
     # uny<v><tv><prog> : cayuhny
     uny<v><tv><prog>+a<prn><pers><p1><sg> : cayunya
+    #uny<v><tv><prog>+a<prn><pers><p1><sg> : cayuʼunyaʼ
     uny<v><tv><prog>+ën<prn><pers><p1><pl> : cayienyën
     # uny<v><tv><prog>+ën<prn><pers><p1><pl> : cayieʼnyëhnn
 

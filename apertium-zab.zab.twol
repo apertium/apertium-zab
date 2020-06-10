@@ -10,8 +10,8 @@ Alphabet
  %{u%}:0 %{u%}:u
  %{Y%}:y %{Y%}:g
  %{G%}:g %{G%}:c %{G%}:q %{G%}:d
- %{gy%}:0 %{gy%}:y
  %{y%}:0 %{y%}:y
+ %{g%}:0 %{g%}:g
  %>:0  ;
 
 Sets
@@ -26,7 +26,7 @@ KV = À È Ê Ì Ò Ù
      à è ê ì ò ù ;
 
 Vow = A E Ë I O U
-     a e ë i o u ;
+      a e ë i o u ;
 
 Cons = B C D F G H J K L M N P Q R S T V W X Y Z 
        b c d f g h j k l m n p q r s t v w x y z ꞉ ;
@@ -39,8 +39,8 @@ Rules
 "{B} as w before b"
 %{B%}:w <=> _ %>:* :b ;
 
-"{Y} as g before y and {gy}"
-%{Y%}:g <=> _ %>:* [ :y | %{gy%}: | %{y%}: ] ;
+"{Y} as g before y"
+%{Y%}:g <=> _ %>:* :y ;
 
 "disappearing consonants only surface in progressive"
 Cx:Cy <=> c a %>:* _ ;
@@ -87,16 +87,15 @@ h:0 <=> :Vow _ :Vow :h :Cons* %>: ;
 "{D} devoices after {Y} (irre)"
 %{D%}:t <=> %{Y%}: %>: _ ;
 
-"{Y} deletes before {G} and {D}"
+"{Y} deletes before {G} and {D} but not between g and i"
 %{Y%}:0 <=> _ %>: [ %{G%}: | %{D%}: ] ;
+            %{g%}:g _ %>: [ :Vow - :i ] ;  ! FIXME: tentative pattern - check
 
-"{y} is 0 after r (hab) and {B} (perf)"
-%{y%}:0 <=> [ :r | %{B%}: ] %>:* _ ;
+"{y} is y only before a vowel"
+%{y%}:y <=> _ [ %>: :Vow ]/[ :0 - %>: ]* ;
 
-"{gy} is 0 after r (hab) and {Y} (irre) "
-%{gy%}:0 <=> [ :r | %{Y%}: ] %>:* _ ;
-
-
+"{g} is g only if a vowel follows"
+%{g%}:g <=> _ %{Y%}: %>: :Vow ;
 
 !"{G} is g unless after {Y} or {B}"
 !{G}:g <=> _ ;

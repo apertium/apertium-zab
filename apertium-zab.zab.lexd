@@ -83,8 +83,8 @@ LEXICON Aspect
 
 <hab>:r>        # habitual
 <perf>:{B}>     # perfective
-<prog>:ca>      # progressive
-<irre>:{Y}>     # irrealis
+<prog>:ca{y}>      # progressive
+<irre>:{g}{Y}>     # irrealis
 
 LEXICON N-Poss(3)
 
@@ -194,8 +194,8 @@ zeiny          zèèiʼny          # "work"
 
 LEXICON V-Stems-Irreg(3)
 
-uny:{gy}uny       uhny:{gy}uny             <tv>    # "do"
-uny[p1pl]:{y}ieny[p1pl]    uhny[p1pl]:{y}ieʼny[p1pl]         <tv>    # "do"
+uny:uny       uhny:uny             <tv>    # "do"
+uny[p1pl]:ieny[p1pl]    uhny[p1pl]:ieʼny[p1pl]         <tv>    # "do"
 
 
 LEXICON V-Stems(3)
