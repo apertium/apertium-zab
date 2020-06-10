@@ -60,8 +60,11 @@ PATTERN Verbs
 
 :Aspect V-Stems(1):V-Stems(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems(3): V-Extender(2): Aspect: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
 
-:Aspect V-Stems-Irreg(1)[p1pl] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[p1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[p1pl]:
-:Aspect V-Stems-Irreg(1)[-p1pl] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-p1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-p1pl]:
+:Aspect V-Stems-Irreg(1)[p1pl,perf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[p1pl,perf] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[p1pl,perf]:
+:Aspect V-Stems-Irreg(1)[-p1pl,perf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-p1pl,perf] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-p1pl,perf]:
+:Aspect V-Stems-Irreg(1)[p1pl,-perf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[p1pl,-perf] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[p1pl,-perf]:
+:Aspect V-Stems-Irreg(1)[-p1pl,-perf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-p1pl,-perf] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-p1pl,-perf]:
+
 
 
 PATTERN Nouns
@@ -81,10 +84,10 @@ N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(2)    # Dir/LR
 
 LEXICON Aspect
 
-<hab>:r>        # habitual
-<perf>:{B}>     # perfective
-<prog>:ca{y}>      # progressive
-<irre>:{g}{Y}>     # irrealis
+<hab>:r>                    # habitual
+<perf>[perf]:{B}>[perf]     # perfective
+<prog>:ca{y}>               # progressive
+<irre>:{g}{Y}>              # irrealis
 
 LEXICON N-Poss(3)
 
@@ -194,8 +197,9 @@ zeiny          zèèiʼny          # "work"
 
 LEXICON V-Stems-Irreg(3)
 
-uny:uny       uhny:uny             <tv>    # "do"
-uny[p1pl]:ieny[p1pl]    uhny[p1pl]:ieʼny[p1pl]         <tv>    # "do"
+uny:uny                          uhny:uny                           <tv> # "do"
+uny[p1pl]:ieny[p1pl]             uhny[p1pl]:ieʼny[p1pl]             <tv> # "do"
+uny[-p1pl,perf]:einy[-p1pl,perf] uhny[-p1pl,perf]:èiʼny[-p1pl,perf] <tv> # "do"
 
 
 LEXICON V-Stems(3)
