@@ -197,7 +197,7 @@ zeiny          zèèiʼny          # "work"
 
 LEXICON V-Stems-Irreg(3)
 
-uny:uny                          uhny:uny                           <tv> # "do"
+uny[-perf]:uny[-perf]            uhny[-perf]:uny[-perf]             <tv> # "do"
 uny[p1pl]:ieny[p1pl]             uhny[p1pl]:ieʼny[p1pl]             <tv> # "do"
 uny[-p1pl,perf]:einy[-p1pl,perf] uhny[-p1pl,perf]:èiʼny[-p1pl,perf] <tv> # "do"
 
