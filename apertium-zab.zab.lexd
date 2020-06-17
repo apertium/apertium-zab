@@ -66,7 +66,6 @@ PATTERN Verbs
 :Aspect V-Stems-Irreg(1)[-p1pl,-perf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-p1pl,-perf] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-p1pl,-perf]:
 
 
-
 PATTERN Nouns
 
 # Bare nouns
@@ -97,6 +96,7 @@ x     x꞉     <px>    # for adding pronominal possession to Ns FIXME: CHECK(2)
 
 LEXICON Prn-Bound(2)           # FIXME
 
++a<prn><pers><p1><sg>[perf]:>a[perf]                 +aʼ<prn><pers><p1><sg>:>aʼ
 +a<prn><pers><p1><sg>:>a                 +aʼ<prn><pers><p1><sg>:>aʼ
 +ën<prn><pers><p1><pl>[p1pl]:>{u}ën[p1pl]      +ëhnn<prn><pers><p1><pl>[p1pl]:>{u}ëhnn[p1pl]
 
@@ -121,7 +121,8 @@ LEXICON Prn-Bound(2)           # FIXME
 +razh<prn><pers><p3><fam><pl>:>razh      +razh<prn><pers><p3><fam><pl>:>razh     # FIXME: CHECK(2)
 +riny<prn><pers><p3><rev><pl>:>riny      +riny<prn><pers><p3><rev><pl>:>riny     # FIXME: CHECK(2)
 
-:                           :
+[perf]:[perf]                           :
+:                                       :
 
 LEXICON Pronouns(3)        # Free pronouns
 
@@ -197,9 +198,10 @@ zeiny          zèèiʼny          # "work"
 
 LEXICON V-Stems-Irreg(3)
 
-uny[-perf]:uny[-perf]            uhny[-perf]:uny[-perf]             <tv> # "do"
-uny[p1pl]:ieny[p1pl]             uhny[p1pl]:ieʼny[p1pl]             <tv> # "do"
-uny[-p1pl,perf]:einy[-p1pl,perf] uhny[-p1pl,perf]:èiʼny[-p1pl,perf] <tv> # "do"
+uny:uny                          uhny:uny                                 <tv> # "do"
+uny[p1pl,perf]:ieny[p1pl,perf]   uhny[p1pl,perf]:ieʼny[p1pl,perf]         <tv> # "do"
+uny[p1pl]:ieny[p1pl]             uhny[p1pl]:ieʼny[p1pl]                   <tv> # "do"
+uny[perf]:einy[perf]             uhny[perf]:èiʼny[perf]                   <tv> # "do"
 
 
 LEXICON V-Stems(3)
