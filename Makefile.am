@@ -20,6 +20,8 @@ TARGETS_COMMON =					\
 	$(LANG1).autoseq.bin			\
 	$(LANG1).revautoseq.bin
 
+SHELL = /bin/bash -o pipefail
+
 # This include defines goals for install-modes, .deps/.d, autobil.prefixes and .mode files:
 @ap_include@
 

@@ -60,10 +60,10 @@ PATTERN Verbs
 
 :Aspect V-Stems(1):V-Stems(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems(3): V-Extender(2): Aspect: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
 
-:Aspect V-Stems-Irreg(1)[p1pl,perf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[p1pl,perf] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[p1pl,perf]:
-:Aspect V-Stems-Irreg(1)[-p1pl,perf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-p1pl,perf] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-p1pl,perf]:
-:Aspect V-Stems-Irreg(1)[p1pl,-perf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[p1pl,-perf] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[p1pl,-perf]:
-:Aspect V-Stems-Irreg(1)[-p1pl,-perf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-p1pl,-perf] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-p1pl,-perf]:
+:Aspect[nonperf] V-Stems-Irreg(1)[nonp1pl,nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
+:Aspect[nonperf] V-Stems-Irreg(1)[-nonp1pl,nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
+:Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
+:Aspect[-nonperf] V-Stems-Irreg(1)[-nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
 
 
 PATTERN Nouns
@@ -81,10 +81,10 @@ N-Stems-Possessed(1) [<n>:] Prn-Bound(1)
 N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(2)    # Dir/LR
 
 
-LEXICON Aspect
+LEXICON Aspect[nonperf]
 
 <hab>:r>                    # habitual
-<perf>[perf]:{B}>[perf]     # perfective
+<perf>[-nonperf]:{B}>[-nonperf]     # perfective
 <prog>:ca{y}>               # progressive
 <irre>:{g}{Y}>              # irrealis
 
@@ -94,11 +94,11 @@ LEXICON N-Poss(3)
 x     x꞉     <px>    # for adding pronominal possession to Ns FIXME: CHECK(2)
 
 
-LEXICON Prn-Bound(2)           # FIXME
+LEXICON Prn-Bound(2)[nonp1pl]           # FIXME
 
-+a<prn><pers><p1><sg>[perf]:>a[perf]                 +aʼ<prn><pers><p1><sg>:>aʼ
 +a<prn><pers><p1><sg>:>a                 +aʼ<prn><pers><p1><sg>:>aʼ
-+ën<prn><pers><p1><pl>[p1pl]:>{u}ën[p1pl]      +ëhnn<prn><pers><p1><pl>[p1pl]:>{u}ëhnn[p1pl]
++a<prn><pers><p1><sg>:>a                 +aʼ<prn><pers><p1><sg>:>aʼ
++ën<prn><pers><p1><pl>[-nonp1pl]:>{u}ën[-nonp1pl]      +ëhnn<prn><pers><p1><pl>[-nonp1pl]:>{u}ëhnn[-nonp1pl]
 
 +u<prn><pers><p2><infm><sg>:>u           +ùuʼ<prn><pers><p2><infm><sg>:>ùuʼ
 +yu<prn><pers><p2><frm><sg>:>yu          +yuuʼ<prn><pers><p2><frm><sg>:>yuuʼ
@@ -196,12 +196,24 @@ xten           x꞉tèeʼn          # "work as"
 zeiny          zèèiʼny          # "work"
 
 
-LEXICON V-Stems-Irreg(3)
+LEXICON V-Stems-Irreg(3)[nonperf,nonp1pl]
 
-uny:uny                          uhny:uny                                 <tv> # "do"
-uny[p1pl,perf]:ieny[p1pl,perf]   uhny[p1pl,perf]:ieʼny[p1pl,perf]         <tv> # "do"
-uny[p1pl]:ieny[p1pl]             uhny[p1pl]:ieʼny[p1pl]                   <tv> # "do"
-uny[perf]:einy[perf]             uhny[perf]:èiʼny[perf]                   <tv> # "do"
+#        |  -perf   |  +perf  |
+# -----------------------------
+#  -p1pl |    uny   |   einy  |
+# -----------------------------
+#  +p1pl |   ieny   |   ieny  |
+# -----------------------------
+
+# uny for everything but perf and p1pl
+uny:uny uhny:uny                                 <tv> # "do"
+# ieny for all p1pl
+uny[-nonp1pl]:ieny[-nonp1pl]    uhny[-nonp1pl]:ieʼny[-nonp1pl]         <tv> # "do"
+uny[-nonp1pl,-nonperf]:ieny[-nonp1pl,-nonperf]    uhny[-nonp1pl,-nonperf]:ieʼny[-nonp1pl,-nonperf]         <tv> # "do"
+#uny[p1pl]:ieny[p1pl]              uhny[p1pl]:ieʼny[p1pl]                   <tv> # "do"
+
+# einy for perf except with p1pl
+uny[-nonperf]:einy[-nonperf]  uhny[-nonperf]:èiʼny[-nonperf]                   <tv> # "do"
 
 
 LEXICON V-Stems(3)
