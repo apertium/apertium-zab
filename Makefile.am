@@ -16,10 +16,8 @@ BASENAME=apertium-$(LANG1)
 TARGETS_COMMON =			\
 	$(LANG1).automorf.hfst		\
 	$(LANG1).automorf.bin		\
-	$(LANG1).autogen.hfst		\
 	$(LANG1SCRIPT1).autogen.hfst \
 	$(LANG1SCRIPT2).autogen.hfst \
-	$(LANG1).autogen.bin			\
 	$(LANG1SCRIPT1).autogen.bin \
 	$(LANG1SCRIPT2).autogen.bin \
 	$(LANG1).autopgen.bin		\
