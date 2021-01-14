@@ -4,21 +4,30 @@
 
 RELEASE=0.1
 VERSION=0.1.0
+
 LANG1=zab
+SCRIPT1=Simp
+SCRIPT2=Dict
+LANG1SCRIPT1=$(LANG1)@$(SCRIPT1)
+LANG1SCRIPT2=$(LANG1)@$(SCRIPT2)
+
 BASENAME=apertium-$(LANG1)
 
-TARGETS_COMMON =					\
+TARGETS_COMMON =			\
 	$(LANG1).automorf.hfst		\
 	$(LANG1).automorf.bin		\
-	$(LANG1).automorf.att.gz	\
 	$(LANG1).autogen.hfst		\
+	$(LANG1SCRIPT1).autogen.hfst \
+	$(LANG1SCRIPT2).autogen.hfst \
 	$(LANG1).autogen.bin			\
-	$(LANG1).autogen.att.gz		\
+	$(LANG1SCRIPT1).autogen.bin \
+	$(LANG1SCRIPT2).autogen.bin \
 	$(LANG1).autopgen.bin		\
-	$(LANG1).prob					\
 	$(LANG1).rlx.bin				\
 	$(LANG1).autoseq.bin			\
-	$(LANG1).revautoseq.bin
+	$(LANG1).revautoseq.bin		\
+	.deps/$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst \
+	.deps/$(LANG1SCRIPT2)-$(LANG1SCRIPT1).hfst
 
 SHELL = /bin/bash -o pipefail
 
@@ -32,39 +41,73 @@ SHELL = /bin/bash -o pipefail
 .deps/$(LANG1).twol.hfst: $(BASENAME).$(LANG1).twol .deps/.d
 	hfst-twolc $< -o $@
 
-.deps/$(LANG1).RL.lexd: $(BASENAME).$(LANG1).lexd .deps/.d
-	cat $< | grep -v 'Dir/LR' > $@
+# RL transducers are for generation
+.deps/$(LANG1SCRIPT1).RL.lexd: $(BASENAME).$(LANG1).lexd .deps/.d
+	cat $< | grep -v 'Dir/LR' | grep -v 'Orth/$(SCRIPT2)' > $@
 
-.deps/$(LANG1).LR.lexd: $(BASENAME).$(LANG1).lexd .deps/.d
-	cat $< | grep -v 'Dir/RL' > $@
+.deps/$(LANG1SCRIPT2).RL.lexd: $(BASENAME).$(LANG1).lexd .deps/.d
+	cat $< | grep -v 'Dir/LR' | grep -v 'Orth/$(SCRIPT1)' > $@
 
-.deps/$(LANG1).RL.lexd.hfst: .deps/$(LANG1).RL.lexd
+# LR transducers are for analysis
+.deps/$(LANG1SCRIPT1).LR.lexd: $(BASENAME).$(LANG1).lexd .deps/.d
+	cat $< | grep -v 'Dir/RL' | grep -v 'Orth/$(SCRIPT2)' > $@
+
+.deps/$(LANG1SCRIPT2).LR.lexd: $(BASENAME).$(LANG1).lexd .deps/.d
+	cat $< | grep -v 'Dir/RL' | grep -v 'Orth/$(SCRIPT1)' > $@
+
+.deps/$(LANG1SCRIPT1).RL.lexd.hfst: .deps/$(LANG1SCRIPT1).RL.lexd
 	lexd $< | hfst-txt2fst > $@
 
-.deps/$(LANG1).LR.lexd.hfst: .deps/$(LANG1).LR.lexd
+.deps/$(LANG1SCRIPT2).RL.lexd.hfst: .deps/$(LANG1SCRIPT2).RL.lexd
 	lexd $< | hfst-txt2fst > $@
 
-.deps/$(LANG1).RL.hfst: .deps/$(LANG1).RL.lexd.hfst .deps/$(LANG1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).RL.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
+.deps/$(LANG1SCRIPT1).LR.lexd.hfst: .deps/$(LANG1SCRIPT1).LR.lexd
+	lexd $< | hfst-txt2fst > $@
 
-.deps/$(LANG1).LR.hfst: .deps/$(LANG1).LR.lexd.hfst .deps/$(LANG1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).LR.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
+.deps/$(LANG1SCRIPT2).LR.lexd.hfst: .deps/$(LANG1SCRIPT2).LR.lexd
+	lexd $< | hfst-txt2fst > $@
 
-$(LANG1).autogen.hfst: .deps/$(LANG1).RL.hfst
+.deps/$(LANG1SCRIPT1).RL.hfst: .deps/$(LANG1SCRIPT1).RL.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1SCRIPT1).RL.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
+
+.deps/$(LANG1SCRIPT2).RL.hfst: .deps/$(LANG1SCRIPT2).RL.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1SCRIPT2).RL.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
+
+.deps/$(LANG1SCRIPT1).LR.hfst: .deps/$(LANG1SCRIPT1).LR.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1SCRIPT1).LR.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
+
+.deps/$(LANG1SCRIPT2).LR.hfst: .deps/$(LANG1SCRIPT2).LR.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1SCRIPT2).LR.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
+
+# the analyser is a combination of the two orthographies' analysers
+.deps/$(LANG1).LR.hfst: .deps/$(LANG1SCRIPT1).LR.hfst .deps/$(LANG1SCRIPT2).LR.hfst
+	hfst-union -1 $< -2 .deps/$(LANG1SCRIPT2).LR.hfst > $@
+
+$(LANG1SCRIPT1).autogen.hfst: .deps/$(LANG1SCRIPT1).RL.hfst
+	hfst-minimise $< | hfst-fst2fst -O -o $@
+
+$(LANG1SCRIPT2).autogen.hfst: .deps/$(LANG1SCRIPT2).RL.hfst
 	hfst-minimise $< | hfst-fst2fst -O -o $@
 
 $(LANG1).automorf.hfst: .deps/$(LANG1).LR.hfst
 	hfst-invert $< | hfst-minimise | hfst-fst2fst -O -o $@
 
-$(LANG1).autogen.att.gz: $(LANG1).autogen.hfst
+$(LANG1SCRIPT1).autogen.att.gz: $(LANG1SCRIPT1).autogen.hfst
+	hfst-fst2txt $< | gzip -9 -c -n > $@
+
+$(LANG1SCRIPT2).autogen.att.gz: $(LANG1SCRIPT2).autogen.hfst
 	hfst-fst2txt $< | gzip -9 -c -n > $@
 
 $(LANG1).automorf.att.gz: $(LANG1).automorf.hfst
 	hfst-fst2txt $< | gzip -9 -c -n > $@
 
-$(LANG1).autogen.bin: $(LANG1).autogen.att.gz .deps/.d
-	zcat < $< > .deps/$(LANG1).autogen.att
-	lt-comp lr .deps/$(LANG1).autogen.att $@
+$(LANG1SCRIPT1).autogen.bin: $(LANG1SCRIPT1).autogen.att.gz .deps/.d
+	zcat < $< > .deps/$(LANG1SCRIPT1).autogen.att
+	lt-comp lr .deps/$(LANG1SCRIPT1).autogen.att $@
+
+$(LANG1SCRIPT2).autogen.bin: $(LANG1SCRIPT2).autogen.att.gz .deps/.d
+	zcat < $< > .deps/$(LANG1SCRIPT2).autogen.att
+	lt-comp lr .deps/$(LANG1SCRIPT2).autogen.att $@
 
 $(LANG1).automorf.bin: $(LANG1).automorf.att.gz .deps/.d
 	zcat < $< > .deps/$(LANG1).automorf.att
@@ -72,6 +115,17 @@ $(LANG1).automorf.bin: $(LANG1).automorf.att.gz .deps/.d
 
 $(LANG1).autopgen.bin: $(BASENAME).post-$(LANG1).dix
 	lt-comp lr $< $@
+
+###############################################################################
+## Orthography converters
+###############################################################################
+
+.deps/$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst: .deps/$(LANG1SCRIPT1).RL.hfst .deps/$(LANG1SCRIPT2).RL.hfst
+	hfst-invert $< | hfst-compose-intersect -1 - -2 `echo $(word 2,$^)` | hfst-minimise > $@
+
+.deps/$(LANG1SCRIPT2)-$(LANG1SCRIPT1).hfst: .deps/$(LANG1SCRIPT2).RL.hfst .deps/$(LANG1SCRIPT1).RL.hfst
+	hfst-invert $< | hfst-compose-intersect -1 - -2 `echo $(word 2,$^)` | hfst-minimise > $@
+
 
 ###############################################################################
 ## Debugging transducers (for testvoc)

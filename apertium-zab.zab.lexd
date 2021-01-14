@@ -14,52 +14,57 @@ Nouns
 Verbs
 Punctuation
 
-NP-Stems(1) [<np>:] NP-Stems(3):
-NP-Stems(1):NP-Stems(2) [<np>:] NP-Stems(3):     # ! Dir/LR
+NP-Stems(1) [<np>:] NP-Stems(3):                 # ! Orth/Simp
+NP-Stems(1):NP-Stems(2) [<np>:] NP-Stems(3):     # ! Orth/Dict
 
-Prep-Stems(1) [<pr>:]
-Prep-Stems(1):Prep-Stems(2) [<pr>:]              # ! Dir/LR
+Prep-Stems(1) [<pr>:]                            # ! Orth/Simp
+Prep-Stems(1):Prep-Stems(2) [<pr>:]              # ! Orth/Dict
 
-Det-Stems(1) [<det>:] Det-Stems(3):
-Det-Stems(1):Det-Stems(2) [<det>:] Det-Stems(3): # ! Dir/LR
+Det-Stems(1) [<det>:] Det-Stems(3):              # ! Orth/Simp
+Det-Stems(1):Det-Stems(2) [<det>:] Det-Stems(3): # ! Orth/Dict
 
-Postdet-Stems(1) [<postdet>:] Postdet-Stems(3):
-Postdet-Stems(1):Postdet-Stems(2) [<postdet>:] Postdet-Stems(3):  # ! Dir/LR
+Postdet-Stems(1) [<postdet>:] Postdet-Stems(3):  # ! Orth/Simp
+Postdet-Stems(1):Postdet-Stems(2) [<postdet>:] Postdet-Stems(3):  # ! Orth/Dict
 
-Adv-Stems(1) [<adv>:]
-Adv-Stems(1):Adv-Stems(2) [<adv>:]               # ! Dir/LR
+Adv-Stems(1) [<adv>:]                            # ! Orth/Simp
+Adv-Stems(1):Adv-Stems(2) [<adv>:]               # ! Orth/Dict
 
-Adv-Stems-Itg(1) [<adv><itg>:]
-Adv-Stems-Itg(1):Adv-Stems-Itg(2) [<adv><itg>:]  # ! Dir/LR
+Adv-Stems-Itg(1) [<adv><itg>:]                   # ! Orth/Simp
+Adv-Stems-Itg(1):Adv-Stems-Itg(2) [<adv><itg>:]  # ! Orth/Dict
 
-Adj-Stems(1) [<adj>:]
-Adj-Stems(1):Adj-Stems(2) [<adj>:]               # ! Dir/LR
+Adj-Stems(1) [<adj>:]                            # ! Orth/Simp
+Adj-Stems(1):Adj-Stems(2) [<adj>:]               # ! Orth/Dict
 
-Ij-Stems(1) [<ij>:]
-Ij-Stems(1):Ij-Stems(2) [<ij>:]                  # ! Dir/LR
+Ij-Stems(1) [<ij>:]                              # ! Orth/Simp
+Ij-Stems(1):Ij-Stems(2) [<ij>:]                  # ! Orth/Dict
 
-Mod-Stems(1) [<mod>:]
-Mod-Stems(1):Mod-Stems(2) [<mod>:]               # ! Dir/LR
+Mod-Stems(1) [<mod>:]                            # ! Orth/Simp
+Mod-Stems(1):Mod-Stems(2) [<mod>:]               # ! Orth/Dict
 
-Pronouns(1) [<prn>:] Pronouns(3):
-Pronouns(1):Pronouns(2) [<prn>:] Pronouns(3):    # ! Dir/LR
+Pronouns(1) [<prn>:] Pronouns(3):                # ! Orth/Simp
+Pronouns(1):Pronouns(2) [<prn>:] Pronouns(3):    # ! Orth/Dict
 
-Number-Stems(1) [<num>:]
-Number-Stems(1):Number-Stems(2) [<num>:]         # ! Dir/LR
+Number-Stems(1) [<num>:]                         # ! Orth/Simp
+Number-Stems(1):Number-Stems(2) [<num>:]         # ! Orth/Dict
 
 # For light verb constructions, with runy
 
-Aux(1) [<aux>:]
-Aux(1):Aux(2) [<aux>:]                           # ! Dir/LR
+Aux(1) [<aux>:]                                  # ! Orth/Simp
+Aux(1):Aux(2) [<aux>:]                           # ! Orth/Dict
 
 
 
 PATTERN Verbs
 
-:Aspect V-Stems(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) [<v>:] V-Stems(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1):
+# Regular verbs
 
-:Aspect V-Stems(1):V-Stems(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems(3): V-Extender(2): Aspect: V-Neg(2): Prn-Bound(2):  # ! Dir/LR
+:Aspect V-Stems(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) [<v>:] V-Stems(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1):  # ! Orth/Simp
 
+:Aspect V-Stems(1):V-Stems(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems(3): V-Extender(2): Aspect: V-Neg(2): Prn-Bound(2):  # ! Orth/Dict
+
+# Irregular verbs
+
+# FIXME: expand to both orthographies
 :Aspect[nonperf] V-Stems-Irreg(1)[nonp1pl,nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
 :Aspect[nonperf] V-Stems-Irreg(1)[-nonp1pl,nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
 :Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
@@ -69,16 +74,16 @@ PATTERN Verbs
 PATTERN Nouns
 
 # Bare nouns
-N-Stems(1) [<n>:]
-N-Stems(1):N-Stems(2) [<n>:]    # Dir/LR
+N-Stems(1) [<n>:]               # Orth/Simp
+N-Stems(1):N-Stems(2) [<n>:]    # Orth/Dict
 
 # Possessed nouns
-:N-Poss(1) N-Stems(1) [<n>:] N-Poss(3): Prn-Bound(1)
-:N-Poss(2) N-Stems(1):N-Stems(2) [<n>:] N-Poss(3): Prn-Bound(1)  # Dir/LR
+:N-Poss(1) N-Stems(1) [<n>:] N-Poss(3): Prn-Bound(1)             # Orth/Simp
+:N-Poss(2) N-Stems(1):N-Stems(2) [<n>:] N-Poss(3): Prn-Bound(1)  # Orth/Dict
 
 # Inherently possessed nouns
-N-Stems-Possessed(1) [<n>:] Prn-Bound(1)
-N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(2)    # Dir/LR
+N-Stems-Possessed(1) [<n>:] Prn-Bound(1)                         # Orth/Simp
+N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(2)    # Orth/Dict
 
 
 LEXICON Aspect[nonperf]
