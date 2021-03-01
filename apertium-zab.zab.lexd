@@ -90,6 +90,14 @@ N-Stems-Possessed(1) [<n>:] Prn-Bound(1)                         # Orth/Simp
 N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(2)    # Orth/Dict
 
 
+PATTERN Neg-Words
+
+[ queity<adv><irre>:queity>d{I} ] Prn-Bound(1) # Orth/Simp
+[ queity<adv><irre>:quëity>d{I} ] Prn-Bound(1) # Orth/Simp ! Dir/LR
+#[ queʼity:queiʼty     # "not"
+#queʼity:quëiʼty     # "not"   ! Dir/LR
+
+
 LEXICON Aspect[nonperf]
 
 <hab>:r>                    # habitual
@@ -270,6 +278,7 @@ guixicy:{G}{u}ixicy  guixiʼihcy:{G}{u}ixiʼihcy  <iv>   # "nod off (to sleep)"
 guizh:{G}{u}izh   guiʼihzh:{G}{u}iʼihzh    <dtv>   # "pay"
 gwezac            gwèeʼzaʼc                <tv>    # "speak (a language) well"
 gyan              gyaàaʼn                  <dtv>   # "feed"
+icy               iʼihcy                   <iv>    # "return"  # FIXME: check
 nab               nààaʼb                   <tv>    # "ask/send for"
 nalaz             nnahlààaʼz               <tv>    # "remember, miss (a person), think about"
 naz               nnàaʼaz                  <tv>    # "grab"

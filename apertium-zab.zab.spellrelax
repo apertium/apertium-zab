@@ -1,0 +1,7 @@
+[
+	! merge apostrophes
+	[ ?* [ ʼ (->) [ %' | %’ | %` | %´ | %‘ | %ʻ ] ] ?* ] .o.
+
+	! merge apostrophes
+	[ ?* [ ꞉ (->) [ %: ] ] ?* ]
+]
