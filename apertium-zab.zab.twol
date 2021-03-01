@@ -102,6 +102,13 @@ h:0 <=> :Vow _ :Vow :h :Cons* %>: ;
 !      except
 !         {Y}
 
+"Delete possessive prefix before x (x:0)"
+x:0 <=> _ ( ꞉: ) %>: x: ;
+
+"Delete possessive prefix before x (꞉:0)"
+꞉:0 <=> x: _ %>: x: ;
+
+
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol

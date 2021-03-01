@@ -76,6 +76,10 @@ PATTERN Verbs
 :Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
 :Aspect[-nonperf] V-Stems-Irreg(1)[-nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
 
+V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1) Aspect: V-Neg(1) Prn-Bound(1)  # ! Orth/Simp
+V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2) Aspect: V-Neg(2) Prn-Bound(2)  # ! Orth/Dict
+
+
 
 PATTERN Nouns
 
@@ -110,7 +114,7 @@ LEXICON Aspect[nonperf]
 LEXICON N-Poss(3)
 
 # FIXME: deal with irregulars, e.g. xyecw/x꞉yèeʼcw for becw
-x     x꞉     <px>    # for adding pronominal possession to Ns FIXME: CHECK(2)
+x>     x꞉>     <px>    # for adding pronominal possession to Ns FIXME: CHECK(2)
 
 
 LEXICON Prn-Bound(2)[nonp1pl]           # FIXME
@@ -148,6 +152,8 @@ LEXICON Pronouns(3)        # Free pronouns
 tu           tu               <itg>   # "who"
 xi           xi               <itg>   # "what"
 
+naa          nàa              <pers><p1><sg> # "I"
+
 danoën:danoën dannooh-ëhnn:dannooh-ëhnn  <pers><p1><pl> # "we"
 danoën:danuën dannooh-ëhnn:dannuuh-ëhnn  <pers><p1><pl> # "we"  ! Dir/LR
 
@@ -175,6 +181,9 @@ LEXICON Conjunctions(3)
 
 chiru        chiruʼ           <cnjcoo>              # "and; but; then"
 tyen         tyeʼnn           <cnjsub>              # "because; so that"
+chi          chih             <cnjsub>              # "when"
+per          pehr             <cnjcoo>              # "but"
+nyec         nyèeʼc           <cnjcoo>              # "neither .../nor ..."
 
 
 LEXICON V-Neg(2)            # FIXME        
@@ -243,12 +252,35 @@ uny[-nonp1pl,-nonperf]:ieny[-nonp1pl,-nonperf]    uhny[-nonp1pl,-nonperf]:ieʼny
 uny[-nonperf]:einy[-nonperf]  uhny[-nonperf]:èiʼny[-nonperf]                   <tv> # "do"
 
 
+LEXICON V-Stems-IrregAspect(3)
+ap:rap                ap:ràaʼp  <tv><hab>    # "have"
+ap:gup                ap:gùuʼp  <tv><perf>   # "have"
+
+u:ru                  u:ruʼuh   <iv><hab>    # "be located"
+u:gu                  u:guʼuh   <iv><perf>   # "be located"
+u:chu                 u:chuʼuh  <iv><irre>   # "be located"            FIXME
+u:nu                  u:nuʼuh   <iv><irre>   # "be located (neutral)"  FIXME
+
+une:rune              une:ruʼuhnèe   <iv><hab>    # "live with"
+une:gune              une:guʼuhnèe   <iv><perf>   # "live with"
+une:chune             une:chuʼuhnèe  <iv><irre>   # "live with"            FIXME
+une:nune              une:nuʼnèe     <iv><irre>   # "live with (neutral)"  FIXME
+une:nune              une:nuʼuhnèe   <iv><irre>   # "live with (neutral)" ! Dir/LR  FIXME
+
+
+
+ac:gac                ac:gaʼc   <iv><irre>   # "be, become"            FIXME
+ac:gac                ac:naaʼc  <iv><irre>   # "be, become (neutral)"  FIXME
+ac:guc                ac:guhc   <iv><perf>   # "be, become"
+ac:rac                ac:rahc   <iv><hab>    # "be, become"
+
 LEXICON V-Stems(3)
 
 ban               bàaʼan                   <iv>    # "follow a medical diet"
 beb               bèeʼb                    <tv>    # "ride (an animal)"  # FIXME: irreg irrealis
 bix               biʼihx                   <iv>    # "ring (of a bell)"
 chiby             chìiby                   <tv>    # "scare"
+culo              culoh                    <tv>    # "take care of"
 culozac           culohzaʼc                <tv>    # "take good care of"
 cuzh              cuhzh                    <tv>    # "play (a wind instrument)"
 cwany             cwàaʼnny                 <tv>    # "wake up"
@@ -278,6 +310,7 @@ guiny:{G}{u}iny   guìiʼiny:{G}{u}ìiʼiny    <tv>    # "borrow; ask for hand (
 guix:{G}{u}ix     guìiʼx:{G}{u}ìiʼx        <tv>    # "lay down, put down (long object)"
 guixicy:{G}{u}ixicy  guixiʼihcy:{G}{u}ixiʼihcy  <iv>   # "nod off (to sleep)"
 guizh:{G}{u}izh   guiʼihzh:{G}{u}iʼihzh    <dtv>   # "pay"
+gwe               gwèèeʼ                   <iv>    # "speak"
 gwezac            gwèeʼzaʼc                <tv>    # "speak (a language) well"
 gyan              gyaàaʼn                  <dtv>   # "feed"
 icy               iʼihcy                   <iv>    # "return"  # FIXME: check
@@ -301,9 +334,11 @@ taz               tàaʼaz                   <tv>    # "hit"
 teidy             tèèiʼdy                  <tv>    # "take/bring across"
 tyepy             tyèeʼpy                  <iv>    # "whistle"
 tyis              tyiʼihs                  <iv>    # "jump"
+unybe             unybèe                   <tv>    # "know, get to know"
 xyeily            xyeʼilly                 <tv>    # "open"
 yac               yaʼahc                   <iv>    # "heal, get better/well"
 yulaz             yuʼlààaʼz                <tv>    # "like"  # FIXME: not used with <perf>
+zeny              zehnny                   <iv>    # "arrive"
 zhiby             zhihby                   <iv>    # "get scared"
 zhiez             rzhìez                   <iv>    # "laugh, smile"
 zhuny             zh꞉ùuʼnny                <iv>    # "run; elope"
@@ -317,6 +352,7 @@ LEXICON N-Stems-Possessed(2)
 
 bzyan            bzyaàaʼn             # "brother (of opposite sex); sister (of opposite sex)"
 ni               niʼih                # "foot; lower leg; back leg (of an animal)
+chiel            chìeʼl               # "spouse, husband, wife"
 
 
 LEXICON N-Stems(2)
@@ -338,6 +374,7 @@ bca              bcaʼah               # "crow"
 bdo              bdòoʼ                # "baby"
 bdua             bdùùaʼ               # "banana"
 becw             bèeʼcw               # "dog"
+beu              beʼeu                # "month"
 beld:bel         behlld:behll         # "fish"               
 beld:bel         bèèeʼlld:bèèeʼll     # "snake"
 beld:beld        behlld:behlld        # "fish"         !  Dir/LR
@@ -381,6 +418,7 @@ guet             gueht                # "tortilla"
 guet\ xtily      gueht\ xtiilly       # "bread"
 guez             guehehz              # "cigarette"
 gyag             gyahg                # "stick, tree, wood, firewood"
+iaz              iihahz               # "year"
 lapy             laʼpy                # "pencil"
 lecsyony         lecsyoony            # "lesson"
 liebr            liʼebr               # "book"
@@ -394,6 +432,7 @@ milagr           milàagr              # "miracle"
 mna              mnààaʼ               # "woman"
 mniny            mnìiʼiny             # "child, kid, boy"
 muly             mùuully              # "money"
+myegr            myeʼgr               # "border patrol (officer)"
 myes             myeʼes               # "mass (at a church)"
 nyis             nyiʼihs              # "water"
 pasaprt          pasapoʼrt            # "passport"
@@ -408,12 +447,15 @@ rrady            rraady               # "radio"
 rregal           rregaʼll             # "gift"
 rresieb          rresiieb             # "bill (for service); receipt"
 sede             sedee                # "CD"
+swert            sweʼrt               # "luck"
+syudadan         syudadaʼnn           # "citizen"
 tarea            tareea               # "exercise, homework"
 telebisyony      telebisyoony         # "television"
 tiu              tiʼu                 # "uncle"
 unida            unidaa               # "unit"
 wbwan            wbwààaʼn             # "theif"
 wi               wii                  # "guava"
+xtad             x꞉taʼad              # "father"
 ydo              ydòòoʼ               # "church"
 yu               yuʼuh                # "house"
 zhi              zh꞉ih                # "day"
@@ -539,6 +581,7 @@ Liendr      Lieʼndr         <ant><f>    # "Herlinda, Erlinda"
 Lienr       Lieʼnr          <ant><f>    # "Herlinda, Erlinda"
 Lijanr      Lijaʼnnr        <ant><m>    # "Alejandro, Alexander"
 Lorenz      Loreʼennz       <ant><f>    # "Lorenza"
+Los\ Angl   Los\ A'nngl     <top>       # "Los Angeles"
 Luc         Luʼc            <ant><m>    # "Lucas, Luke"
 Luch        Luʼch           <ant><f>    # "(woman's name)"
 Lusy        Luʼsy           <ant><m>    # "Luis, Lucio, Louis, Lucius"
@@ -626,6 +669,7 @@ Plory       Ploory          <ant><m>    # "Florentino"
 Poly        Poʼoly          <ant><m>    # "Hipolito, Hypolitus"
 Ponzh       Poʼonnzh        <ant><m>    # "Alfonso"
 Ponzy       Poʼonnzy        <ant><f>    # "Alfonsa"
+Ponzy       Poʼnnzy         <ant><f>    # "Alfonsa" ! Dir/LR
 Pred        Preed           <ant><m>    # "Alfredo, Alfred"
 Puisy       Puʼisy          <ant><m>    # "Felix"
 Pyen        Pyeʼnn          <ant><f>    # "Delfina, Pina, Delphine"
@@ -664,6 +708,7 @@ Siedr       Siiedr          <ant><f>    # "Isidra"
 Sily        Siilly          <ant><f>    # "Silvia, Sylvia"
 Sily        Siilly          <ant><m>    # "Basilio, Basil"
 Sobryeiny   Sobryeeiny      <ant><m>    # "(man's name)"
+Stados\ Unied  Stadohs\ Uniied <top>    # "United States"
 Syen        Syeʼenn         <ant><f>    # "Lusina, Jacinta, Jacinth"
 Syen        Syeʼenn         <ant><m>    # "Jacinto"
 Syend       Syeʼennd        <ant><f>    # "Lusina, Jacinta, Jacinth"
@@ -686,6 +731,7 @@ Tyen        Tyeʼnn          <ant><f>    # "Cristina, Christina"
 Tyen        Tyeʼnn          <ant><f>    # "Cristina, Christina, Christine"
 Tyen        Tyeʼnn          <ant><m>    # "Celestino, Tino"
 Tyofl       Tyoʼfl          <ant><m>    # "Teofilo, Theophilus"
+West\ Los\ Angl   Weʼst\ Los\ A'nngl     <top>       # "Los Angeles"
 Wse         See             <ant><m>    # "Jose, Joseph, Joe"
 Xandan      Xanndaan        <top>       # "Santa Ana del Valle"
 Xgyia       X꞉gyìiʼah       <top>       # "Teotitlán del Valle"
@@ -705,9 +751,11 @@ LEXICON Prep-Stems(2)
 
 cuan      cuahnn      # "and, with"
 quën      quëhnn      # "and, with"
-xte       x꞉tèeʼ      # "of"
+xte       x꞉tèeʼ      # "of, as"
 xten      x꞉tèeʼn     # "of"    # Dir/LR    # FIXME
 zalo      zalloh      # "about" (?)
+par       pahr        # "for"
+axta      aʼxtaʼ      # "until, up to"
 
 LEXICON Det-Stems(3)
 
@@ -724,6 +772,7 @@ re        rèeʼ     <dem>   # "this"
 LEXICON Adj-Stems(2)
 
 cweby            cweby               # "new"
+zac              zaʼc                # "nice, good, fancy"
 
 LEXICON Adv-Stems(2)
 
@@ -736,6 +785,10 @@ uas              uʼas                # "really"
 zhi:zhi          zhii:zhii           # "tomorrow"
 zhi:yzhi         zhii:yzhii          # "tomorrow"  ! Dir/LR
 ni               niʼih               # "that's why, here's why"
+daru\ chu\ zhi   dàaʼruʼ\ chuʼuh\ zh꞉ih # "some day"
+a\ gucgan        a\ guhcgaan         # "finally"
+ricy             riʼcy               # "there"
+nyec             nyèeʼc              # "not"
 
 LEXICON Adv-Stems-Itg(2)
 
