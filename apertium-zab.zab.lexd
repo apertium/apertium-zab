@@ -96,8 +96,8 @@ PATTERN Neg-Words
 
 [ queity<adv>:queity ] V-Neg Prn-Bound(1)   # Orth/Simp
 [ queity<adv>:quëity ] V-Neg Prn-Bound(1)   # Orth/Simp ! Dir/LR
-[ queity<adv>:queiʼty ] V-Neg Prn-Bound(1)  # Orth/Dict
-[ queity<adv>:quëiʼty ] V-Neg Prn-Bound(1)  # Orth/Dict ! Dir/LR
+[ queity<adv>:queʼity ] V-Neg Prn-Bound(1)  # Orth/Dict
+[ queity<adv>:quëʼity ] V-Neg Prn-Bound(1)  # Orth/Dict ! Dir/LR
 
 
 LEXICON Aspect[nonperf]
@@ -730,8 +730,8 @@ LEXICON Adv-Stems(2)
 a                a                   # "already" (completion of verb)
 na               nah                 # "now"
 nai              nàiʼ                # "yesterday"
-queity:queity    queʼity:queiʼty     # "not"
-queity:quëity    queʼity:quëiʼty     # "not"   ! Dir/LR
+queity:queity    queʼity:queʼity     # "not"
+queity:quëity    queʼity:quëʼity     # "not"   ! Dir/LR
 uas              uʼas                # "really"
 zhi:zhi          zhii:zhii           # "tomorrow"
 zhi:yzhi         zhii:yzhii          # "tomorrow"  ! Dir/LR
@@ -779,8 +779,8 @@ LEXICON Ij-Stems(2)
 a                àaaʼ                # "yes"
 as               aʼs                 # "hi, hey"
 as\ nia          aʼs\ nniìaʼ         # "hey there"
-queity:queity    queʼity:queiʼty     # "no"
-queity:quëity    queʼity:quëiʼty     # "no"   ! Dir/LR
+queity:queity    queʼity:queʼity     # "no"
+queity:quëity    queʼity:quëʼity     # "no"   ! Dir/LR
 
 
 LEXICON Mod-Stems(2)    # modal particles
