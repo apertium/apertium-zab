@@ -55,6 +55,8 @@ Number-Stems(1):Number-Stems(2) [<num>:]         # ! Orth/Dict
 Aux(1) [<aux>:]                                  # ! Orth/Simp
 Aux(1):Aux(2) [<aux>:]                           # ! Orth/Dict
 
+Neg-Words
+
 
 PATTERN Verbs
 
@@ -92,10 +94,10 @@ N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(2)    # Orth/Dict
 
 PATTERN Neg-Words
 
-[ queity<adv><irre>:queity>d{I} ] Prn-Bound(1) # Orth/Simp
-[ queity<adv><irre>:quëity>d{I} ] Prn-Bound(1) # Orth/Simp ! Dir/LR
-#[ queʼity:queiʼty     # "not"
-#queʼity:quëiʼty     # "not"   ! Dir/LR
+[ queity<adv>:queity ] V-Neg Prn-Bound(1)   # Orth/Simp
+[ queity<adv>:quëity ] V-Neg Prn-Bound(1)   # Orth/Simp ! Dir/LR
+[ queity<adv>:queiʼty ] V-Neg Prn-Bound(1)  # Orth/Dict
+[ queity<adv>:quëiʼty ] V-Neg Prn-Bound(1)  # Orth/Dict ! Dir/LR
 
 
 LEXICON Aspect[nonperf]
