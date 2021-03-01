@@ -184,6 +184,7 @@ tyen         tyeʼnn           <cnjsub>              # "because; so that"
 chi          chih             <cnjsub>              # "when"
 per          pehr             <cnjcoo>              # "but"
 nyec         nyèeʼc           <cnjcoo>              # "neither .../nor ..."
+zicy\ ni\ na ziʼcy\ nih\ nàa  <cnjsub>              # "like, namely"
 
 
 LEXICON V-Neg(2)            # FIXME        
@@ -258,21 +259,32 @@ ap:gup                ap:gùuʼp  <tv><perf>   # "have"
 
 u:ru                  u:ruʼuh   <iv><hab>    # "be located"
 u:gu                  u:guʼuh   <iv><perf>   # "be located"
-u:chu                 u:chuʼuh  <iv><irre>   # "be located"            FIXME
-u:nu                  u:nuʼuh   <iv><irre>   # "be located (neutral)"  FIXME
+u:chu                 u:chuʼuh  <iv><irre>   # "be located"
+u:nu                  u:nuʼuh   <iv><neut>   # "be located (neutral)"
 
 une:rune              une:ruʼuhnèe   <iv><hab>    # "live with"
 une:gune              une:guʼuhnèe   <iv><perf>   # "live with"
-une:chune             une:chuʼuhnèe  <iv><irre>   # "live with"            FIXME
-une:nune              une:nuʼnèe     <iv><irre>   # "live with (neutral)"  FIXME
-une:nune              une:nuʼuhnèe   <iv><irre>   # "live with (neutral)" ! Dir/LR  FIXME
+une:chune             une:chuʼuhnèe  <iv><irre>   # "live with"
+une:nune              une:nuʼnèe     <iv><neut>   # "live with (neutral)"
+une:nune              une:nuʼuhnèe   <iv><neut>   # "live with (neutral)" ! Dir/LR
 
-
-
-ac:gac                ac:gaʼc   <iv><irre>   # "be, become"            FIXME
-ac:gac                ac:naaʼc  <iv><irre>   # "be, become (neutral)"  FIXME
+ac:gac                ac:gaʼc   <iv><irre>   # "be, become"
+ac:gac                ac:naaʼc  <iv><neut>   # "be, become (neutral)"
 ac:guc                ac:guhc   <iv><perf>   # "be, become"
 ac:rac                ac:rahc   <iv><hab>    # "be, become"
+
+ile:rile              ile:rilleʼeh   <iv><hab>    # "be able to, know how to"
+ile:gule              ile:gulleʼeh   <iv><perf>   # 
+ile:chile             ile:chilleʼeh  <iv><irre>   #
+ile:zale              ile:zalleʼeh   <iv><def>    # 
+
+# FIXME: p1pl forms of ria
+ia:ria                ia:rihah       <iv><hab>    # "go"
+ia:gwe                ia:gweheh      <iv><perf>   #
+ia:chia               ia:chiia       <iv><irre>   #
+ia:ze                 ia:zeheh       <iv><def>    #
+ia:ze                 ia:zèe         <iv><inch>   #
+
 
 LEXICON V-Stems(3)
 
@@ -336,6 +348,7 @@ tyepy             tyèeʼpy                  <iv>    # "whistle"
 tyis              tyiʼihs                  <iv>    # "jump"
 unybe             unybèe                   <tv>    # "know, get to know"
 xyeily            xyeʼilly                 <tv>    # "open"
+yan               yàaʼan                   <iv>    # "stay"
 yac               yaʼahc                   <iv>    # "heal, get better/well"
 yulaz             yuʼlààaʼz                <tv>    # "like"  # FIXME: not used with <perf>
 zeny              zehnny                   <iv>    # "arrive"
@@ -345,6 +358,7 @@ zhuny             zh꞉ùuʼnny                <iv>    # "run; elope"
 zhuny:zhyuny      zh꞉ùuʼnny:zhy꞉ùuʼnny     <iv>    # "run; elope"   # ! Dir/LR
 zhyag             zhyàag                   <tv>    # "meet"
 zhyeil            zhyeʼilly                <iv>    # "open"
+zicy              ziʼihcy                  <dtv>   # "send (someone) back (somewhere)"
 zilaz             zilààaʼz                 <tv>    # "used to think that"
 
 
@@ -446,6 +460,7 @@ rmudy            rmuudy               # "medicine"
 rrady            rraady               # "radio"
 rregal           rregaʼll             # "gift"
 rresieb          rresiieb             # "bill (for service); receipt"
+scwel            scweel               # "school"
 sede             sedee                # "CD"
 swert            sweʼrt               # "luck"
 syudadan         syudadaʼnn           # "citizen"
@@ -462,6 +477,7 @@ zhi              zh꞉ih                # "day"
 zhieb            zhiʼeb               # "goat"
 zhily            zhiʼìilly            # "sheep"
 zhomrel          zh꞉ommreel           # "hat"
+zhyap            zhyàaʼp              # "girl"
 zhyet            zhyeʼet              # "cat"
 
 
@@ -575,6 +591,8 @@ Lenzh       Leʼnnzh         <ant><f>    # "Florencia, Florence, Flo, Lorenza, L
 Leony       Leoony          <ant><m>    # "Leo, Leon"
 Lepy        Leʼpy           <ant><f>    # "Lupe"
 Lepy        Leʼpy           <ant><m>    # "Lupe"
+Liandr      Liaʼndr         <ant><f>    # "(woman's name)"
+Lianr       Liaʼnr          <ant><f>    # "(woman's name)"
 Lieb        Liʼeb           <ant><m>    # "Felipe, Philip"
 Lien        Liienn          <ant><m>    # "Valente, Valentin, Valentine"
 Liendr      Lieʼndr         <ant><f>    # "Herlinda, Erlinda"
@@ -626,6 +644,7 @@ Moi         Mòiʼ            <ant><m>    # "Moises, Moses"
 Mony        Moʼoony         <ant><f>    # "Monica"
 Mony        Mòony           <ant><f>    # "(woman's name)"
 Mony        Mòony           <ant><m>    # "Ramon"
+Morales     Morales         <cog><mf>   # "Morales"    FIXME: check Dict form
 Muan        Muʼuann         <ant><m>    # "Raymundo, Mundo, Raymond"
 Muand       Muʼannd         <ant><m>    # "Raymundo, Mundo, Raymond"
 Myeng       Myeʼenng        <ant><f>    # "Dominga"
@@ -668,8 +687,8 @@ Pily        Piʼilly         <ant><m>    # "Porfirio, Filimon, Philemon"
 Plory       Ploory          <ant><m>    # "Florentino"
 Poly        Poʼoly          <ant><m>    # "Hipolito, Hypolitus"
 Ponzh       Poʼonnzh        <ant><m>    # "Alfonso"
-Ponzy       Poʼonnzy        <ant><f>    # "Alfonsa"
 Ponzy       Poʼnnzy         <ant><f>    # "Alfonsa" ! Dir/LR
+Ponzy       Poʼonnzy        <ant><f>    # "Alfonsa"
 Pred        Preed           <ant><m>    # "Alfredo, Alfred"
 Puisy       Puʼisy          <ant><m>    # "Felix"
 Pyen        Pyeʼnn          <ant><f>    # "Delfina, Pina, Delphine"
@@ -719,6 +738,7 @@ Tan         Taan            <ant><f>    # "Cayetana"
 Tan         Taan            <ant><m>    # "Cayetano"
 Teb         Teʼeb           <ant><m>    # "Esteban, Stephen, Steve"
 Tery        Teery           <ant><f>    # "Eleuteria"
+Tijwan      Tijwaʼnn        <top>       # "Tijuana"
 Tiny        Tiiny           <ant><f>    # "Martina"
 Tony        Toʼnny          <ant><m>    # "Antonio, Anthony"
 Tory        Toory           <ant><f>    # "Victoria"
@@ -739,13 +759,12 @@ Xmony       Xmoʼoony        <ant><f>    # "Monica"
 Xtaisy      Xtaiʼsy         <ant><f>    # "Anastacia, Anastasia"
 Xtruad      X꞉truaʼd        <ant><f>    # "Gertruda, Gertrudiz, Gertrude"
 Yadier      Yadiier         <ant><f>    # "Yadira"
+Yagul       Yaguʼll         <top>       # "Yagul"
 Yo          Yoo             <ant><f>    # "(woman's name)"
 Yol         Yoʼoll          <ant><f>    # "Yolanda"
 Zhuan       Zh꞉ùaan         <ant><f>    # "Juana, Jane, Jean, Joan"
 Zhyac       Zhyaʼc          <ant><f>    # "(woman's name)"
 Zyec        Zyeʼc           <ant><f>    # "Francisca, Chica, Frances"
-ndr         ʼndr            <ant><f>    # "(woman's name)"
-nr          ʼnr             <ant><f>    # "(woman's name)"
 
 LEXICON Prep-Stems(2)
 
@@ -789,6 +808,7 @@ daru\ chu\ zhi   dàaʼruʼ\ chuʼuh\ zh꞉ih # "some day"
 a\ gucgan        a\ guhcgaan         # "finally"
 ricy             riʼcy               # "there"
 nyec             nyèeʼc              # "not"
+zicyizy          ziʼcyihzy           # "just"
 
 LEXICON Adv-Stems-Itg(2)
 
