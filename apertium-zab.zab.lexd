@@ -63,7 +63,8 @@ PATTERN Verbs
 #:Aspect V-Stems(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) [<v>:] V-Stems(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1):  # ! Orth/Simp
 ( :Aspect ( V-Stems(1) [<v>:] V-Stems(3): ) V-Extender(1) Aspect: ) V-Neg(1) Prn-Bound(1)  # ! Orth/Simp
 
-:Aspect V-Stems(1):V-Stems(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems(3): V-Extender(2): Aspect: V-Neg(2): Prn-Bound(2):  # ! Orth/Dict
+#:Aspect V-Stems(1):V-Stems(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems(3): V-Extender(2): Aspect: V-Neg(2): Prn-Bound(2):  # ! Orth/Dict
+( :Aspect ( V-Stems(1):V-Stems(2) [<v>:] V-Stems(3): ) V-Extender(2) Aspect: ) V-Neg(2) Prn-Bound(2)   # ! Orth/Dict
 
 # Irregular verbs
 
