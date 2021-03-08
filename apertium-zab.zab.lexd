@@ -20,6 +20,9 @@ NP-Stems(1):NP-Stems(2) [<np>:] NP-Stems(3):     # ! Orth/Dict
 Prep-Stems(1) [<pr>:]                            # ! Orth/Simp
 Prep-Stems(1):Prep-Stems(2) [<pr>:]              # ! Orth/Dict
 
+Prep-Stems-WPron(1) [<pr>:] Prn-Bound(1)                     # ! Orth/Simp
+Prep-Stems-WPron(1):Prep-Stems-WPron(2) [<pr>:] Prn-Bound(2) # ! Orth/Dict
+
 Det-Stems(1) [<det>:] Det-Stems(3):              # ! Orth/Simp
 Det-Stems(1):Det-Stems(2) [<det>:] Det-Stems(3): # ! Orth/Dict
 
@@ -63,21 +66,27 @@ PATTERN Verbs
 # Regular verbs
 
 #:Aspect V-Stems(1) :V-Extender(1) :V-Neg(1) :Prn-Bound(1) [<v>:] V-Stems(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1):  # ! Orth/Simp
-( :Aspect ( V-Stems(1) [<v>:] V-Stems(3): ) V-Extender(1) Aspect: ) V-Neg(1) Prn-Bound(1)  # ! Orth/Simp
+( :Aspect ( V-Stems(1) [<v>:] V-Stems(3): ) V-Extender(1)? Aspect: ) V-Neg(1)? Prn-Bound(1)  # ! Orth/Simp
 
 #:Aspect V-Stems(1):V-Stems(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems(3): V-Extender(2): Aspect: V-Neg(2): Prn-Bound(2):  # ! Orth/Dict
-( :Aspect ( V-Stems(1):V-Stems(2) [<v>:] V-Stems(3): ) V-Extender(2) Aspect: ) V-Neg(2) Prn-Bound(2)   # ! Orth/Dict
+( :Aspect ( V-Stems(1):V-Stems(2) [<v>:] V-Stems(3): ) V-Extender(2)? Aspect: ) V-Neg(2)? Prn-Bound(2)   # ! Orth/Dict
 
 # Irregular verbs
 
 # FIXME: expand to both orthographies
-:Aspect[nonperf] V-Stems-Irreg(1)[nonp1pl,nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
-:Aspect[nonperf] V-Stems-Irreg(1)[-nonp1pl,nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
-:Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
-:Aspect[-nonperf] V-Stems-Irreg(1)[-nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
+#:Aspect[nonperf] V-Stems-Irreg(1)[nonp1pl,nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
+#:Aspect[nonperf] V-Stems-Irreg(1)[-nonp1pl,nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
+#:Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
+#:Aspect[-nonperf] V-Stems-Irreg(1)[-nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
+:Aspect[nonperf] V-Stems-Irreg(1)[nonp1pl,nonperf] :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[nonp1pl]:
+:Aspect[nonperf] V-Stems-Irreg(1)[-nonp1pl,nonperf] :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[-nonp1pl]:
+:Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[nonp1pl]:
+:Aspect[-nonperf] V-Stems-Irreg(1)[-nonp1pl,-nonperf] :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[-nonp1pl]:
 
-V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1) V-Neg(1) Prn-Bound(1)  # ! Orth/Simp
-V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2) V-Neg(2) Prn-Bound(2)  # ! Orth/Dict
+
+
+V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1)? V-Neg(1)? Prn-Bound(1)  # ! Orth/Simp
+V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2)? V-Neg(2)? Prn-Bound(2)  # ! Orth/Dict
 
 
 
@@ -89,7 +98,7 @@ N-Stems(1):N-Stems(2) [<n>:]    # Orth/Dict
 
 # Possessed nouns
 :N-Poss(1) N-Stems(1) [<n>:] N-Poss(3): Prn-Bound(1)             # Orth/Simp
-:N-Poss(2) N-Stems(1):N-Stems(2) [<n>:] N-Poss(3): Prn-Bound(1)  # Orth/Dict
+:N-Poss(2) N-Stems(1):N-Stems(2) [<n>:] N-Poss(3): Prn-Bound(2)  # Orth/Dict
 
 # Inherently possessed nouns
 N-Stems-Possessed(1) [<n>:] Prn-Bound(1)                         # Orth/Simp
@@ -100,8 +109,8 @@ PATTERN Neg-Words
 
 [ queity<adv>:queity ] V-Neg Prn-Bound(1)   # Orth/Simp
 [ queity<adv>:quëity ] V-Neg Prn-Bound(1)   # Orth/Simp ! Dir/LR
-[ queity<adv>:queʼity ] V-Neg Prn-Bound(1)  # Orth/Dict
-[ queity<adv>:quëʼity ] V-Neg Prn-Bound(1)  # Orth/Dict ! Dir/LR
+[ queity<adv>:queʼity ] V-Neg Prn-Bound(2)  # Orth/Dict
+[ queity<adv>:quëʼity ] V-Neg Prn-Bound(2)  # Orth/Dict ! Dir/LR
 
 
 LEXICON Aspect[nonperf]
@@ -179,22 +188,23 @@ ni           nih              <rel>                 # "who/that/which, the one w
 
 LEXICON Conjunctions(3)
 
-chiru        chiruʼ           <cnjcoo>              # "and; but; then"
-tyen         tyeʼnn           <cnjsub>              # "because; so that"
 chi          chih             <cnjsub>              # "when"
-per          pehr             <cnjcoo>              # "but"
+chiru        chiruʼ           <cnjcoo>              # "and; but; then"
 nyec         nyèeʼc           <cnjcoo>              # "neither .../nor ..."
+o            o                <cnjcoo>              # "or"
+per          pehr             <cnjcoo>              # "but"
+tyen         tyeʼnn           <cnjsub>              # "because; so that"
 zicy\ ni\ na ziʼcy\ nih\ nàa  <cnjsub>              # "like, namely"
 
 
 LEXICON V-Neg(2)            # FIXME        
 
 <neg>:>d{I}                 <neg>:>d{I}ʼ
-:                           :
+#:                           :
 
 LEXICON V-Extender(2)       # FIXME
 <pol>:>la                   <pol>:>làaʼ
-:                           :
+#:                           :
 
 #LEXICON Caus
 #
@@ -272,6 +282,19 @@ ac:gac                ac:gaʼc   <iv><irre>   # "be, become"
 ac:gac                ac:naaʼc  <iv><neut>   # "be, become (neutral)"
 ac:guc                ac:guhc   <iv><perf>   # "be, become"
 ac:rac                ac:rahc   <iv><hab>    # "be, become"
+ac:nac                ac:naaʼc  <iv><neut>   #
+
+acxu:gacxu            acxu:gaʼcx꞉ùu   <iv><irre>   # "get sick"
+acxu:gacxu            acxu:naaʼcx꞉ùu  <iv><neut>   #
+acxu:gucxu            acxu:guhcx꞉ùu   <iv><perf>   #
+acxu:racxu            acxu:rahcx꞉ùu   <iv><hab>    #
+acxu:nacxu            acxu:naaʼcx꞉ùu  <iv><neut>   #
+
+acbe:gacbe            acbe:gaʼcbèeʼ   <iv><irre>   # "understand, know"
+acbe:gacbe            acbe:naaʼcbèeʼ  <iv><neut>   #
+acbe:gucbe            acbe:guhcbèeʼ   <iv><perf>   #
+acbe:racbe            acbe:rahcbèeʼ   <iv><hab>    #
+acbe:nacbe            acbe:naaʼcbèeʼ  <iv><neut>   #
 
 ile:rile              ile:rilleʼeh   <iv><hab>    # "be able to, know how to"
 ile:gule              ile:gulleʼeh   <iv><perf>   # 
@@ -284,6 +307,10 @@ ia:gwe                ia:gweheh      <iv><perf>   #
 ia:chia               ia:chiia       <iv><irre>   #
 ia:ze                 ia:zeheh       <iv><def>    #
 ia:ze                 ia:zèe         <iv><inch>   #
+
+yet:rgyet             yet:rgyeʼeht   <iv><hab>    # "play"
+yet:bzuat             yet:bzuʼaht    <iv><perf>   #
+yet:cyet              yet:cyeʼt      <iv><irre>   #
 
 # See Cali Chiu Vol 2, Lecsyony Tseinyabchon (
 
@@ -355,6 +382,7 @@ guizh:{G}{u}izh   guiʼihzh:{G}{u}iʼihzh    <dtv>   # "pay"
 gwe               gwèèeʼ                   <iv>    # "speak"
 gwezac            gwèeʼzaʼc                <tv>    # "speak (a language) well"
 gyan              gyaàaʼn                  <dtv>   # "feed"
+eipy              eʼihpy                   <dtv>   # "call (someone) (a name)"
 icy               iʼihcy                   <iv>    # "return"  # FIXME: check
 nab               nààaʼb                   <tv>    # "ask/send for"
 nalaz             nnahlààaʼz               <tv>    # "remember, miss (a person), think about"
@@ -394,12 +422,13 @@ zilaz             zilààaʼz                 <tv>    # "used to think that"
 
 LEXICON N-Stems-Possessed(2)
 
+becw:xyecw       becw:x꞉yèeʼcw        # "dog (irregular"
 bzyan            bzyaàaʼn             # "brother (of opposite sex); sister (of opposite sex)"
-ni               niʼih                # "foot; lower leg; back leg (of an animal)
 chiel            chìeʼl               # "spouse, husband, wife"
 lo               lohoh                # "face"
-xnanmam          x꞉nnaʼanmaʼmm        # "grandmother"
+ni               niʼih                # "foot; lower leg; back leg (of an animal)
 xnan             x꞉nnaʼan             # "(grandparent?)"
+xnanmam          x꞉nnaʼanmaʼmm        # "grandmother"
 
 
 LEXICON N-Stems(2)
@@ -488,6 +517,7 @@ part             paʼrt                # "part"
 pasaprt          pasapoʼrt            # "passport"
 pelot            peloʼt               # "ball"
 pes              peʼs                 # "peso"
+pistoly          pistoʼlly            # "gun"
 plum             pluʼmm               # "pen"
 polisia          polisiia             # "policeman; police"
 pwert            pweeʼrt              # "door"
@@ -496,6 +526,8 @@ rmudy            rmuudy               # "medicine"
 rrady            rraady               # "radio"
 rregal           rregaʼll             # "gift"
 rresieb          rresiieb             # "bill (for service); receipt"
+rrestauran       rrestauraʼann        # "restaurant"
+rsily            rsìiilly             # "morning"
 scwel            scweel               # "school"
 sede             sedee                # "CD"
 swert            sweʼrt               # "luck"
@@ -503,6 +535,7 @@ syudadan         syudadaʼnn           # "citizen"
 tarea            tareea               # "exercise, homework"
 telebisyony      telebisyoony         # "television"
 tiu              tiʼu                 # "uncle"
+unibersida       unibersidaa          # "university, college"
 unida            unidaa               # "unit"
 wbwan            wbwààaʼn             # "theif"
 wi               wii                  # "guava"
@@ -524,6 +557,7 @@ Aniset      Aniseʼt         <ant><m>    # "Aniseto"
 Anjalyen    Anjalyeʼnn      <ant><f>    # "Angelina"
 Anjalyend   Anjalyeʼnnd     <ant><f>    # "Angelina"
 Arasely     Araseʼlly       <ant><f>    # "Araceli, Aracely"
+Araceli     Araceli         <ant><f>    # "Araceli"  Dir/LR
 Arnulf      Arnuʼullf       <ant><m>    # "Arnulfo"
 Bac         Baʼahc          <top>       # "Tlacolula (de Matamoros)"
 Baisy       Baiʼsy          <ant><f>    # "Bonifacia"
@@ -695,6 +729,7 @@ Nataly      Nataʼally       <ant><f>    # "Natalia, Natalie"
 Ndien       Ndiien          <ant><m>    # "Bernardino, Enedino, Bernard"
 Ndien       Ndiienn         <ant><f>    # "Enedina, Bernardina, Bernadine"
 Ndres       Ndreʼs          <ant><m>    # "Andres, Andrew"
+Ndua        Ndùuʼah         <top>       # "Oaxaca"
 Nduny       Nduuny          <ant><m>    # "Antonio, Anthony"
 Nel         Neʼll           <ant><m>    # "Manuel"
 Nes         Neʼs            <ant><f>    # "Inez, Ines"
@@ -717,6 +752,7 @@ Pamyël      Páʼmmyëll       <ant><m>    # "Panfilo"
 Pan         Paʼan           <ant><m>    # "(man's name)"
 Pastiny     Pahstiiny       <ant><f>    # "Faustina"
 Pau         Paʼàu           <ant><f>    # "Paula"
+Pedro       Pedro           <ant><m>    # "Pedro (Spanish version)"
 Petr        Peʼtr           <ant><f>    # "Petra"
 Petr        Peʼtr           <ant><f>    # "Petra"
 Pily        Piʼilly         <ant><m>    # "Porfirio, Filimon, Philemon"
@@ -752,8 +788,10 @@ Ryen        Ryeʼnn          <ant><f>    # "Florinda, Alejandrina, Alexandrina"
 Ryet        Ryeʼt           <ant><m>    # "Margarito"
 Sabely      Sabeelly        <ant><f>    # "Isabel"
 Sabien      Sabiienn        <ant><f>    # "Sabina, Sabine"
+Samohi      Samohi          <org>       # "Santa Monica High School"
 San         Saʼann          <ant><f>    # "Crisanta"
 San\ Luc    Sann\ Luʼuc     <top>       # "San Lucas Quiaviní"
+Santa\ Mony Sánntah\ Moony  <top>       # "Santa Monica"
 Se          See             <ant><m>    # "Jose, Joseph, Joe"
 Sebastyang  Sebastyaʼanng   <ant><m>    # "Sebastian"
 Seby        Seʼeby          <ant><m>    # "Eusebio"
@@ -845,18 +883,21 @@ zac              zaʼc                # "nice, good, fancy"
 LEXICON Adv-Stems(2)
 
 a                a                   # "already" (completion of verb)
+a\ gucgan        a\ guhcgaan         # "finally"
+daru\ chu\ zhi   dàaʼruʼ\ chuʼuh\ zh꞉ih # "some day"
 na               nah                 # "now"
+nadota           nadòoʼtaʼ           # "at first"
 nai              nàiʼ                # "yesterday"
+naru             nahruʼ              # "just now; finally"
+ni               niʼih               # "that's why, here's why"
+nyec             nyèeʼc              # "not"
 queity:queity    queʼity:queʼity     # "not"
 queity:quëity    queʼity:quëʼity     # "not"   ! Dir/LR
-uas              uʼas                # "really"
-zhi:zhi          zhii:zhii           # "tomorrow"
-zhi:yzhi         zhii:yzhii          # "tomorrow"  ! Dir/LR
-ni               niʼih               # "that's why, here's why"
-daru\ chu\ zhi   dàaʼruʼ\ chuʼuh\ zh꞉ih # "some day"
-a\ gucgan        a\ guhcgaan         # "finally"
+queityru         queʼityruʼ          # "no longer"
 ricy             riʼcy               # "there"
-nyec             nyèeʼc              # "not"
+uas              uʼas                # "really"
+zhi:yzhi         zhii:yzhii          # "tomorrow"  ! Dir/LR
+zhi:zhi          zhii:zhii           # "tomorrow"
 zicyizy          ziʼcyihzy           # "just"
 
 LEXICON Adv-Stems-Itg(2)
@@ -903,6 +944,7 @@ as               aʼs                 # "hi, hey"
 as\ nia          aʼs\ nniìaʼ         # "hey there"
 queity:queity    queʼity:queʼity     # "no"
 queity:quëity    queʼity:quëʼity     # "no"   ! Dir/LR
+uaszuatsa        uaʼszuatsaʼ         # "wow"
 
 
 LEXICON Mod-Stems(2)    # modal particles
