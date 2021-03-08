@@ -76,8 +76,8 @@ PATTERN Verbs
 :Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
 :Aspect[-nonperf] V-Stems-Irreg(1)[-nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
 
-V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1) Aspect: V-Neg(1) Prn-Bound(1)  # ! Orth/Simp
-V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2) Aspect: V-Neg(2) Prn-Bound(2)  # ! Orth/Dict
+V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1) V-Neg(1) Prn-Bound(1)  # ! Orth/Simp
+V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2) V-Neg(2) Prn-Bound(2)  # ! Orth/Dict
 
 
 
@@ -285,6 +285,36 @@ ia:chia               ia:chiia       <iv><irre>   #
 ia:ze                 ia:zeheh       <iv><def>    #
 ia:ze                 ia:zèe         <iv><inch>   #
 
+# See Cali Chiu Vol 2, Lecsyony Tseinyabchon (
+
+atga:ratga            atga:ràaʼtgaʼah <iv><hab>   # "lie down (in a location)"
+atga:natga            atga:nàaʼtgaʼah <iv><neut>  #
+atga:guatga           atga:gùaʼtgaʼah <iv><perf>  #
+
+beb:rbeb              beb:rbèeʼb     <iv><hab>    # "get (put) into position (on a surface)"
+beb:wbeb              beb:wbèeʼb     <iv><perf>   #
+beb:cweb              beb:cwèeʼb     <iv><irre>   #
+beb:beb               beb:bèeʼb      <iv><neut>   #
+
+zeiby:zeiby           zeiby:zèèiʼby  <iv><neut>   # "be hanging"
+zeiby:rzeiby          zeiby:rzèèiʼby <iv><hab>    #
+zeiby:seiby           zeiby:sèèiʼby  <iv><irre>   #
+
+zub:rzub              zub:rzùuʼb     <iv><hab>    # "get/be placed (in a location)"
+zub:sub               zub:sùuʼb      <iv><irre>   #
+zub:zub               zub:zuʼùuʼ     <iv><neut>   #
+
+zub:rzub              zub:rzùub      <iv><hab>    # "sit / sit down (in a location)"
+zub:sub               zub:sùub       <iv><irre>   #
+zub:zub               zub:zùub       <iv><neut>   #
+
+zu:rzu                zu:rzuh        <iv><hab>    # "stand (in a location)
+zu:su                 zu:suu         <iv><irre>   #
+zu:zu                 zu:zuu         <iv><neut>   #
+
+zugwa:rzugwa          zugwa:rzugwaʼah  <iv><hab>  # "stand (in a location)
+zugwa:sugwa           zugwa:sugwaʼah   <iv><irre> #
+zugwa:zugwa           zugwa:zugwaʼah   <iv><neut> #
 
 LEXICON V-Stems(3)
 
@@ -367,6 +397,9 @@ LEXICON N-Stems-Possessed(2)
 bzyan            bzyaàaʼn             # "brother (of opposite sex); sister (of opposite sex)"
 ni               niʼih                # "foot; lower leg; back leg (of an animal)
 chiel            chìeʼl               # "spouse, husband, wife"
+lo               lohoh                # "face"
+xnanmam          x꞉nnaʼanmaʼmm        # "grandmother"
+xnan             x꞉nnaʼan             # "(grandparent?)"
 
 
 LEXICON N-Stems(2)
@@ -418,6 +451,7 @@ cotony           cotoony              # "shirt/blouse"
 coyot            coyoʼt               # "‘coyote’ - cross-border escort"
 cub              cuʼuhb               # "tejate, masa"
 cwen             cweʼenn              # "story"
+dizh             dìiʼzh               # "word, language"
 doctor           doʼctoor             # "doctor"
 dolr             doʼlr                # "dollar"
 edifisy          edifiiʼsy            # "building"
@@ -433,6 +467,7 @@ guet\ xtily      gueht\ xtiilly       # "bread"
 guez             guehehz              # "cigarette"
 gyag             gyahg                # "stick, tree, wood, firewood"
 iaz              iihahz               # "year"
+la               lah                  # "name"
 lapy             laʼpy                # "pencil"
 lecsyony         lecsyoony            # "lesson"
 liebr            liʼebr               # "book"
@@ -449,6 +484,7 @@ muly             mùuully              # "money"
 myegr            myeʼgr               # "border patrol (officer)"
 myes             myeʼes               # "mass (at a church)"
 nyis             nyiʼihs              # "water"
+part             paʼrt                # "part"
 pasaprt          pasapoʼrt            # "passport"
 pelot            peloʼt               # "ball"
 pes              peʼs                 # "peso"
@@ -772,9 +808,22 @@ cuan      cuahnn      # "and, with"
 quën      quëhnn      # "and, with"
 xte       x꞉tèeʼ      # "of, as"
 xten      x꞉tèeʼn     # "of"    # Dir/LR    # FIXME
-zalo      zalloh      # "about" (?)
 par       pahr        # "for"
 axta      aʼxtaʼ      # "until, up to"
+
+LEXICON Prep-Stems-WPron(2)
+
+cwe       cweʼeh      # "beside, next to"
+dets      dehts       # "behind, in back of"
+guecy     gueʼehcy    # "above"
+lany      làaʼany     # "in"
+lo        lohoh       # "on; in front of; to; (divided) by; in (year)"
+ni        niʼih       # "under"
+ru        ruʼuh       # "on the edge of"
+trasde    tráhsdeh    # "behind, in back of"
+zalo      zalloh      # "about" (?)
+zha       zh꞉àaʼ      # "under"
+zhan      zh꞉ààaʼn    # "under"
 
 LEXICON Det-Stems(3)
 
