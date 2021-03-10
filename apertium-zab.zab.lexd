@@ -69,7 +69,7 @@ PATTERN Verbs
 ( :Aspect ( V-Stems(1) [<v>:] V-Stems(3): ) V-Extender(1)? Aspect: ) V-Neg(1)? Prn-Bound(1)  # ! Orth/Simp
 
 #:Aspect V-Stems(1):V-Stems(2) :V-Extender(2) :V-Neg(2) :Prn-Bound(2) [<v>:] V-Stems(3): V-Extender(2): Aspect: V-Neg(2): Prn-Bound(2):  # ! Orth/Dict
-( :Aspect ( V-Stems(1):V-Stems(2) [<v>:] V-Stems(3): ) V-Extender(2)? Aspect: ) V-Neg(2)? Prn-Bound(2)   # ! Orth/Dict
+( :Aspect ( V-Stems(1):V-Stems(2) [<v>:] V-Stems(3): ) V-Extender(2)? Aspect: ) V-Neg(2)? Prn-Bound(1):Prn-Bound(2)   # ! Orth/Dict
 
 # Irregular verbs
 
@@ -86,7 +86,7 @@ PATTERN Verbs
 
 
 V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1)? V-Neg(1)? Prn-Bound(1)  # ! Orth/Simp
-V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2)? V-Neg(2)? Prn-Bound(2)  # ! Orth/Dict
+V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2)? V-Neg(2)? Prn-Bound(1):Prn-Bound(2)  # ! Orth/Dict
 
 
 
@@ -98,19 +98,19 @@ N-Stems(1):N-Stems(2) [<n>:]    # Orth/Dict
 
 # Possessed nouns
 :N-Poss(1) N-Stems(1) [<n>:] N-Poss(3): Prn-Bound(1)             # Orth/Simp
-:N-Poss(2) N-Stems(1):N-Stems(2) [<n>:] N-Poss(3): Prn-Bound(2)  # Orth/Dict
+:N-Poss(2) N-Stems(1):N-Stems(2) [<n>:] N-Poss(3): Prn-Bound(1):Prn-Bound(2)  # Orth/Dict
 
 # Inherently possessed nouns
 N-Stems-Possessed(1) [<n>:] Prn-Bound(1)                         # Orth/Simp
-N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(2)    # Orth/Dict
+N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(1):Prn-Bound(2)    # Orth/Dict
 
 
 PATTERN Neg-Words
 
 [ queity<adv>:queity ] V-Neg Prn-Bound(1)   # Orth/Simp
 [ queity<adv>:quëity ] V-Neg Prn-Bound(1)   # Orth/Simp ! Dir/LR
-[ queity<adv>:queʼity ] V-Neg Prn-Bound(2)  # Orth/Dict
-[ queity<adv>:quëʼity ] V-Neg Prn-Bound(2)  # Orth/Dict ! Dir/LR
+[ queity<adv>:queʼity ] V-Neg Prn-Bound(1):Prn-Bound(2)  # Orth/Dict
+[ queity<adv>:quëʼity ] V-Neg Prn-Bound(1):Prn-Bound(2)  # Orth/Dict ! Dir/LR
 
 
 LEXICON Aspect[nonperf]
@@ -436,12 +436,14 @@ LEXICON N-Stems(2)
 Dizhsa           Dìiʼzhsah            # "Zapotec language"
 Dizhtily         Dìiʼzhtiilly         # "Spanish language"
 Dyoz             Dyooz                # "G-d"
-Ingles           Ingleʼs              # "English language"
+Ingles           Ingleʼs              # "English language"  ! Dir/LR
+Ingles           Inglehs              # "English language"
 Lia              Lia                  # person word for females
 Tiu              Tiʼu                 # person word for males (Señor, Don)
 amiegw           amieʼgw              # "friend"
 apartamen        apartameʼenn         # "apartment"
-autobuas         autobuaʼs            # "bus"
+autobuas         autobuaʼs            # "bus"          ! Dir/LR
+autobuas         autobuahs            # "bus"
 bag              baag                 # "cow"
 banua            bannùùaʼ             # "scorpion"
 bar              baar                 # "stick, pole"
@@ -620,6 +622,7 @@ Diegw       Diegw           <ant><m>    # "Diego, James"
 Dolf        Doʼollf         <ant><m>    # "Adolfo, Adolph"
 Dyau        Dyàuʼ           <ant><m>    # "Santiago"
 Dyeu        Dyeʼu           <ant><m>    # "Diego, James"
+Elena       Elena           <ant><f>    # "Elena"
 Ernestyen   Ernestyeʼnn     <ant><f>    # "Ernestina, Ernestine"
 Felisyet    Felisyeʼt       <ant><f>    # "Felicita, Felicity"
 Florentyen  Florentyeʼenn   <ant><f>    # "Florentina"
@@ -790,6 +793,7 @@ Sabely      Sabeelly        <ant><f>    # "Isabel"
 Sabien      Sabiienn        <ant><f>    # "Sabina, Sabine"
 Samohi      Samohi          <org>       # "Santa Monica High School"
 San         Saʼann          <ant><f>    # "Crisanta"
+San\ Diegw  Sann\ Dieʼgw    <top>       # "San Diego"
 San\ Luc    Sann\ Luʼuc     <top>       # "San Lucas Quiaviní"
 Santa\ Mony Sánntah\ Moony  <top>       # "Santa Monica"
 Se          See             <ant><m>    # "Jose, Joseph, Joe"
