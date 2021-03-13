@@ -78,11 +78,16 @@ PATTERN Verbs
 #:Aspect[nonperf] V-Stems-Irreg(1)[-nonp1pl,nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
 #:Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[nonp1pl]:
 #:Aspect[-nonperf] V-Stems-Irreg(1)[-nonp1pl,-nonperf] :V-Extender(1) :V-Neg(1) :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1): Aspect: V-Neg(1): Prn-Bound(1)[-nonp1pl]:
-:Aspect[nonperf] V-Stems-Irreg(1)[nonp1pl,nonperf] :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[nonp1pl]:
-:Aspect[nonperf] V-Stems-Irreg(1)[-nonp1pl,nonperf] :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[-nonp1pl]:
-:Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] :Prn-Bound(1)[nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[nonp1pl]:
-:Aspect[-nonperf] V-Stems-Irreg(1)[-nonp1pl,-nonperf] :Prn-Bound(1)[-nonp1pl] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[-nonp1pl]:
+:Aspect[nonperf] V-Stems-Irreg(1)[nonp1pl,nonperf] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[nonp1pl]      # ! Orth/Simp
+:Aspect[nonperf] V-Stems-Irreg(1)[-nonp1pl,nonperf] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[-nonp1pl]      # ! Orth/Simp
+:Aspect[-nonperf] V-Stems-Irreg(1)[nonp1pl,-nonperf] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[nonp1pl]      # ! Orth/Simp
+:Aspect[-nonperf] V-Stems-Irreg(1)[-nonp1pl,-nonperf] [<v>:] V-Stems-Irreg(3): V-Extender(1)? Aspect: V-Neg(1)? Prn-Bound(1)[-nonp1pl]      # ! Orth/Simp
 
+
+:Aspect[nonperf] V-Stems-Irreg(1):V-Stems-Irreg(2)[nonp1pl,nonperf] [<v>:] V-Stems-Irreg(3): V-Extender(2)? Aspect: V-Neg(2)? Prn-Bound(1):Prn-Bound(2)[nonp1pl]      # ! Orth/Dict
+:Aspect[nonperf] V-Stems-Irreg(1):V-Stems-Irreg(2)[-nonp1pl,nonperf] [<v>:] V-Stems-Irreg(3): V-Extender(2)? Aspect: V-Neg(2)? Prn-Bound(1)[-nonp1pl]:Prn-Bound(2)[-nonp1pl]      # ! Orth/Dict
+:Aspect[-nonperf] V-Stems-Irreg(1):V-Stems-Irreg(2)[nonp1pl,-nonperf] [<v>:] V-Stems-Irreg(3): V-Extender(2)? Aspect: V-Neg(2)? Prn-Bound(1)[nonp1pl]:Prn-Bound(2)[nonp1pl]      # ! Orth/Dict
+:Aspect[-nonperf] V-Stems-Irreg(1):V-Stems-Irreg(2)[-nonp1pl,-nonperf] [<v>:] V-Stems-Irreg(3): V-Extender(2)? Aspect: V-Neg(2)? Prn-Bound(1)[-nonp1pl]:Prn-Bound(2)[-nonp1pl]      # ! Orth/Dict
 
 
 V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1)? V-Neg(1)? Prn-Bound(1)  # ! Orth/Simp
@@ -254,14 +259,14 @@ LEXICON V-Stems-Irreg(3)[nonperf,nonp1pl]
 # -----------------------------
 
 # uny for everything but perf and p1pl
-uny:uny uhny:uny                                 <tv> # "do"
+uny:uny uny:uhny                                 <tv> # "do"
 # ieny for all p1pl
-uny[-nonp1pl]:ieny[-nonp1pl]    uhny[-nonp1pl]:ieʼny[-nonp1pl]         <tv> # "do"
-uny[-nonp1pl,-nonperf]:ieny[-nonp1pl,-nonperf]    uhny[-nonp1pl,-nonperf]:ieʼny[-nonp1pl,-nonperf]         <tv> # "do"
+uny[-nonp1pl]:ieny[-nonp1pl]    uny[-nonp1pl]:ieʼny[-nonp1pl]         <tv> # "do"
+uny[-nonp1pl,-nonperf]:ieny[-nonp1pl,-nonperf]    uny[-nonp1pl,-nonperf]:ieʼny[-nonp1pl,-nonperf]         <tv> # "do"
 #uny[p1pl]:ieny[p1pl]              uhny[p1pl]:ieʼny[p1pl]                   <tv> # "do"
 
 # einy for perf except with p1pl
-uny[-nonperf]:einy[-nonperf]  uhny[-nonperf]:èiʼny[-nonperf]                   <tv> # "do"
+uny[-nonperf]:einy[-nonperf]  uny[-nonperf]:èiʼny[-nonperf]                   <tv> # "do"
 
 
 LEXICON V-Stems-IrregAspect(3)
@@ -957,6 +962,7 @@ LEXICON Mod-Stems(2)    # modal particles
 
 e         èee           # yes/no question marker
 na        nah           # optionally used at end of wh questions
+zhi       zhiʼ          # adds emphasis at the end of a thought
 
 
 
