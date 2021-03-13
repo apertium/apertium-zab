@@ -161,7 +161,8 @@ LEXICON Pronouns(3)        # Free pronouns
 tu           tu               <itg>   # "who"
 xi           xi               <itg>   # "what"
 
-naa          nàa              <pers><p1><sg> # "I"
+naa          nàaʼ             <pers><p1><sg> # "I"
+naa          nàa              <pers><p1><sg> # "I"  ! Dir/LR
 
 danoën:danoën dannooh-ëhnn:dannooh-ëhnn  <pers><p1><pl> # "we"
 danoën:danuën dannooh-ëhnn:dannuuh-ëhnn  <pers><p1><pl> # "we"  ! Dir/LR
@@ -442,8 +443,8 @@ Lia              Lia                  # person word for females
 Tiu              Tiʼu                 # person word for males (Señor, Don)
 amiegw           amieʼgw              # "friend"
 apartamen        apartameʼenn         # "apartment"
-autobuas         autobuaʼs            # "bus"          ! Dir/LR
-autobuas         autobuahs            # "bus"
+autobuas         autobuaʼs            # "bus"
+autobuas         autobuahs            # "bus"         ! Dir/LR
 bag              baag                 # "cow"
 banua            bannùùaʼ             # "scorpion"
 bar              baar                 # "stick, pole"
@@ -872,7 +873,7 @@ LEXICON Det-Stems(3)
 cha       chah     <cls>   # "one, a/an (with breadstuffs)"
 ra        ra       <qnt>   # (pl)
 rata      raʼtaʼ   <qnt>   # "every"
-teiby     teiby    <idf>   # "a/an"
+teiby     teʼihby  <idf>   # "a/an"
 
 LEXICON Postdet-Stems(3)
 
@@ -883,12 +884,13 @@ LEXICON Adj-Stems(2)
 
 cweby            cweby               # "new"
 zac              zaʼc                # "nice, good, fancy"
+duar             duuar               # "hard"
 
 LEXICON Adv-Stems(2)
 
 a                a                   # "already" (completion of verb)
 a\ gucgan        a\ guhcgaan         # "finally"
-daru\ chu\ zhi   dàaʼruʼ\ chuʼuh\ zh꞉ih # "some day"
+daru\ chu\ zhi   dàaʼruʼ\ chuʼuh\ zh꞉ih # "some day"
 na               nah                 # "now"
 nadota           nadòoʼtaʼ           # "at first"
 nai              nàiʼ                # "yesterday"
