@@ -19,8 +19,8 @@ Sets
 Nasal = N M 
         n m ;
 
-quVowels = I E Ë
-           i e ë ;
+quVowels = I E Ë Ì
+           i e ë ì ;
 
 KV = À È Ê Ì Ò Ù
      à è ê ì ò ù ;
