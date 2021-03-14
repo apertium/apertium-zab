@@ -151,12 +151,12 @@ LEXICON Prn-Bound(2)[nonp1pl]           # FIXME
 +azh<prn><pers><p3><fam><sg>:>azh        +azh<prn><pers><p3><fam><sg>:>azh       # FIXME: CHECK(2)
 +iny<prn><pers><p3><rev><sg>:>{u}iny     +iny<prn><pers><p3><rev><sg>:>{u}iny    # FIXME: CHECK(2), (1): iny/ni
 
-+rëng<prn><pers><p3><prox><pl>:>rëng     +rëng<prn><pers><p3><prox><pl>:>rëng    # FIXME: CHECK(2)
-+ri<prn><pers><p3><dist><pl>:>ri         +rih<prn><pers><p3><dist><pl>:>rih     # FIXME: CHECK(2)
-+rëb<prn><pers><p3><resp><pl>:>rëb       +rëhb<prn><pers><p3><resp><pl>:>rëhb    # FIXME: CHECK(2)
-+rëm<prn><pers><p3><anml><pl>:>rëm       +rëhm<prn><pers><p3><anml><pl>:>rëhm    # FIXME: CHECK(2)
-+razh<prn><pers><p3><fam><pl>:>razh      +razh<prn><pers><p3><fam><pl>:>razh     # FIXME: CHECK(2)
-+riny<prn><pers><p3><rev><pl>:>riny      +riny<prn><pers><p3><rev><pl>:>riny     # FIXME: CHECK(2)
++ëng<prn><pers><p3><prox><pl>:>rëng      +ëng<prn><pers><p3><prox><pl>:>rëng    # FIXME: CHECK(2)
++i<prn><pers><p3><dist><pl>:>ri          +ih<prn><pers><p3><dist><pl>:>rih     # FIXME: CHECK(2)
++ëb<prn><pers><p3><resp><pl>:>rëb        +ëhb<prn><pers><p3><resp><pl>:>rëhb    # FIXME: CHECK(2)
++ëm<prn><pers><p3><anml><pl>:>rëm        +ëhm<prn><pers><p3><anml><pl>:>rëhm    # FIXME: CHECK(2)
++azh<prn><pers><p3><fam><pl>:>razh       +azh<prn><pers><p3><fam><pl>:>razh     # FIXME: CHECK(2)
++iny<prn><pers><p3><rev><pl>:>riny       +iny<prn><pers><p3><rev><pl>:>riny     # FIXME: CHECK(2)
 
 [perf]:[perf]                           :
 :                                       :
@@ -208,6 +208,15 @@ LEXICON V-Neg(2)            # FIXME
 
 <neg>:>d{I}                 <neg>:>d{I}ʼ
 #:                           :
+
+# Some other adverbials can come before(?) the negative one
+# so at some point we could treat these all as adverbials,
+# but would need two slots
+# slot 1:
+#+di<adv>:>d{I}
+# slot 2:
+#+cas<adv>:>cas(?)
+#+dux<adv>:>dux(?)
 
 LEXICON V-Extender(2)       # FIXME
 <pol>:>la                   <pol>:>làaʼ
