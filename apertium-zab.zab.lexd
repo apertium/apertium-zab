@@ -167,7 +167,6 @@ tu           tu               <itg>   # "who"
 xi           xi               <itg>   # "what"
 
 naa          nàaʼ             <pers><p1><sg> # "I"
-naa          nàa              <pers><p1><sg> # "I"  ! Dir/LR
 
 danoën:danoën dannooh-ëhnn:dannooh-ëhnn  <pers><p1><pl> # "we"
 danoën:danuën dannooh-ëhnn:dannuuh-ëhnn  <pers><p1><pl> # "we"  ! Dir/LR
@@ -179,7 +178,9 @@ yu:yëbu      yuʼuuʼ:yəbuʼuuʼ  <pers><p2><frm><sg>   # "you (sg, formal)" !
 yuad         yùad             <pers><p2><frm><pl>   # "you (pl, formal)"
 yuad:yëbuad  yuad:yëbùad      <pers><p2><frm><pl>   # "you (pl, formal)" ! Dir/LR
 
-lai          laʼàiʼ           <pers><p3><dist><sg>  # "he/she/it (distal)"
+lai          laʼàiʼ           <pers><p3><dist><sg>  # "he/she/it (distal)" ! Dir/LR
+lai          laʼài            <pers><p3><dist><sg>  # "he/she/it (distal)" ! Dir/LR
+lai          laʼai            <pers><p3><dist><sg>  # "he/she/it (distal)"
 laëng        laʼa-ëng         <pers><p3><prox><sg>  # "he/she/it (proximal)"
 laëb         làaʼ-ëhb         <pers><p3><resp><sg>  # "he/she/it (respectful)"
 laëm         làaʼ-ëhmm        <pers><p3><anml><sg>  # "he/she/it (animal)"
@@ -220,6 +221,7 @@ LEXICON V-Extender(2)       # FIXME
 
 LEXICON Aux(2)
 
+abenton        abentoon         # "ride"
 alabar         alabaar          # "praise"
 arreglad       arreglaad        # "arrange for"
 bda            bdaa             # "cat a shadow, give shade"
@@ -275,7 +277,7 @@ ap:gup                ap:gùuʼp  <tv><perf>   # "have"
 
 u:ru                  u:ruʼuh   <iv><hab>    # "be located"
 u:gu                  u:guʼuh   <iv><perf>   # "be located"
-u:chu                 u:chuʼuh  <iv><irre>   # "be located"
+Du:chu                 u:chuʼuh  <iv><irre>   # "be located"
 u:nu                  u:nuʼuh   <iv><neut>   # "be located (neutral)"
 
 une:rune              une:ruʼuhnèe   <iv><hab>    # "live with"
@@ -431,7 +433,8 @@ LEXICON N-Stems-Possessed(2)
 becw:xyecw       becw:x꞉yèeʼcw        # "dog (irregular"
 bzyan            bzyaàaʼn             # "brother (of opposite sex); sister (of opposite sex)"
 chiel            chìeʼl               # "spouse, husband, wife"
-lo               lohoh                # "face"
+lo               loh                  # "face"
+lo               lohoh                # "face"  ! Dir/LR
 ni               niʼih                # "foot; lower leg; back leg (of an animal)
 xnan             x꞉nnaʼan             # "(grandparent?)"
 xnanmam          x꞉nnaʼanmaʼmm        # "grandmother"
@@ -526,6 +529,7 @@ pasaprt          pasapoʼrt            # "passport"
 pelot            peloʼt               # "ball"
 pes              peʼs                 # "peso"
 pistoly          pistoʼlly            # "gun"
+plad             plaàad               # "dish"
 plum             pluʼmm               # "pen"
 polisia          polisiia             # "policeman; police"
 pwert            pweeʼrt              # "door"
@@ -887,9 +891,10 @@ re        rèeʼ     <dem>   # "this"
 
 LEXICON Adj-Stems(2)
 
-cweby            cweby               # "new"
-zac              zaʼc                # "nice, good, fancy"
+cweby            cweeby              # "new"
 duar             duuar               # "hard"
+nya              nyàa                # "clean"
+zac              zaʼc                # "nice, good, fancy"
 
 LEXICON Adv-Stems(2)
 
@@ -910,6 +915,7 @@ uas              uʼas                # "really, very"
 zhi:yzhi         zhii:yzhii          # "tomorrow"  ! Dir/LR
 zhi:zhi          zhii:zhii           # "tomorrow"
 zicyizy          ziʼcyihzy           # "just"
+zyeiny           zyèiny              # "a lot"
 
 LEXICON Adv-Stems-Itg(2)
 
