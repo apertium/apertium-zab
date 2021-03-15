@@ -292,7 +292,7 @@ ap:gup                ap:gùuʼp  <tv><perf>   # "have"
 
 u:ru                  u:ruʼuh   <iv><hab>    # "be located"
 u:gu                  u:guʼuh   <iv><perf>   # "be located"
-Du:chu                 u:chuʼuh  <iv><irre>   # "be located"
+u:chu                 u:chuʼuh  <iv><irre>   # "be located"
 u:nu                  u:nuʼuh   <iv><neut>   # "be located (neutral)"
 
 une:rune              une:ruʼuhnèe   <iv><hab>    # "live with"
@@ -302,22 +302,19 @@ une:nune              une:nuʼnèe     <iv><neut>   # "live with (neutral)"
 une:nune              une:nuʼuhnèe   <iv><neut>   # "live with (neutral)" ! Dir/LR
 
 ac:gac                ac:gaʼc   <iv><irre>   # "be, become"
-ac:gac                ac:naaʼc  <iv><neut>   # "be, become (neutral)"
+ac:nac                ac:naaʼc  <iv><neut>   # "be, become (neutral)"
 ac:guc                ac:guhc   <iv><perf>   # "be, become"
 ac:rac                ac:rahc   <iv><hab>    # "be, become"
-ac:nac                ac:naaʼc  <iv><neut>   #
 
 acxu:gacxu            acxu:gaʼcx꞉ùu   <iv><irre>   # "get sick"
-acxu:gacxu            acxu:naaʼcx꞉ùu  <iv><neut>   #
+acxu:nacxu            acxu:naaʼcx꞉ùu  <iv><neut>   #
 acxu:gucxu            acxu:guhcx꞉ùu   <iv><perf>   #
 acxu:racxu            acxu:rahcx꞉ùu   <iv><hab>    #
-acxu:nacxu            acxu:naaʼcx꞉ùu  <iv><neut>   #
 
 acbe:gacbe            acbe:gaʼcbèeʼ   <iv><irre>   # "understand, know"
-acbe:gacbe            acbe:naaʼcbèeʼ  <iv><neut>   #
+acbe:nacbe            acbe:naaʼcbèeʼ  <iv><neut>   #
 acbe:gucbe            acbe:guhcbèeʼ   <iv><perf>   #
 acbe:racbe            acbe:rahcbèeʼ   <iv><hab>    #
-acbe:nacbe            acbe:naaʼcbèeʼ  <iv><neut>   #
 
 ile:rile              ile:rilleʼeh   <iv><hab>    # "be able to, know how to"
 ile:gule              ile:gulleʼeh   <iv><perf>   # 
@@ -989,6 +986,7 @@ LEXICON Mod-Stems(2)    # modal particles
 e         èee           # yes/no question marker
 na        nah           # optionally used at end of wh questions
 zhi       zhiʼ          # adds emphasis at the end of a thought
+la        làaʼ          # focus particle
 
 
 LEXICON Numeral
