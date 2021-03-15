@@ -13,6 +13,7 @@ PATTERNS
 Nouns
 Verbs
 Punctuation
+Numerals
 
 NP-Stems(1) [<np>:] NP-Stems(3):                 # ! Orth/Simp
 NP-Stems(1):NP-Stems(2) [<np>:] NP-Stems(3):     # ! Orth/Dict
@@ -93,6 +94,8 @@ PATTERN Verbs
 V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1)? V-Neg(1)? Prn-Bound(1)  # ! Orth/Simp
 V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2)? V-Neg(2)? Prn-Bound(1):Prn-Bound(2)  # ! Orth/Dict
 
+V-Copula(1) [<cop>:] V-Copula(3): V-Extender(1)? V-Neg(1)? Prn-Bound(1)[usedWCop]  # ! Orth/Simp
+V-Copula(1):V-Copula(2) [<cop>:] V-Copula(3): V-Extender(2)? V-Neg(2)? Prn-Bound(1):Prn-Bound(2)[usedWcop]  # ! Orth/Dict
 
 
 PATTERN Nouns
@@ -122,6 +125,7 @@ LEXICON Aspect[nonperf]
 
 <hab>:r>                    # habitual
 <perf>[-nonperf]:{B}>[-nonperf]     # perfective
+<perf>[-nonperf]:b>[-nonperf]       # perfective  Dir/LR  Orth/SJGZ
 <prog>:ca{y}>               # progressive
 <irre>:{g}{Y}>              # irrealis
 
@@ -131,13 +135,12 @@ LEXICON N-Poss(3)
 x>     x꞉>     <px>    # for adding pronominal possession to Ns FIXME: CHECK(2)
 
 
-LEXICON Prn-Bound(2)[nonp1pl]           # FIXME
+LEXICON Prn-Bound(2)[nonp1pl,usedWcop]           # FIXME
 
-+a<prn><pers><p1><sg>:>a                 +aʼ<prn><pers><p1><sg>:>aʼ
-+a<prn><pers><p1><sg>:>a                 +aʼ<prn><pers><p1><sg>:>aʼ
++a<prn><pers><p1><sg>[-usedWcop]:>a[-usedWcop]         +aʼ<prn><pers><p1><sg>[-usedWcop]:>aʼ[-usedWcop]
 +ën<prn><pers><p1><pl>[-nonp1pl]:>{u}ën[-nonp1pl]      +ëhnn<prn><pers><p1><pl>[-nonp1pl]:>{u}ëhnn[-nonp1pl]
 
-+u<prn><pers><p2><infm><sg>:>u           +ùuʼ<prn><pers><p2><infm><sg>:>ùuʼ
++u<prn><pers><p2><infm><sg>[-usedWcop]:>u[-usedWcop]   +ùuʼ<prn><pers><p2><infm><sg>[-usedWcop]:>ùuʼ[-usedWcop]
 +yu<prn><pers><p2><frm><sg>:>yu          +yuuʼ<prn><pers><p2><frm><sg>:>yuuʼ
 +yëbu<prn><pers><p2><frm><sg>:>yëbu      +yëbuuʼ<prn><pers><p2><frm><sg>:>yëbuuʼ   # ! Dir/LR
 +ad<prn><pers><p2><infm><pl>:>ad         +ad<prn><pers><p2><infm><pl>:>ad      # FIXME: CHECK(2)
@@ -145,15 +148,16 @@ LEXICON Prn-Bound(2)[nonp1pl]           # FIXME
 +yëbuad<prn><pers><p2><frm><pl>:>yëbuad  +yëbùad<prn><pers><p2><frm><sg>:>yëbùad   # ! Dir/LR
 
 +ëng<prn><pers><p3><prox><sg>:>{u}ëng    +ëng<prn><pers><p3><prox><sg>:>{u}ëng
-+i<prn><pers><p3><dist><sg>:>{u}i        +ih<prn><pers><p3><dist><sg>:>{u}ih
-+ëb<prn><pers><p3><resp><sg>:>{u}ëb      +ëhb<prn><pers><p3><resp><sg>:>{u}ëhb   # FIXME: CHECK(2)
-+ëm<prn><pers><p3><anml><sg>:>{u}ëm      +ëhm<prn><pers><p3><anml><sg>:>{u}ëhm   # FIXME: CHECK(2)
++i<prn><pers><p3><dist><sg>:>{u}i        +i<prn><pers><p3><dist><sg>:>{u}ih
++ëb<prn><pers><p3><resp><sg>:>{u}ëb      +ëb<prn><pers><p3><resp><sg>:>{u}ëhb   # FIXME: CHECK(2)
++ëm<prn><pers><p3><anml><sg>:>{u}ëm      +ëm<prn><pers><p3><anml><sg>:>{u}ëhm   # FIXME: CHECK(2)
 +azh<prn><pers><p3><fam><sg>:>azh        +azh<prn><pers><p3><fam><sg>:>azh       # FIXME: CHECK(2)
 +iny<prn><pers><p3><rev><sg>:>{u}iny     +iny<prn><pers><p3><rev><sg>:>{u}iny    # FIXME: CHECK(2), (1): iny/ni
 
 +ëng<prn><pers><p3><prox><pl>:>rëng      +ëng<prn><pers><p3><prox><pl>:>rëng    # FIXME: CHECK(2)
-+i<prn><pers><p3><dist><pl>:>ri          +ih<prn><pers><p3><dist><pl>:>rih     # FIXME: CHECK(2)
-+ëb<prn><pers><p3><resp><pl>:>rëb        +ëhb<prn><pers><p3><resp><pl>:>rëhb    # FIXME: CHECK(2)
++i<prn><pers><p3><dist><pl>:>ri          +i<prn><pers><p3><dist><pl>:>rih      # FIXME: CHECK(2)
++ëb<prn><pers><p3><resp><pl>:>rëb        +ëb<prn><pers><p3><resp><pl>:>rëhb    # FIXME: CHECK(2)
++ëb<prn><pers><p3><resp><pl>:>deb        +ëb<prn><pers><p3><resp><pl>:>deb     # Dir/LR  Orth/SJGZ
 +ëm<prn><pers><p3><anml><pl>:>rëm        +ëhm<prn><pers><p3><anml><pl>:>rëhm    # FIXME: CHECK(2)
 +azh<prn><pers><p3><fam><pl>:>razh       +azh<prn><pers><p3><fam><pl>:>razh     # FIXME: CHECK(2)
 +iny<prn><pers><p3><rev><pl>:>riny       +iny<prn><pers><p3><rev><pl>:>riny     # FIXME: CHECK(2)
@@ -188,6 +192,7 @@ laëm         làaʼ-ëhmm        <pers><p3><anml><sg>  # "he/she/it (animal)"
 lari         làaʼri           <pers><p3><dist><pl>  # "they/them (distal)"
 larëng       làaʼrëng         <pers><p3><prox><pl>  # "they/them (proximal)"
 larëb        làaʼrëhb         <pers><p3><resp><pl>  # "they/them (respectful)"
+larëb        laadeb           <pers><p3><resp><pl>  # "they/them (respectful)" ! Dir/LR  Orth/SJGZ
 larëm        làaʼrëhmm        <pers><p3><anml><sg>  # "they/them (animal)"
 
 
@@ -271,6 +276,7 @@ LEXICON V-Stems-Irreg(3)[nonperf,nonp1pl]
 
 # uny for everything but perf and p1pl
 uny:uny uny:uhny                                 <tv> # "do"
+uny:un  uny:un                                   <tv> # "do"  Dir/LR Orth/SJGZ
 # ieny for all p1pl
 uny[-nonp1pl]:ieny[-nonp1pl]    uny[-nonp1pl]:ieʼny[-nonp1pl]         <tv> # "do"
 uny[-nonp1pl,-nonperf]:ieny[-nonp1pl,-nonperf]    uny[-nonp1pl,-nonperf]:ieʼny[-nonp1pl,-nonperf]         <tv> # "do"
@@ -359,6 +365,11 @@ zu:zu                 zu:zuu         <iv><neut>   #
 zugwa:rzugwa          zugwa:rzugwaʼah  <iv><hab>  # "stand (in a location)
 zugwa:sugwa           zugwa:sugwaʼah   <iv><irre> #
 zugwa:zugwa           zugwa:zugwaʼah   <iv><neut> #
+
+
+LEXICON V-Copula(3)
+
+na:na                 na:nàa         <neut>   #
 
 LEXICON V-Stems(3)
 
@@ -970,7 +981,7 @@ as               aʼs                 # "hi, hey"
 as\ nia          aʼs\ nniìaʼ         # "hey there"
 queity:queity    queʼity:queʼity     # "no"
 queity:quëity    queʼity:quëʼity     # "no"   ! Dir/LR
-uaszuatsa        uaʼszuatsaʼ         # "wow"
+uaszuatsa        uʼaszuatsaʼ         # "wow"
 
 
 LEXICON Mod-Stems(2)    # modal particles
@@ -979,6 +990,22 @@ e         èee           # yes/no question marker
 na        nah           # optionally used at end of wh questions
 zhi       zhiʼ          # adds emphasis at the end of a thought
 
+
+LEXICON Numeral
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+PATTERN Numerals
+Numeral+ [<num>:]
+Numeral+ ([.]|[,]) Numeral+ [<num>:]
 
 
 LEXICON Punctuation

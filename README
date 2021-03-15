@@ -1,22 +1,28 @@
-zab: `apertium-zab`
+Western Tlacolula Valley Zapotec: `apertium-zab`
 ===============================================================================
 
 This is an Apertium monolingual language package for zab. What
 you can use this language package for:
 
-* Morphological analysis of zab
-* Morphological generation of zab
-* Part-of-speech tagging of zab
+* Morphological analysis of Western Tlacolula Valley Zapotec
+* Morphological generation of Western Tlacolula Valley Zapotec
+* Part-of-speech tagging of Western Tlacolula Valley Zapotec
+
+Responsibilities
+-------------------------------------------------------------------------------
+
+Guelaguetza clause: While licensed with a free/open-source license that permits commercial uses, it is expected that anything created using this data be made available to the community of San Lucas Quiaviní free of charge.  This is consistent with the communities practice of guelaguetza, a complex system of reciprocity and exchange of good and labor.
 
 Requirements
 -------------------------------------------------------------------------------
 
-You will need the following software installed:
+To compile these resources, you will need the following software installed:
 
 * lttoolbox (>= 3.3.0)
 * apertium (>= 3.3.0)
 * vislcg3 (>= 0.9.9.10297)
 * hfst (>= 3.8.2)
+* lexd (>= 1.0.0)
 
 If this does not make any sense, we recommend you look at: www.apertium.org.
 
@@ -64,7 +70,7 @@ TODO: test tagger result
 Files and data
 -------------------------------------------------------------------------------
 
-* [`apertium-zab.zab.lexc`](apertium-zab.zab.lexc) - Morphotactic dictionary
+* [`apertium-zab.zab.lexd`](apertium-zab.zab.lexd) - Morphotactic dictionary
 * [`apertium-zab.zab.twol`](apertium-zab.zab.twol) - Morphophonological rules
 * [`apertium-zab.zab.rlx`](apertium-zab.zab.rlx) - Constraint Grammar disambiguation rules
 * [`apertium-zab.post-zab.dix`](apertium-zab.post-zab.dix) - Post-generator
