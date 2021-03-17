@@ -108,12 +108,12 @@ N-Stems(1) [<n>:]               # Orth/Simp
 N-Stems(1):N-Stems(2) [<n>:]    # Orth/Dict
 
 # Possessed nouns
-:N-Poss(1) N-Stems(1) [<n>:] N-Poss(3): Prn-Bound(1)             # Orth/Simp
-:N-Poss(2) N-Stems(1):N-Stems(2) [<n>:] N-Poss(3): Prn-Bound(1):Prn-Bound(2)  # Orth/Dict
+:N-Poss(1) N-Stems(1)[regPoss] [<n>:] N-Poss(3): Prn-Bound(1)             # Orth/Simp
+:N-Poss(2) N-Stems(1):N-Stems(2)[regPoss] [<n>:] N-Poss(3): Prn-Bound(1):Prn-Bound(2)  # Orth/Dict
 
 # Inherently possessed nouns
-N-Stems-Possessed(1) [<n>:] Prn-Bound(1)                         # Orth/Simp
-N-Stems-Possessed(1):N-Stems-Possessed(2) [<n>:] Prn-Bound(1):Prn-Bound(2)    # Orth/Dict
+N-Stems-Possessed(1) [<n><px>:] Prn-Bound(1)                         # Orth/Simp
+N-Stems-Possessed(1):N-Stems-Possessed(2) [<n><px>:] Prn-Bound(1):Prn-Bound(2)    # Orth/Dict
 
 
 PATTERN Neg-Words
@@ -461,7 +461,7 @@ xnan             x꞉nnaʼan             # "(grandparent?)"
 xnanmam          x꞉nnaʼanmaʼmm        # "grandmother"
 
 
-LEXICON N-Stems(2)
+LEXICON N-Stems(2)[regPoss]
 
 Dizhsa           Dìiʼzhsah            # "Zapotec language"
 Dizhtily         Dìiʼzhtiilly         # "Spanish language"
@@ -481,7 +481,7 @@ basquetbol       basqueʼtboʼll        # "basketball"
 bca              bcaʼah               # "crow"
 bdo              bdòoʼ                # "baby"
 bdua             bdùùaʼ               # "banana"
-becw             bèeʼcw               # "dog"
+becw[-regPoss]   bèeʼcw[-regPoss]     # "dog"
 beu              beʼeu                # "month"
 beld:bel         behlld:behll         # "fish"               
 beld:bel         bèèeʼlld:bèèeʼll     # "snake"
