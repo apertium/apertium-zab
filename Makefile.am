@@ -124,10 +124,10 @@ $(LANG1).autopgen.bin: $(BASENAME).post-$(LANG1).dix
 ## Orthography converters
 ###############################################################################
 
-.deps/$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst: .deps/$(LANG1SCRIPT1).RL.hfst .deps/$(LANG1SCRIPT2).RL.hfst
+.deps/$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst: .deps/$(LANG1SCRIPT1).LR.hfst .deps/$(LANG1SCRIPT2).RL.hfst
 	hfst-invert $< | hfst-compose-intersect -1 - -2 `echo $(word 2,$^)` | hfst-minimise > $@
 
-.deps/$(LANG1SCRIPT2)-$(LANG1SCRIPT1).hfst: .deps/$(LANG1SCRIPT2).RL.hfst .deps/$(LANG1SCRIPT1).RL.hfst
+.deps/$(LANG1SCRIPT2)-$(LANG1SCRIPT1).hfst: .deps/$(LANG1SCRIPT2).LR.hfst .deps/$(LANG1SCRIPT1).RL.hfst
 	hfst-invert $< | hfst-compose-intersect -1 - -2 `echo $(word 2,$^)` | hfst-minimise > $@
 
 $(LANG1).$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst: .deps/$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst
