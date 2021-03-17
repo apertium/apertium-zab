@@ -124,11 +124,16 @@ $(LANG1).autopgen.bin: $(BASENAME).post-$(LANG1).dix
 ## Orthography converters
 ###############################################################################
 
-.deps/$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst: .deps/$(LANG1SCRIPT1).LR.hfst .deps/$(LANG1SCRIPT2).RL.hfst
-	hfst-invert $< | hfst-compose-intersect -1 - -2 `echo $(word 2,$^)` | hfst-minimise > $@
+.deps/$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst: .deps/$(LANG1SCRIPT1).LR.hfst .deps/$(LANG1SCRIPT2).RL.hfst .deps/$(LANG1).spellrelax.hfst
+	hfst-compose-intersect -1 $< -2 .deps/$(LANG1).spellrelax.hfst | hfst-invert | hfst-compose-intersect -1 - -2 .deps/$(LANG1SCRIPT2).RL.hfst | hfst-minimise > $@
+#.deps/$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst: $(LANG1SCRIPT1).automorf.hfst .deps/$(LANG1SCRIPT2).RL.hfst
+#	hfst-fst2fst -i $< -x | hfst-compose-intersect -1 - -2 .deps/$(LANG1SCRIPT2).RL.hfst -o $@
 
-.deps/$(LANG1SCRIPT2)-$(LANG1SCRIPT1).hfst: .deps/$(LANG1SCRIPT2).LR.hfst .deps/$(LANG1SCRIPT1).RL.hfst
-	hfst-invert $< | hfst-compose-intersect -1 - -2 `echo $(word 2,$^)` | hfst-minimise > $@
+.deps/$(LANG1SCRIPT2)-$(LANG1SCRIPT1).hfst: .deps/$(LANG1SCRIPT2).LR.hfst .deps/$(LANG1SCRIPT1).RL.hfst .deps/$(LANG1).spellrelax.hfst
+	hfst-compose-intersect -1 $< -2 .deps/$(LANG1).spellrelax.hfst | hfst-invert | hfst-compose-intersect -1 - -2 .deps/$(LANG1SCRIPT1).RL.hfst | hfst-minimise > $@
+#.deps/$(LANG1SCRIPT2)-$(LANG1SCRIPT1).hfst: $(LANG1SCRIPT2).automorf.hfst .deps/$(LANG1SCRIPT1).RL.hfst
+#	hfst-fst2fst -i $< -x | hfst-compose-intersect -1 - -2 .deps/$(LANG1SCRIPT2).RL.hfst -o $@
+
 
 $(LANG1).$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst: .deps/$(LANG1SCRIPT1)-$(LANG1SCRIPT2).hfst
 	hfst-fst2fst -O $< -o $@

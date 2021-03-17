@@ -95,7 +95,7 @@ V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1)? V-Neg(1)? P
 V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2)? V-Neg(2)? Prn-Bound(1):Prn-Bound(2)  # ! Orth/Dict
 
 V-Copula(1) [<cop>:] V-Copula(3): V-Extender(1)? V-Neg(1)? Prn-Bound(1)[usedWCop]  # ! Orth/Simp
-V-Copula(1):V-Copula(2) [<cop>:] V-Copula(3): V-Extender(2)? V-Neg(2)? Prn-Bound(1):Prn-Bound(2)[usedWcop]  # ! Orth/Dict
+V-Copula(2) [<cop>:] V-Copula(3): V-Extender(2)? V-Neg(2)? Prn-Bound(1):Prn-Bound(2)[usedWcop]  # ! Orth/Dict
 
 
 PATTERN Nouns
@@ -375,7 +375,7 @@ beb               bèeʼb                    <tv>    # "ride (an animal)"  # FIX
 bix               biʼihx                   <iv>    # "ring (of a bell)"
 chiby             chìiby                   <tv>    # "scare"
 culo              culoh                    <tv>    # "take care of"
-culozac           culohzaʼc                <tv>    # "take good care of"
+culozac:culoza{C} culohzaʼc:culohzaʼ{C}    <tv>    # "take good care of"
 cuzh              cuhzh                    <tv>    # "play (a wind instrument)"
 cwany             cwàaʼnny                 <tv>    # "wake up"
 cwez              cwèez                    <tv>    # "turn off"
@@ -405,7 +405,7 @@ guix:{G}{u}ix     guìiʼx:{G}{u}ìiʼx        <tv>    # "lay down, put down (lo
 guixicy:{G}{u}ixicy  guixiʼihcy:{G}{u}ixiʼihcy  <iv>   # "nod off (to sleep)"
 guizh:{G}{u}izh   guiʼihzh:{G}{u}iʼihzh    <dtv>   # "pay"
 gwe               gwèèeʼ                   <iv>    # "speak"
-gwezac            gwèeʼzaʼc                <tv>    # "speak (a language) well"
+gwezac:gweza{C}   gwèeʼzaʼc:gwèeʼzaʼc      <tv>    # "speak (a language) well"
 gyan              gyaàaʼn                  <dtv>   # "feed"
 eipy              eʼihpy                   <dtv>   # "call (someone) (a name)"
 icy               iʼihcy                   <iv>    # "return"  # FIXME: check
@@ -432,7 +432,8 @@ tyis              tyiʼihs                  <iv>    # "jump"
 unybe             unybèe                   <tv>    # "know, get to know"
 xyeily            xyeʼilly                 <tv>    # "open"
 yan               yàaʼan                   <iv>    # "stay"
-yac               yaʼahc                   <iv>    # "heal, get better/well"
+yac:ya{C}         yaʼahc:yaʼah{C}          <iv>    # "heal, get better/well"
+yual              yuʼahll                  <iv>    # "pant"
 yulaz             yuʼlààaʼz                <tv>    # "like"  # FIXME: not used with <perf>
 zeny              zehnny                   <iv>    # "arrive"
 zhiby             zhihby                   <iv>    # "get scared"

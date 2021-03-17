@@ -10,6 +10,7 @@ Alphabet
  %{u%}:0 %{u%}:u
  %{Y%}:y %{Y%}:g
  %{G%}:g %{G%}:c %{G%}:q %{G%}:d
+ %{C%}:c %{C%}:q
  %{y%}:0 %{y%}:y
  %{g%}:0 %{g%}:g
  %>:0  ;
@@ -49,7 +50,7 @@ Cx:Cy <=> c a %>:* _ ;
       matched ;
 
 "c{u} as qu if before i/e/ë: {u}:u"
-%{u%}:u <=> c: %>:* _ :quVowels ;
+%{u%}:u <=> [ c: | %{C%}: ] %>:* _ :quVowels ;
             [ :g | :q ] _ :quVowels ;
 
 "c{u} as qu if before i/e/ë: c:q"
@@ -101,6 +102,9 @@ h:0 <=> :Vow _ :Vow :h :Cons* %>: ;
 !{G}:g <=> _ ;
 !      except
 !         {Y}
+
+"{C} is q only before {u}:u; otherwise c"
+%{C%}:q <=> _ ( %>: ) %{u%}:u ;
 
 "Delete possessive prefix before x (x:0)"
 x:0 <=> _ ( ꞉: ) %>: x: ;
