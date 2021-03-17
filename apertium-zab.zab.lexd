@@ -22,7 +22,7 @@ Prep-Stems(1) [<pr>:]                            # ! Orth/Simp
 Prep-Stems(1):Prep-Stems(2) [<pr>:]              # ! Orth/Dict
 
 Prep-Stems-WPron(1) [<pr>:] Prn-Bound(1)                     # ! Orth/Simp
-Prep-Stems-WPron(1):Prep-Stems-WPron(2) [<pr>:] Prn-Bound(2) # ! Orth/Dict
+Prep-Stems-WPron(1):Prep-Stems-WPron(2) [<pr>:] Prn-Bound(1):Prn-Bound(2) # ! Orth/Dict
 
 Det-Stems(1) [<det>:] Det-Stems(3):              # ! Orth/Simp
 Det-Stems(1):Det-Stems(2) [<det>:] Det-Stems(3): # ! Orth/Dict
@@ -38,6 +38,9 @@ Adv-Stems-Itg(1):Adv-Stems-Itg(2) [<adv><itg>:]  # ! Orth/Dict
 
 Adj-Stems(1) [<adj>:]                            # ! Orth/Simp
 Adj-Stems(1):Adj-Stems(2) [<adj>:]               # ! Orth/Dict
+
+Adj-Stems(1) [<adj>:] Prn-Bound(1)               # ! Orth/Simp
+Adj-Stems(1):Adj-Stems(2) [<adj>:] Prn-Bound(1):Prn-Bound(2) # ! Orth/Dict
 
 Ij-Stems(1) [<ij>:]                              # ! Orth/Simp
 Ij-Stems(1):Ij-Stems(2) [<ij>:]                  # ! Orth/Dict
@@ -94,7 +97,7 @@ PATTERN Verbs
 V-Stems-IrregAspect(1) [<v>:] V-Stems-IrregAspect(3): V-Extender(1)? V-Neg(1)? Prn-Bound(1)  # ! Orth/Simp
 V-Stems-IrregAspect(1):V-Stems-IrregAspect(2) [<v>:] V-Stems-IrregAspect(3): V-Extender(2)? V-Neg(2)? Prn-Bound(1):Prn-Bound(2)  # ! Orth/Dict
 
-V-Copula(1) [<cop>:] V-Copula(3): V-Extender(1)? V-Neg(1)? Prn-Bound(1)[usedWCop]  # ! Orth/Simp
+V-Copula(1) [<cop>:] V-Copula(3): V-Extender(1)? V-Neg(1)? Prn-Bound(1)[usedWcop]  # ! Orth/Simp
 V-Copula(2) [<cop>:] V-Copula(3): V-Extender(2)? V-Neg(2)? Prn-Bound(1):Prn-Bound(2)[usedWcop]  # ! Orth/Dict
 
 
