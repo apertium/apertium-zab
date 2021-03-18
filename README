@@ -8,10 +8,12 @@ you can use this language package for:
 * Morphological generation of Western Tlacolula Valley Zapotec
 * Part-of-speech tagging of Western Tlacolula Valley Zapotec
 
+Se necesita traducir esta página al Dizhsa y al español.
+
 Responsibilities
 -------------------------------------------------------------------------------
 
-Guelaguetza clause: While licensed with a free/open-source license that permits commercial uses, it is expected that anything created using this data be made available to the community of San Lucas Quiaviní free of charge.  This is consistent with the communities practice of guelaguetza, a complex system of reciprocity and exchange of good and labor.
+**Guelaguetza clause**: While licensed with a free/open-source license that permits commercial uses, it is expected that anything created using this data be made available to the community of San Lucas Quiaviní free of charge.  This is consistent with the communities practice of guelaguetza, a complex system of reciprocity and exchange of good and labor.
 
 Requirements
 -------------------------------------------------------------------------------
@@ -25,6 +27,7 @@ To compile these resources, you will need the following software installed:
 * lexd (>= 1.0.0)
 
 If this does not make any sense, we recommend you look at: www.apertium.org.
+Especially have a look at https://wiki.apertium.org/wiki/Installation.
 
 Compiling
 -------------------------------------------------------------------------------
@@ -57,14 +60,34 @@ Testing
 -------------------------------------------------------------------------------
 
 If you are in the source directory after running make, the following
-commands should work:
+commands should work for analysis:
 
 ```console
-$ echo "TODO: test sentence" | apertium -d . zab-morph
-TODO: test analysis result
+$ echo "Yseidylayu naa Dizhsa." | apertium -d . zab-morph
+^Yseidylayu/seidy<v><tv><pol><irre>+yu<prn><pers><p2><frm><sg>/seidy<v><dtv><pol><irre>+yu<prn><pers><p2><frm><sg>$ ^naa/naa<prn><pers><p1><sg>$ ^Dizhsa/Dizhsa<n>$^../..<sent>$
 
-$ echo "TODO: test sentence" | apertium -d . zab-tagger
-TODO: test tagger result
+$ echo "Yseidylayu naa Dizhsa." | apertium -d . zab-tagger
+^Yseidylayu/Seidy<v><dtv><pol><irre>+yu<prn><pers><p2><frm><sg>$ ^naa/naa<prn><pers><p1><sg>$ ^Dizhsa/Dizhsa<n>$^../..<sent>$
+```
+
+There are also orthography-specific generation modes:
+
+```console
+$ echo "^amiegw<n><px>+u<prn><pers><p2><infm><sg>$" | apertium -d . -f none zab-gener
+xamiegwu
+
+$ echo "^amiegw<n><px>+u<prn><pers><p2><infm><sg>$" | apertium -d . -f none zab_Phon-gener
+x꞉amieʼgwùuʼ
+```
+
+Furthermore, there are orthography conversion modes:
+
+```console
+$ echo "Yseidylayu naa Dizhsa." | apertium -d . zab_Simp-zab_Phon
+Ysèiʼdylàaʼyuuʼ nàaʼ Dìiʼzhsah.
+
+$ echo "Ysèiʼdylàaʼyuuʼ nàaʼ Dìiʼzhsah." | apertium -d . zab_Phon-zab_Simp
+Yseidylayu naa Dizhsa.
 ```
 
 Files and data

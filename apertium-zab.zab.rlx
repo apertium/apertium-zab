@@ -1,8 +1,30 @@
 # Firstly, we need to define what tags should be considered sentence delimiters. For this example, only full stop is set as delimiter.
 DELIMITERS = "<.>" ;
 
+SUBREADINGS = LTR ; # Alternate, left-to-right (main reading on the left)
+
 # We can define sets for common tag clusters
 LIST Case = (n s) (n p) ; # A set that matches either a Noun Singular or a Noun Plural
+
+# Parts of speech
+# ===============
+LIST N = n ;
+LIST Pron = prn ;
+LIST Prop = np ;
+
+# Subcategories
+# =============
+
+LIST IV = iv ;
+LIST TV = tv ;
+LIST DTV = dtv ;
+
+# Sets
+# ====
+
+SET NOMINAL = N | Prop | Pron ;
+
+
 
 SECTION
 # If there is a singular noun to the right, I cannot be a verb or noun.
@@ -10,6 +32,13 @@ REMOVE (n) OR (v) IF (1 (n s)) ;
 
 # If there is a conjunction followed by a certain cohort of the same CASE as me, choose me.
 SELECT $$Case IF (1 (cnjcoo) LINK 1C $$Case) ;
+
+# Choose ditransitive if ambiguous and three consecutive nominals
+SELECT DTV IF
+	(0C TV OR DTV)
+	(0/1 NOMINAL)
+	(1 NOMINAL)
+	(2 NOMINAL) ;
 
 # Resources:
 # http://visl.sdu.dk/cg3.html

@@ -33,7 +33,18 @@
         <file name="zab.revautoseq.bin"/>
       </program>
       <program name="lt-proc -g">
-        <file name="zab.autogen.bin"/>
+        <file name="zab@Simp.autogen.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="zab_Phon-gener" install="yes">
+    <pipeline>
+      <program name="lsx-proc">
+        <file name="zab.revautoseq.bin"/>
+      </program>
+      <program name="lt-proc -g">
+        <file name="zab@Dict.autogen.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -68,12 +79,39 @@
       <program name="lt-proc -w">
         <file name="zab.automorf.bin"/>
       </program>
-      <program name="cg-conv -a"/>
+      <program name="cg-conv -a -l"/>
       <program name="vislcg3 --trace --grammar">
         <file name="zab.rlx.bin"/>
       </program>
     </pipeline>
   </mode>
+
+  <mode name="zab_Simp-zab_Phon" install="yes">
+    <pipeline>
+      <program name="hfst-proc">
+        <file name="zab.zab@Simp-zab@Dict.hfst"/>
+      </program>
+      <program name="perl -pe 's:\/.+?\$:\$:g'"/>
+      <program name="hfst-proc -n -N1">
+        <file name="zab.zab@Simp-zab@Dict.hfst"/>
+      </program>
+      <!-- program name="sed -re 's/ʼ/\'/g;s/꞉/:/g'"/ -->
+    </pipeline>
+  </mode>
+
+  <mode name="zab_Phon-zab_Simp" install="yes">
+    <pipeline>
+      <program name="hfst-proc">
+        <file name="zab.zab@Dict-zab@Simp.hfst"/>
+      </program>
+      <program name="perl -pe 's:\/.+?\$:\$:g'"/>
+      <program name="hfst-proc -n -N1">
+        <file name="zab.zab@Dict-zab@Simp.hfst"/>
+      </program>
+      <!-- program name="sed -re 's/ʼ/\'/g;s/꞉/:/g'"/ -->
+    </pipeline>
+  </mode>
+
 
 </modes>
 
