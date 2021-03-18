@@ -1,0 +1,44 @@
+[
+
+	! Some adjustments for SJGZ Bible
+
+	! accept ll as zh or zh꞉
+	[ ?* [ [ z h ([ %: | ꞉ ]) ] (->) [ l l ] ] ?* ] .o.
+
+	! accept ɨ as ë
+	[ ?* [ ë (->) [ ɨ ] ] ?* ] .o.
+
+	! accept á as a
+	[ ?* [ a (->) [ á ] ] ?* ] .o.
+
+	! accept é as e
+	[ ?* [ e (->) [ é ] ] ?* ] .o.
+
+	! accept ó as o
+	[ ?* [ o (->) [ ó ] ] ?* ] .o.
+
+	! accept í as i
+	[ ?* [ i (->) [ í ] ] ?* ] .o.
+
+	! accept ú as u
+	[ ?* [ u (->) [ ú ] ] ?* ] .o.
+
+	! accept ü as w
+	[ ?* [ w (->) [ ü ] ] ?* ] .o.
+
+	! accept ii as i
+	[ ?* [ i (->) [ [ i | í ] [ i | í ] ] ] ?* ] .o.
+
+	! accept ee as e
+	[ ?* [ e (->) [ [ e | é ] [ e | é ] ] ] ?* ] .o.
+
+	! accept uu as u
+	[ ?* [ u (->) [ [ u | ú ] [ u | ú ] ] ] ?* ] .o.
+
+	! accept oo as o
+	[ ?* [ o (->) [ [ o | ó ] [ o | ó ] ] ] ?* ] .o.
+
+	! accept aa as a
+	[ ?* [ a (->) [ [ a | á ] [ a | á ] ] ] ?* ] 
+
+]

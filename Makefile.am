@@ -8,8 +8,10 @@ VERSION=0.1.0
 LANG1=zab
 SCRIPT1=Simp
 SCRIPT2=Dict
+SCRIPT3=SJGZ
 LANG1SCRIPT1=$(LANG1)@$(SCRIPT1)
 LANG1SCRIPT2=$(LANG1)@$(SCRIPT2)
+LANG1SCRIPT3=$(LANG1)@$(SCRIPT3)
 
 BASENAME=apertium-$(LANG1)
 
@@ -20,6 +22,7 @@ TARGETS_COMMON =			\
 	$(LANG1SCRIPT2).autogen.hfst \
 	$(LANG1SCRIPT1).autogen.bin \
 	$(LANG1SCRIPT2).autogen.bin \
+	$(LANG1SCRIPT3).automorf.hfst \
 	$(LANG1).autopgen.bin		\
 	$(LANG1).rlx.bin				\
 	$(LANG1).autoseq.bin			\
@@ -90,8 +93,14 @@ $(LANG1SCRIPT2).autogen.hfst: .deps/$(LANG1SCRIPT2).RL.hfst
 .deps/$(LANG1).spellrelax.hfst: $(BASENAME).$(LANG1).spellrelax
 	hfst-regexp2fst -S -o $@ < $<
 
+.deps/$(LANG1SCRIPT3).spellrelax.hfst: $(BASENAME).$(LANG1SCRIPT3).spellrelax
+	hfst-regexp2fst -S -o $@ < $<
+
 $(LANG1).automorf.hfst: .deps/$(LANG1).LR.hfst .deps/$(LANG1).spellrelax.hfst
 	hfst-compose-intersect -1 $< -2 .deps/$(LANG1).spellrelax.hfst | hfst-invert | hfst-minimise | hfst-fst2fst -O -o $@
+
+$(LANG1SCRIPT3).automorf.hfst: .deps/$(LANG1).LR.hfst .deps/$(LANG1).spellrelax.hfst .deps/$(LANG1SCRIPT3).spellrelax.hfst
+	hfst-compose-intersect -1 $< -2 .deps/$(LANG1).spellrelax.hfst | hfst-compose-intersect -1 - -2 .deps/$(LANG1SCRIPT3).spellrelax.hfst | hfst-invert | hfst-minimise | hfst-fst2fst -O -o $@
 
 #$(LANG1).automorf.hfst: .deps/$(LANG1).LR.hfst
 #	hfst-invert $< | hfst-minimise | hfst-fst2fst -O -o $@
