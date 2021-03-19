@@ -1,8 +1,11 @@
-Western Tlacolula Valley Zapotec: `apertium-zab`
+Dizhsa / Western Tlacolula Valley Zapotec: `apertium-zab`
 ===============================================================================
 
-This is an Apertium monolingual language package for zab. What
-you can use this language package for:
+This is an Apertium monolingual language package for Dizhsa, or
+Western Tlacolula Valley Zapotec, with a focus on the variety of
+San Lucas Quiaviní.
+
+What you can use this language package for:
 
 * Morphological analysis of Western Tlacolula Valley Zapotec
 * Morphological generation of Western Tlacolula Valley Zapotec
