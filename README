@@ -76,11 +76,11 @@ $ echo "Yseidylayu naa Dizhsa." | apertium -d . zab-tagger
 There are also orthography-specific generation modes:
 
 ```console
-$ echo "^amiegw<n><px>+u<prn><pers><p2><infm><sg>$" | apertium -d . -f none zab-gener
-xamiegwu
+$ echo "^becw<n><px>+u<prn><pers><p2><infm><sg>$" | apertium -d . -f none zab-gener
+xyecwu
 
-$ echo "^amiegw<n><px>+u<prn><pers><p2><infm><sg>$" | apertium -d . -f none zab_Phon-gener
-x꞉amieʼgwùuʼ
+$ echo "^becw<n><px>+u<prn><pers><p2><infm><sg>$" | apertium -d . -f none zab_Phon-gener
+x꞉yèeʼcwùuʼ
 ```
 
 Furthermore, there are orthography conversion modes:
@@ -99,6 +99,7 @@ Files and data
 * [`apertium-zab.zab.lexd`](apertium-zab.zab.lexd) - Morphotactic dictionary
 * [`apertium-zab.zab.twol`](apertium-zab.zab.twol) - Morphophonological rules
 * [`apertium-zab.zab.rlx`](apertium-zab.zab.rlx) - Constraint Grammar disambiguation rules
+* [`apertium-zab.zab.spellrelax`](apertium-zab.zab.spellrelax) - Rules for accepting orthographic variants
 * [`apertium-zab.post-zab.dix`](apertium-zab.post-zab.dix) - Post-generator
 * [`zab.prob`](zab.prob) - Tagger model
 * [`modes.xml`](modes.xml) - Translation modes
