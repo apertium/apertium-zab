@@ -111,6 +111,13 @@ For more information
 * http://wiki.apertium.org/wiki/apertium-zab
 * http://wiki.apertium.org/wiki/Using_an_lttoolbox_dictionary
 
+Citing
+-------------------------------------------------------------------------------
+
+When referencing this work in an academic publication, we ask that you cite the following source:
+
+* Washington, Jonathan N., Felipe H. Lopez, and Brook Danielle Lillehaugen (2021).  “***Towards a morphological transducer and orthography converter for Western Tlacolula Valley Zapotec***”.  In: _Proceedings of the First Workshop on Natural Language Processing for Indigenous Languages of the Americas (AmericasNLP)_, pp. 185–193.  URL: [https://www.aclweb.org/anthology/2021.americasnlp-1.21].
+
 Help and support
 -------------------------------------------------------------------------------
 
