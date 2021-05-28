@@ -1,6 +1,6 @@
 AC_PREREQ(2.52)
 
-AC_INIT([Apertium zab], [0.1.0], [jonathan.north.washington@gmail.com], [apertium-zab], [https://wiki.apertium.org/wiki/Apertium-zab])
+AC_INIT([Apertium zab], [0.1.0], [jonathan.n.washington@gmail.com], [apertium-zab], [https://wiki.apertium.org/wiki/Apertium-zab])
 AM_INIT_AUTOMAKE
 
 AC_PROG_LN_S
