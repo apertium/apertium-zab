@@ -1,0 +1,18 @@
+{
+  "tenses": {
+    "input": "tenses-input.txt",
+    "mode": "zab-morph"
+  },
+  "tenses-gen": {
+    "input": "tenses-gen-input.txt",
+    "mode": "zab-gener"
+  },
+  "verbs-runy": {
+    "input": "verbs-runy-input.txt",
+    "mode": "zab-morph"
+  },
+  "verbs-runy-gen": {
+    "input": "verbs-runy-gen-input.txt",
+    "mode": "zab-gener"
+  }
+}

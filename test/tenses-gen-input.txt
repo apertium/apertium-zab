@@ -1,0 +1,25 @@
+# habitual
+^cwez<v><tv><hab>$
+^dub<v><iv><hab>$
+^zhuny<v><iv><hab>$
+# regular perfective
+^dub<v><iv><perf>$
+^nalaz<v><tv><perf>$
+^bix<v><iv><perf>$
+^zhuny<v><iv><perf>$
+# irregular perfective
+^guily<v><tv><perf>$
+^gub<v><tv><perf>$
+# regular irrealis
+^deidy<v><dtv><irre>$
+^zhuny<v><iv><irre>$
+# irregular irrealis
+^deidy<v><tv><irre>$
+^guily<v><tv><irre>$
+^gub<v><tv><irre>$
+^dily<v><tv><irre>$
+# regular progressive
+^dinal<v><tv><prog>$
+^zhuny<v><iv><prog>$
+# irregular progressive
+^dub<v><iv><prog>$

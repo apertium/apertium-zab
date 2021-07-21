@@ -1,0 +1,16 @@
+# habitual
+^uny<v><tv><hab>$
+^uny<v><tv><hab>+a<prn><pers><p1><sg>$
+^uny<v><tv><hab>+ën<prn><pers><p1><pl>$
+# perfective
+^uny<v><tv><perf>$
+^uny<v><tv><perf>+a<prn><pers><p1><sg>$
+^uny<v><tv><perf>+ën<prn><pers><p1><pl>$
+# irrealis
+^uny<v><tv><irre>$
+^uny<v><tv><irre>+a<prn><pers><p1><sg>$
+^uny<v><tv><irre>+ën<prn><pers><p1><pl>$
+# progressive
+^uny<v><tv><prog>$
+^uny<v><tv><prog>+a<prn><pers><p1><sg>$
+^uny<v><tv><prog>+ën<prn><pers><p1><pl>$

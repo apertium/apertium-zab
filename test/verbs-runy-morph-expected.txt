@@ -1,0 +1,24 @@
+[-1xHdfRG_gP5#0] ^beiny/uny<v><tv><perf>$
+[/-1xHdfRG_gP5]
+[2s_AWfmhaUvR#0] ^cayunya/uny<v><tv><prog>+a<prn><pers><p1><sg>$
+[/2s_AWfmhaUvR]
+[GF6Ls31JEfyX#0] ^cayienyën/uny<v><tv><prog>+ën<prn><pers><p1><pl>$
+[/GF6Ls31JEfyX]
+[GufPdlsOxXj4#0] ^cayuny/uny<v><tv><prog>$
+[/GufPdlsOxXj4]
+[MwjWo2DkMLG9#0] ^bienyën/uny<v><tv><perf>+ën<prn><pers><p1><pl>$
+[/MwjWo2DkMLG9]
+[OIuVMSqhHLoV#0] ^gunya/uny<v><tv><irre>+a<prn><pers><p1><sg>$
+[/OIuVMSqhHLoV]
+[R2sxfuxbp2IY#0] ^beinya/uny<v><tv><perf>+a<prn><pers><p1><sg>$
+[/R2sxfuxbp2IY]
+[YsuosFXeLbDp#0] ^runya/uny<v><tv><hab>+a<prn><pers><p1><sg>$
+[/YsuosFXeLbDp]
+[Z0_Usa1YNdBk#0] ^rienyën/uny<v><tv><hab>+ën<prn><pers><p1><pl>$
+[/Z0_Usa1YNdBk]
+[ewdyqVdU8yYm#0] ^runy/uny<v><tv><hab>$
+[/ewdyqVdU8yYm]
+[fN00lzj_eOPh#0] ^gyienyën/uny<v><tv><irre>+ën<prn><pers><p1><pl>$
+[/fN00lzj_eOPh]
+[mjOKjGy6BXY3#0] ^guny/uny<v><tv><irre>$
+[/mjOKjGy6BXY3]
