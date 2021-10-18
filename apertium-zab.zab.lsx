@@ -15,21 +15,21 @@
 
 	<pardefs>
 		<pardef n="adj">
-			<e><i><w/><s n="adj"/><j/></i></e>
-			<e><i><w/><s n="adj"/><t/><j/></i></e>
+			<e><i><w/><s n="adj"/><d/></i></e>
+			<e><i><w/><s n="adj"/><t/><d/></i></e>
 		</pardef>
 		<pardef n="adv">
-			<e><i><w/><s n="adv"/><j/></i></e>
-			<e><i><w/><s n="adv"/><t/><j/></i></e>
+			<e><i><w/><s n="adv"/><d/></i></e>
+			<e><i><w/><s n="adv"/><t/><d/></i></e>
 		</pardef>
 		<pardef n="n">
-			<e><i><w/><s n="n"/><t/><j/></i></e>
+			<e><i><w/><s n="n"/><t/><d/></i></e>
 		</pardef>
 		<pardef n="det">
-			<e><i><w/><s n="det"/><t/><j/></i></e>
+			<e><i><w/><s n="det"/><t/><d/></i></e>
 		</pardef>
 		<pardef n="prn">
-			<e><i><w/><s n="prn"/><t/><j/></i></e>
+			<e><i><w/><s n="prn"/><t/><d/></i></e>
 		</pardef>
 		<pardef n="SN"><!-- FIXME -->
 			<e><par n="n"/></e>
@@ -41,8 +41,8 @@
 			<e><par n="det"/><par n="adj"/><par n="adj"/><par n="n"/></e>
 		</pardef>
 		<pardef n="w_edge" c="word edge">
-			<e><i>+<w/><t/><j/></i></e>
-			<e><i><j/></i></e>
+			<e><i>+<w/><t/><d/></i></e>
+			<e><i><d/></i></e>
 		</pardef>
 	</pardefs>
 
@@ -56,7 +56,7 @@
 			<par n="w_edge"/>
 			<par n="SN"/>
 			<p>
-				<l>alabar<s n="aux"/><j/></l>
+				<l>alabar<s n="aux"/><d/></l>
 				<r></r>
 			</p>
 		</e>
@@ -70,7 +70,7 @@
 			<par n="w_edge"/>
 			<par n="SN"/>
 			<p>
-				<l>bgwa<s n="aux"/><j/></l>
+				<l>bgwa<s n="aux"/><d/></l>
 				<r></r>
 			</p>
 		</e>
@@ -84,7 +84,7 @@
 			<par n="w_edge"/>
 			<par n="SN"/>
 			<p>
-				<l>comprender<s n="aux"/><j/></l>
+				<l>comprender<s n="aux"/><d/></l>
 				<r></r>
 			</p>
 		</e>
@@ -98,7 +98,7 @@
 			<par n="w_edge"/>
 			<par n="SN"/>
 			<p>
-				<l>contest<s n="aux"/><j/></l>
+				<l>contest<s n="aux"/><d/></l>
 				<r></r>
 			</p>
 		</e>
