@@ -922,8 +922,8 @@ LEXICON Postdet-Stems(3)
 re        rèe      <dem>   # "that"
 re        rèeʼ     <dem>   # "this"
 
-PATTERN adj-Stems(2)
-(Adj-Stems(2) [<adj>:]) [^[pred,mod]]
+PATTERN adj-Stems
+(Adj-Stems(2)) [^[pred,mod]]
 LEXICON Adj-Stems(2)
 
 cweby            cweeby              # "new"
