@@ -954,7 +954,12 @@ ngats[pred]           ngaàaʼts[pred]             # "yellow"
 ngas[pred]            ngaʼas[pred]               # "black"
 nga[pred]             ngàa'ah[pred]              # "green, raw"
 ncweby[pred]          ncwèeby[pred]              # "new"
-
+bgyuzh[mod]           bgyúu’zh[mod]               # "rotten"
+btaad[mod]            btáad[mod]                  # "wrinkled"
+bya[mod]              byaá[mod]                   # "clean"
+byety[mod]            byée’ty[mod]                # "crooked, bent"
+bzhiu[mod]            bzh:ìu’[mod]                # "burned"
+bzhya[mod]            bzhyah[mod]                 # "full"
 
 
 LEXICON Adv-Stems(2)
